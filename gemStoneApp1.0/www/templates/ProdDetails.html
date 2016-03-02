@@ -1,0 +1,52 @@
+<h5> Product Details</h5>
+<style>
+  table {
+    width:auto;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: center;
+  }
+  table#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+    background-color:#fff;
+  }
+  table#t01 th	{
+    background-color: slateblue;
+    color: white;
+  }
+</style>
+<div class="col-md-8">
+  <table id="t01">
+    <tr>
+      <th>Sr.No</th>
+      <th>Stone Name</th>
+      <th>Stone Size</th>
+      <th>Stone Weight </th>
+      <th>Stone Pieces </th>
+      <th>Stone Dimensions</th>
+      <th>Stone Color</th>
+      <th>Stone Shape </th>
+      <th>Stone Origin</th>
+    </tr>
+    <tr ng-repeat="partialdata1 in getItemDetails" ng-hide="data.Status==false">
+      <td>{{$index+1}}</td>
+      <td>{{partialdata1.sName}}</td>
+      <td>{{partialdata1.stoneSize}}</td>
+      <td>{{partialdata1.sWeight}}</td>
+      <td>{{partialdata1.sPieces}}</td>
+      <td>{{partialdata1.sDimensions}}</td>
+      <td>{{partialdata1.sColor}}</td>
+      <td>{{partialdata1.stoneShape}}</td>
+      <td>{{partialdata1.sOrigin}}</td>
+
+    </tr>
+
+  </table>
+

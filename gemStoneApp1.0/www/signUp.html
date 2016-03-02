@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="js/ng-cordova.min.js"></script>
+  <script src="js/ng-cordova.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="starter">
+<ion-pane>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">SIGN UP</h1>
+  </ion-header-bar>
+  <form ng-app="myApp" name="myForm" novalidate>
+    <ion-content>
+      <div class="list">
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >First Name</span>
+          <input type="text" placeholder="First Name" ng-model="firstName" name="fir" required autofocus>
+    <span style="color:red" ng-show="myForm.fir.$invalid && myForm.fir.$pristine||myForm.fir.$invalid && myForm.fir.$dirty">
+      <span ng-show="myForm.fir.$error.required">*</span>
+      </span>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >Last Name</span>
+          <input type="text" placeholder="Last Name" ng-model="lastName"name="las" required>
+    <span style="color:red" ng-show="myForm.las.$invalid && myForm.las.$pristine||myForm.las.$invalid && myForm.las.$dirty">
+      <span ng-show="myForm.las.$error.required">*</span>
+      </span>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >User Name</span>
+          <input type="text" placeholder="User Name" ng-model="userName"name="use" required>
+    <span style="color:red" ng-show="myForm.use.$invalid && myForm.use.$pristine||myForm.use.$invalid && myForm.use.$dirty">
+      <span ng-show="myForm.use.$error.required">*</span>
+      </span>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >City</span>
+          <input type="text" placeholder="City" ng-model="city"name="cit" required>
+    <span style="color:red" ng-show="myForm.cit.$invalid && myForm.cit.$pristine||myForm.cit.$invalid && myForm.cit.$dirty">
+      <span ng-show="myForm.cit.$error.required">*</span>
+      </span>
+        </label>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >Contact Number</span>
+          <input type="number" placeholder="Contact Number" ng-model="contact"name="con" required>
+    <span style="color:red" ng-show="myForm.con.$invalid && myForm.con.$pristine||myForm.con.$invalid && myForm.con.$dirty">
+      <span ng-show="myForm.con.$error.required">*</span>
+      </span>
+        </label>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >Email id</span>
+          <input type="email" name="email" ng-model="email" placeholder="Email" required>
+        <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+          <span ng-show="myForm.email.$error.required">Email is required.</span>
+          <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+        </span>
+          </p>
+
+        </label>
+        <p>
+          <button class="button button-block button-calm"  ng-click="signup()"
+                  ng-disabled="myForm.email.$dirty && myForm.email.$invalid ||
+                myForm.email.$dirty && myForm.email.$invalid||myForm.con.$invalid && myForm.con.$pristine||myForm.con.$invalid && myForm.con.$dirty||myForm.cit.$invalid && myForm.cit.$pristine||myForm.cit.$invalid && myForm.cit.$dirty||myForm.use.$invalid && myForm.use.$pristine||myForm.use.$invalid && myForm.use.$dirty||myForm.las.$invalid && myForm.las.$pristine||myForm.las.$invalid && myForm.las.$dirty||myForm.fir.$invalid && myForm.fir.$pristine||myForm.fir.$invalid && myForm.fir.$dirty" >SignUp</button>
+          <!--<input type="submit"
+                 ng-click="signup(firstName,lastName,userName,city,number_no,email)"
+                 ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+                  myForm.email.$dirty && myForm.email.$invalid"> -->
+        </p>
+
+
+      </div>
+    </ion-content>
+  </form>
+</body>
+</html>

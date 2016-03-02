@@ -1,0 +1,102 @@
+<head><style>
+  table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 2px;
+    table-layout: fixed;
+    margin: 0;
+  }
+  table tr:nth-child(odd)	{
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+</style>
+</head>
+<script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-header-bar>
+      <h1 class="title">Settings</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list">
+        <a class="item" ui-sref="changepassword" ng-click="hidePopover()">
+          Change Password
+        </a>
+        <a class="item" ui-sref="login" ng-click="hidePopover()">
+          Logout
+        </a>
+      </div>
+    </ion-content>
+  </ion-popover-view>
+</script>
+
+<ion-view view-title="View Items">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon ion-ios-gear"  ng-click="openPopover($event)">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+    <button type="button" class="btn btn-primary"><a ui-sref="ProdCat">Product Category </a></button>
+      <button type="button" class="btn btn-primary"><a ui-sref="ProdDetails">Product Details </a></button>
+        <button type="button" class="btn btn-primary"><a ui-sref="ProdInfo">Info related to products</a></button>
+          <button type="button" class="btn btn-primary"><a ui-sref="ProdPrices">Product Prices</a></button>
+    </div>
+ <!-- <ion-content class="padding">
+    <ion-refresher pulling-text="Pull to refresh"
+                   refreshing-text="Loading..."
+                   refreshing-icon="ion-loading-c"
+                   pulling-icon="ion-ios7-arrow-thin-down"
+                   on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-scroll direction="xy" style="width:auto; height:auto">
+      <div class="scroll-container"></div>
+
+      <h4>Procured Items:</h4>
+      <table>
+
+        <tr>
+          <th><h5>Precious/Semiprecious</h5></th> 1
+          <th><h5>Purchase Type</h5></th> 1
+          <th><h5>Stone name</h5></th> 1
+          <th><h5>Size</h5></th> 2
+          <th><h5>Weight</h5></th> 2
+          <th><h5>Pieces</h5></th> 2
+          <th><h5>Dimensions</h5></th> 2
+          <th><h5>Color</h5></th> 2
+          <th><h5>Shape</h5></th> 2
+          <th><h5>Origin</h5></th> 2
+          <th><h5>Treatment Remark</h5></th> 3
+          <th><h5>Certificate Agency</h5></th> 3
+          <th><h5>Exp Sp/Carat</h5></th> 4
+          <th><h5>Stock Id</h5></th> 1
+          <th><h5>Supplier Cert Ref Num</h5></th> 3
+          <th><h5>Purchase Price</h5></th>4
+
+        </tr>
+        <tr ng-repeat="x in getData">
+          <td>{{ x.a }}</td>
+          <td>{{ x.b}}</td>
+          <td>{{ x.c}}</td>
+          <td>{{ x.d}}</td>
+          <td>{{ x.e}}</td>
+          <td>{{ x.f}}</td>
+          <td>{{ x.g}}</td>
+          <td>{{ x.h}}</td>
+          <td>{{ x.i}}</td>
+          <td>{{ x.j}}</td>
+          <td>{{ x.k}}</td>
+          <td>{{ x.l}}</td>
+          <td>{{ x.m}}</td>
+          <td>{{ x.n}}</td>
+          <td>{{ x.o}}</td>
+          <td>{{ x.p}}</td>
+
+
+        </tr>
+      </table>
+    </ion-scroll>-->
+  </ion-content>
+</ion-view>

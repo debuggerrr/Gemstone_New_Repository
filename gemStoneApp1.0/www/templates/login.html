@@ -1,0 +1,31 @@
+
+<ion-content  class="padding">
+<form  name="myForm" >
+  <center><img src="img/gem.png" height="250px" width="250px"></center>
+  <div class="list">
+    <label class="item item-input">
+      <span class="input-label" ></span>
+      <input type="text" placeholder="Username" ng-model="text1" name="user" required autofocus>
+        <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid && myForm.user.$pristine">
+          <span ng-show="myForm.user.$error.required">Username is required.</span>
+        </span>
+
+    </label>
+    <label class="item item-input">
+      <span class="input-label"></span>
+      <input type="password" placeholder="Password" ng-model="text2" name="pass"required>
+      <span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid && myForm.pass.$pristine">
+        <span ng-show="myForm.user.$error.required">Password is required.</span>
+      </span>
+    </label>
+  </div>
+  <button class="button button-block button-balanced" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+  myForm.pass.$dirty && myForm.pass.$invalid ||myForm.pass.$pristine && myForm.user.$pristine " ng-click="login(text1,text2);text1='';text2='';">Login</button>
+
+  <button class="button button-block button-calm " ng-click="insert()">SignUp</button>
+
+  <p class="text-center">
+    <a ui-sref="forgot-password">Forgot Password?</a>
+
+</form>
+</ion-content>
