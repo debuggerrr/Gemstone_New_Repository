@@ -1,0 +1,47 @@
+<div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
+<div class="contentarearight" >
+<style>
+    table {
+        width:auto;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+    table#t01 tr:nth-child(even) {
+        background-color: white;
+    }
+    table#t01 tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table#t01 th	{
+        background-color: black;
+        color: white;
+    }
+</style>
+<div class="col-md-8" style="margin:10px 0px 10px 10px">
+<table id="t01" >
+    <tr>
+        <th>Sr No.</th>
+        <th>Agent's First Name</th>
+        <th>Agent's Last Name</th>
+        <th>Username</th>
+        <th>Email Id</th>
+        <th>Contact Number</th>
+    </tr>
+    <tr ng-repeat="data in getInsertAgents">
+        <td>{{$index+1}}</td>
+        <td>{{data.firstName}}</td>
+        <td>{{data.lastName}}</td>
+        <td>{{data.userName}}</td>
+        <td>{{data.emailId}}</td>
+        <td>{{data.contact}}</td>
+    </tr>
+
+</table>
+</div>
+    </div>

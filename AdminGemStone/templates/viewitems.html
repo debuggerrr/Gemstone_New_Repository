@@ -1,0 +1,52 @@
+
+<div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
+    <div class="contentarearight">
+        <style>
+
+                table {
+                width:auto;
+                    }
+                    table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    }
+                    th, td {
+                    padding: 5px;
+                    text-align: center;
+                    }
+                    table#t01 tr:nth-child(even) {
+                    background-color: #eee;
+                    }
+                    table#t01 tr:nth-child(odd) {
+                    background-color:#fff;
+                    }
+                    table#t01 th	{
+                    background-color: black;
+                    color: white;
+                    }
+                    </style>
+
+<div class="col-md-8" style="margin:10px 0px 10px 10px">
+    <table id="t01" >
+
+        <tr>
+            <th>ID</th>
+            <th>Name of Stone</th>
+            <th>Purchase type</th>
+            <th>Precious/Semiprecious</th>
+            <th>Agent</th>
+            <th>Edit/Update</th>
+    </tr>
+        <tr>
+            <td>1</td>
+            <td contentEditable>Ruby</td>
+            <td>Single</td>
+            <td>Precious</td>
+            <td>Mr.Abc</td>
+            <td><button><a ui-sref="editStone">edit</a></button></td>
+        </tr>
+
+</table>
+</div>
+    </div>
+
