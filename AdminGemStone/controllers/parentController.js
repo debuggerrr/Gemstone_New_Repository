@@ -187,6 +187,60 @@ $scope.approve_req=function()
 
 	}
 
+	$scope.updateItems=function()
+	{
+		var edit_i=this.edit_i;
+		$http.get('http://localhost:17681/api/perItemDetails/' + edit_i)
+			.success(function (res) {
+				console.log(res);
+				$scope.getupExpenss = res;
+
+				var pushTextExpenses = $scope.getupExpenss;
+				$scope.meraId=pushTextExpenses.id;
+				$scope.sname = pushTextExpenses.sName;
+				$scope.userAgent = pushTextExpenses.userNames;
+				$scope.ptype = pushTextExpenses.pType;
+				$scope.upbtn = true;
+			});
+
+	}
+
+	$scope.updateSave=function()
+	{
+		var updateid=this.meraId;
+		var bb2price=this.bbprice;
+		var maxbbPrice=this.mpbbprice;
+		var vipPrice=this.vip_price;
+		var retailPrice=this.retailprice;
+		var sname=this.sname;
+		var ptype=this.ptype;
+		var useragent=this.userAgent;
+		var obj = {
+			bbPrice: bb2price,
+			maxbbPrice: maxbbPrice,
+			vipPrice: vipPrice,
+			retailPrice:retailPrice,
+			userNames:useragent,
+			pType:ptype,
+			sName:sname
+		};
+
+		$http({
+			method: 'put',
+			url: "http://localhost:17681/api/perItemDetails/" + updateid,
+			data: JSON.stringify(obj),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		}).
+		success(function (data, status, headers, config) {
+			alert("updated succesfully");
+		}).
+		error(function (data, status, headers, config) {
+			console.log('Error: ' + status);
+		});
+	}
+
 	$http.get("http://localhost:17681/api/insertAgents")
 		.success(function(res){
 			$scope.getInsertAgents=res;
@@ -203,6 +257,13 @@ $scope.approve_req=function()
 			$scope.getItemDetails=res;
 
 		})
+
+	$http.get("http://localhost:17681/api/perItemDetails")
+		.success(function(res){
+			$scope.getEditItems=res;
+
+		})
+
 	$scope.declineStone=function()
 	{
 		var reject_id=this.reject_id;
