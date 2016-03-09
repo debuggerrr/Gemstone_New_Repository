@@ -55,6 +55,14 @@ function($stateProvider, $urlRouterProvider, USER_ROLES) {
               authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor, USER_ROLES.guest]
           }
       })
+
+      .state('modalView', {
+          url: "/modalView",
+          templateUrl: "templates/modalExample.html",
+          data: {
+              authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor, USER_ROLES.guest]
+          }
+      })
       .state('viewinv', {
           url: "/inventory",
           templateUrl: "templates/viewinventory.html",
