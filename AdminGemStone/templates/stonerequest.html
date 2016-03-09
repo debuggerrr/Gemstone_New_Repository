@@ -1,4 +1,144 @@
 <div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
+<div class="contentarearight" >
+    <style>
+        table {
+            width:auto;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: white;
+        }
+        table#t01 tr:nth-child(odd) {
+            background-color:#fff;
+        }
+        table#t01 th	{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <div class="col-md-8" style="margin:10px 0px 10px 10px">
+        <table id="t01" >
+            <tr>
+                <th>Sr No.</th>
+                <th>First Name</th>
+                <th>Name Of Stone</th>
+                <th>Details</th>
+                <th>Approve</th>
+                <th>Delete</th>
+            </tr>
+            <tr ng-repeat="stone in getItemDetails">
+
+                <td>{{$index+1}}</td>
+                <td>{{stone.userNames}}</td>
+                <td>{{stone.sName}}</td>
+
+                <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="showDetails(st_id=stone.id)">Show Details</button></td>
+                <td><button type="button" class="btn btn-info btn-lg" ng-click="approveStone(stone_id=stone.id)">&#10004;</button></td>
+                <td><button type="button" class="btn btn-info btn-lg" ng-click="declineStone(reject_id=stone.id)" >&#10006;</button></td>
+
+            </tr>
+            </table>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Details</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+
+                        <table style="width:auto">
+                            <tr>
+                                <td style="padding: 10px">First Name :</td>
+                                <td>{{userNames}}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px">Type Of Purchase :</td>
+                                <td>{{pType}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 10px">Name Of Stone :</td>
+                                <td>{{sName}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 10px">Size :</td>
+                                <td>{{stoneSize}}</td>
+
+                                <td style="padding: 10px">Total Weight(CTs) :</td>
+                                <td>{{sWeight}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 10px">Pieces :</td>
+                                <td>{{sPieces}}</td>
+
+                                <td style="padding: 10px">Dimensions :</td>
+                                <td>{{sDimensions}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 10px">Color :</td>
+                                <td>{{sColor}}</td>
+
+                                <td style="padding: 10px">Shape :</td>
+                                <td>{{stoneShape}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 10px">Origin :</td>
+                                <td>{{sOrigin}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 10px">Treatment Remark :</td>
+                                <td>{{sRemark}}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px">Certificate Agency :</td>
+                                <td>{{scerAgency}}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px">Expected Sales price/carat :</td>
+                                <td>{{sCarat}}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px">Stock ID :</td>
+                                <td>{{stockId}}</td>
+
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px">Supplier Reference Certificate No. :</td>
+                                <td>{{sSupplierRef}}</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px">Procure Price :</td>
+                                <td>{{sPurchase}}</td>
+                            </tr>
+                        </table>
+                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                                                 </div>
+                                                     </div>
+
+                                                        </div></div>
+<!--<div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
 <div class="contentarearight">
 
     <div class="panel panel-default">
@@ -99,3 +239,4 @@
     </div>
 </div>
 </div>
+-->
