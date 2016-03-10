@@ -2,7 +2,7 @@ angular.module('loginApp').config(['$stateProvider', '$urlRouterProvider', 'USER
 function($stateProvider, $urlRouterProvider, USER_ROLES) {
 
   // For any unmatched url, redirect to /
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/home");
   
   // Now set up the states
   $stateProvider
@@ -59,6 +59,13 @@ function($stateProvider, $urlRouterProvider, USER_ROLES) {
       .state('modalView', {
           url: "/modalView",
           templateUrl: "templates/modalExample.html",
+          data: {
+              authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor, USER_ROLES.guest]
+          }
+      })
+      .state('solditems', {
+          url: "/sold",
+          templateUrl: "templates/soldItems.html",
           data: {
               authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor, USER_ROLES.guest]
           }

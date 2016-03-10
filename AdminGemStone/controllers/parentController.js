@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('loginApp').
-controller('ParentController', ['$http','$scope', '$rootScope', '$modal', 'Auth', 'AUTH_EVENTS','USER_ROLES',
-function($http,$scope, $rootScope, $modal, Auth, AUTH_EVENTS, USER_ROLES){
+controller('ParentController', ['$http','$state','$scope', '$rootScope', '$modal', 'Auth', 'AUTH_EVENTS','USER_ROLES',
+function($http,$state,$scope, $rootScope, $modal, Auth, AUTH_EVENTS, USER_ROLES){
 	// this is the parent controller for all controllers.
 	// Manages auth login functions and each controller
 	// inherits from this controller	
@@ -15,7 +15,7 @@ $scope.enterAgents=function() {
 	var emailid = this.emailId;
 	var contact = this.contactNames;
 
-	$http.get("http://localhost:17681/api/insertAgents?username=" + username)
+	$http.get("http://localhost:55453/api/insertAgents?username=" + username)
 		.then(function onFulfilled(response) {
 			$scope.getUsernames = response.data;
 			var getUsername = $scope.getUsernames;
@@ -28,7 +28,7 @@ $scope.enterAgents=function() {
 		}).catch(function onRejected(response) {
 		var request = $http({
 			method: "post",
-			url: "http://localhost:17681/api/insertAgents",
+			url: "http://localhost:55453/api/insertAgents",
 			crossDomain: true,
 			data: {
 				firstName: firstname,
@@ -52,6 +52,7 @@ $scope.enterAgents=function() {
 		/*this.firstName = "";
 		 this.lastName = "";
 		 this.userName = "";
+
 		 this.locationName = "";
 		 this.emailId = "";
 		 this.contactName = "";*/
@@ -78,7 +79,7 @@ $scope.approve_req=function()
 			var addedby='Application';
 			var request = $http({
 				method: "post",
-				url: "http://localhost:3772/api/perUserRegisters",
+				url: "http://localhost:55453/api/perUserRegisters",
 				crossDomain: true,
 				data: {
 					firstName: firstName_ag,
@@ -102,13 +103,13 @@ $scope.approve_req=function()
 					//alert("success");
 				})
 
-			$http.delete("http://localhost:3772/api/userRegisters/"+agents_id)
+			$http.delete("http://localhost:55453/api/userRegisters/"+agents_id)
 				.success(function(res){
 
 					alert("deleted");
 				})
 		})
-
+	$location.path('templates/viewrequest.html');
 }
 
 	$scope.approve_req_pur=function()
@@ -116,7 +117,7 @@ $scope.approve_req=function()
 		var agentrole="Purchaser";
 		console.log("approve");
 		var agents_id=this.agents_id_purchaser;
-		$http.get("http://localhost:3772/api/userRegisters/"+agents_id)
+		$http.get("http://localhost:55453/api/userRegisters/"+agents_id)
 			.success(function(res){
 				$scope.getAgentsData=res;
 				var getAgents=$scope.getAgentsData;
@@ -132,7 +133,7 @@ $scope.approve_req=function()
 
 				var request = $http({
 					method: "post",
-					url: "http://localhost:3772/api/perUserRegisters",
+					url: "http://localhost:55453/api/perUserRegisters",
 					crossDomain: true,
 					data: {
 						firstName: firstName_ag,
@@ -156,30 +157,106 @@ $scope.approve_req=function()
 						//alert("success");
 					})
 
-				$http.delete("http://localhost:3772/api/userRegisters/"+agents_id)
+				$http.delete("http://localhost:55453/api/userRegisters/"+agents_id)
 					.success(function(res){
 
 						alert("deleted");
 					})
 			})
-
-	}
+		}
 
 	$scope.decline=function()
 	{
 		var decline_id=this.id_dec;
-		$http.delete("http://localhost:3772/api/userRegisters/"+decline_id)
+		$http.delete("http://localhost:55453/api/userRegisters/"+decline_id)
 			.success(function(res){
 				alert("deleted");
 			})
+
+	};
+
+	$scope.delsolditem=function()
+	{
+		var sold_id=this.sold_id;
+		$http.delete("http://localhost:55453/api/soldItemDetails/"+sold_id)
+			.success(function(res){
+				alert("deleted");
+			})
+			};
+
+	$scope.markSold=function()
+	{
+		console.log("Mark Sold");
+		var items_id2=this.items_id;
+		$http.get("http://localhost:55453/api/perItemDetails/"+items_id2)
+			.success(function(res){
+				$scope.getItemsData=res;
+				var getItems=$scope.getItemsData;
+				var userName_item=getItems.userNames;
+				var preSemi_item=getItems.preSemi;
+				var pType_item=getItems.pType;
+				var sName_item=getItems.sName;
+				var stoneSize_item=getItems.stoneSize;
+				var sWeight_item=getItems.sWeight;
+				var sPieces_item=getItems.sPieces;
+				var sDimensions_item=getItems.sDimensions;
+				var sColor_item=getItems.sColor;
+				var stoneShape_item=getItems.stoneShape;
+				var sOrigin_item=getItems.sOrigin;
+				var scerAgency_item=getItems.scerAgency;
+				var sCarat_item=getItems.sCarat;
+				var stockId_item=getItems.stockId;
+				var sSupplierRef_item=getItems.sSupplierRef;
+				var sPurchase_item=getItems.sPurchase;
+
+				var request = $http({
+					method: "post",
+					url: "http://localhost:55453/api/soldItemDetails",
+					crossDomain: true,
+					data: {
+						userNames: userName_item,
+						preSemi: preSemi_item,
+						pType: pType_item,
+						sName: sName_item,
+						stoneSize: stoneSize_item,
+						sWeight: sWeight_item,
+						sPieces: sPieces_item,
+						sDimensions:sDimensions_item,
+						sColor: sColor_item,
+						stoneShape: stoneShape_item,
+						sOrigin: sOrigin_item,
+						scerAgency: scerAgency_item,
+						sCarat: sCarat_item,
+						stockId: stockId_item,
+						sSupplierRef: sSupplierRef_item,
+						sPurchase:sPurchase_item,
+					},
+					headers: {'Content-Type': 'application/json'}
+				})
+					.success(function (resp) {
+
+						//alert(resp);
+						//further code will refresh the current database data on page
+						alert("Done Successfully...");
+						//window.location='./main.html';
+						//alert("success");
+					})
+
+				$http.delete("http://localhost:55453/api/perItemDetails/"+items_id2)
+					.success(function(res){
+
+						alert("deleted");
+					})
+			})
 	}
+
 
 	$scope.approveStone=function()
 	{
 		var stone_id=this.stone_id;
 
 		console.log("approve");
-		$http.get("http://localhost:3772/api/itemDetails/"+stone_id)
+		$http.get("http://localhost:55453/api/itemDetails/"+stone_id)
 			.success(function(res){
 				$scope.getStonesData=res;
 				var getStonesData=$scope.getStonesData;
@@ -203,7 +280,7 @@ $scope.approve_req=function()
 
 				var request = $http({
 					method: "post",
-					url: "http://localhost:3772/api/perItemDetails",
+					url: "http://localhost:55453/api/perItemDetails",
 					crossDomain: true,
 					data: {
 						userNames:  userNamess_st,
@@ -235,7 +312,7 @@ $scope.approve_req=function()
 						//alert("success");
 					})
 
-				$http.delete("http://localhost:3772/api/itemDetails/"+stone_id)
+				$http.delete("http://localhost:55453/api/itemDetails/"+stone_id)
 					.success(function(res){
 
 						alert("deleted");
@@ -247,7 +324,7 @@ $scope.approve_req=function()
 	$scope.updateItems=function()
 	{
 		var edit_i=this.edit_i;
-		$http.get('http://localhost:3772/api/perItemDetails/' + edit_i)
+		$http.get('http://localhost:55453/api/perItemDetails/' + edit_i)
 			.success(function (res) {
 				console.log(res);
 				$scope.getupExpenss = res;
@@ -285,7 +362,7 @@ $scope.approve_req=function()
 
 		$http({
 			method: 'put',
-			url: "http://localhost:3772/api/perItemDetails/" + updateid,
+			url: "http://localhost:55453/api/perItemDetails/" + updateid,
 			data: obj,
 			headers: {
 				'Content-Type': 'application/json'
@@ -299,26 +376,41 @@ $scope.approve_req=function()
 		});
 	}
 
-	$http.get("http://localhost:3772/api/insertAgents")
+	$http.get("http://localhost:55453/api/insertAgents")
 		.success(function(res){
 			$scope.getInsertAgents=res;
 			var getInsertAgents=$scope.getInsertAgents;
-
+			var totag=res.length;
+			$scope.totag=totag;
 		})
-	$http.get("http://localhost:3772/api/userRegisters")
+
+	$http.get("http://localhost:55453/api/userRegisters")
 		.success(function(res){
 			$scope.getUserRegisters=res;
-
+			var us=res.length;
+			$scope.us=us;
 		})
-	$http.get("http://localhost:3772/api/itemDetails")
+
+	$http.get("http://localhost:55453/api/soldItemDetails")
+		.success(function(res){
+			$scope.getSoldItems=res;
+		})
+
+	$http.get("http://localhost:55453/api/itemDetails")
 		.success(function(res){
 			$scope.getItemDetails=res;
-
-
+			var x=res.length;
+			$scope.x=x;
 		})
 
+	$http.get("http://localhost:55453/api/perItemDetails")
+		.success(function(res){
+			$scope.getPerItemDetails=res;
+			var totalItems=res.length;
+			$scope.totalItems=totalItems;
+		})
 
-	$http.get("http://localhost:3772/api/perItemDetails")
+	$http.get("http://localhost:55453/api/perItemDetails")
 		.success(function(res){
 			$scope.getEditItems=res;
 
@@ -327,7 +419,7 @@ $scope.approve_req=function()
 	$scope.showDetails=function(){
 	var id=this.st_id;
 
-		$http.get("http://localhost:3772/api/itemDetails/"+id)
+		$http.get("http://localhost:55453/api/itemDetails/"+id)
 			.success(function(res){
 				$scope.getItemDetailsByStone=res;
 				var test=$scope.getItemDetailsByStone;
@@ -354,14 +446,38 @@ $scope.approve_req=function()
 			})
 	};
 
+	$scope.cancelAndNew=function()
+	{
+		//document.getElementById('signup1').reset();
+		document.getElementById("sname").value = "";
+		document.getElementById("uname").value = "";
+		document.getElementById("ptype").value = "";
+		document.getElementById("b2bprice").value = "";
+		document.getElementById("perb2bprice").value = "";
+		document.getElementById("vipprice").value = "";
+		document.getElementById("retailprice").value = "";
+		$scope.upbtn=false;
+	}
+
 	$scope.declineStone=function()
 	{
 		var reject_id=this.reject_id;
-		$http.delete("http://localhost:3772/api/itemDetails/" + reject_id)
+		$http.delete("http://localhost:55453/api/itemDetails/" + reject_id)
 			.success(function (res) {
 				console.log("deleted");
 			})
 	}
+
+	$scope.decline_view=function()
+	{
+		var id_view=this.id_view;
+		$http.delete("http://localhost:55453/api/insertAgents/" + id_view)
+			.success(function (res) {
+				console.log("deleted");
+			})
+	}
+
+
 
 	$scope.increment=function(){
 		var count=1;
