@@ -7,9 +7,7 @@
         <div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
         <div class="companyname2">Gemstone</div>
         <div class="logoutbar">
-            <div class="logoutbar_img1"><a href="#"><img src="images/profileicon.png" /></a></div>
-            <div class="logoutbar_img1"><a href="#"><img src="images/emailicon.png" /></a></div>
-            <div class="logoutbar_img1"><a href="#"><img src="images/notificationicon.png" /></a></div>
+            <div class="logoutbar_img2"><a href="#"><img src="images/profileicon.png" /></a></div>
             <div class="logoutbar_img2"><a href="#" ng-click="logout()"><img src="images/logouticon.png" /></a></div>
             <div class="clear"></div>
         </div>
@@ -45,13 +43,14 @@
             </ul> -->
             <div id='cssmenu'>
                 <ul>
-
+                    <li class='last'><a ui-sref='home'><span>Home</span></a></li>
                     <li class='last'><a ui-sref='viewrequest'><span>Agent Request</span></a></li>
                     <li class="last"><a ui-sref='stonerequest'><span>Stone Request</span></a></li>
                     <li class='last'><a ui-sref="adminState"><span>Add Agent</span></a></li>
-                    <li class='last'><a ui-sref="viewagents"><span>View Agent</span></a></li>
-                    <li class='last'><a ui-sref="viewitem"><span>View Items</span></a></li>
-                    <li class='last'><a ui-sref="viewinv"><span>View Inventory</span></a></li>
+                    <li class='last'><a ui-sref="viewagents" ui-sref-opts="{reload: true}"><span>View Agent</span></a></li>
+                    <li class='last'><a ui-sref="viewitem"><span>View/Edit Items</span></a></li>
+                    <li class='last'><a ui-sref="viewinv"><span>Available Items</span></a></li>
+                    <li class='last'><a ui-sref="solditems"><span>Sold Items</span></a></li>
                 </ul>
             </div>
 
