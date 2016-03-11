@@ -415,6 +415,12 @@ $scope.approve_req=function()
 			$scope.totalItems=totalItems;
 		})
 
+	$http.get("http://localhost:55453/api/perUserRegisters")
+		.success(function(res){
+			$scope.getPerUserDetails=res;
+
+		})
+
 	$http.get("http://localhost:55453/api/perItemDetails")
 		.success(function(res){
 			$scope.getEditItems=res;
@@ -470,13 +476,14 @@ $scope.approve_req=function()
 		$http.delete("http://localhost:55453/api/itemDetails/" + reject_id)
 			.success(function (res) {
 				console.log("deleted");
+				alert("Deleted");
 			})
 	}
 
 	$scope.decline_view=function()
 	{
 		var id_view=this.id_view;
-		$http.delete("http://localhost:55453/api/insertAgents/" + id_view)
+		$http.delete("http://localhost:55453/api/perUserRegisters/" + id_view)
 			.success(function (res) {
 				console.log("deleted");
 			})

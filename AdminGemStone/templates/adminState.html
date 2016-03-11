@@ -9,24 +9,30 @@
                     <tr>
                         <td style="padding: 10px">First Name </td>
                         <td style="padding: 10px">:</td>
-                        <td><input type="text" ng-model="firstName"></td>
+                        <td><input type="text" ng-model="firstName" name="firstName"required><span ng-show="myForm.firstName.$error.required" class="error">  *Required</span></td>
+
+
                     </tr>
                     <tr>
                         <td style="padding: 10px">Last Name </td>
                         <td style="padding: 10px">:</td>
-                        <td><input type="text" ng-model="lastName"></td>
+                        <td><input type="text" ng-model="lastName"name="lastName" required><span ng-show="myForm.lastName.$error.required" class="error">  *Required</span></td>
+                        </td>
                     </tr>
                     <tr>
                         <td style="padding: 10px">User Name </td>
                         <td style="padding: 10px">:</td>
-                        <td><input type="text" ng-model="ad_userName"></td>
+                        <td><input type="text" ng-model="ad_userName" name="ad_userName"required><span ng-show="myForm.ad_userName.$error.required" class="error">  *Required</span></td>
+                        </td>
                     </tr>
                     <tr>
                         <td style="padding: 10px">Agent Role </td>
                         <td style="padding: 10px">:</td>
                         <td>
-                            <select value="Purchaser" ng-model="roles" id="roles" name="roles" style="width: 174px">
-                                <option value="" disabled selected>--------Select One--------</option>
+                            <select value="Purchaser" ng-model="roles" id="roles" name="roles" style="width: 174px" required>
+
+
+                        <option value="" disabled selected>--------Select One--------</option><span ng-show="myForm.firstName.$error.required" class="error">  *Required</span>
                                 <option value="Purchaser">Purchaser</option>
                                 <option value="Salesman">Salesman</option>
                             </select>
@@ -35,21 +41,27 @@
                     <tr>
                         <td style="padding: 10px">Origin </td>
                         <td style="padding: 10px">:</td>
-                        <td><input type="text" ng-model="locationName"></td>
+                        <td><input type="text" ng-model="locationName" name="locationName" required><span ng-show="myForm.locationName.$error.required" class="error">  *Required</span></td>
+                        </td>
                     </tr>
                     <tr>
                         <td style="padding: 10px">Email Id </td>
                         <td style="padding: 10px">:</td>
-                        <td><input type="text" ng-model="emailId"></td>
+                        <td><input type="email" ng-model="emailId" name="emailId" required> <span class="error" ng-show="myForm.emailId.$dirty && myForm.emailId.$invalid ||myForm.emailId.$pristine && myForm.emailId.$invalid">
+                        <span ng-show="myForm.emailId.$error.required">  *Required.</span>
+                        <span ng-show="myForm.emailId.$error.email">Invalid email address.</span>
+                        </span>
+                        </td>
                     </tr>
                     <tr>
                         <td style="padding: 10px">Contact </td>
                         <td style="padding: 10px">:</td>
-                        <td><input type="number" ng-model="contactNames"></td>
+                        <td><input type="number" ng-model="contactNames" name="contactNames" required><span ng-show="myForm.contactNames.$error.required" class="error">  *Required</span></td>
+                        </td>
                     </tr>
                 </table>
                 <div class="text-center">
-                    <div class="btn-group btn-group-lg" >  <button type="button" class="btn btn-primary" ng-click="enterAgents()" style= "background-color: black; color: white">Submit</button></div>
+                    <div class="btn-group btn-group-lg" >  <button type="button" class="btn btn-primary" ng-click="enterAgents()" ng-disabled="myForm.firstName.$error.required||myForm.lastName.$error.required||myForm.contactNames.$error.required||myForm.ad_userName.$error.required||myForm.emailId.$error.required||myForm.roles.$error.required" style= "background-color: black; color: white">Submit</button></div>
                 </div>
             </form>
         </div>
