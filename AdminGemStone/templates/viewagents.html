@@ -30,17 +30,19 @@
                 <th>Agent's First Name</th>
                 <th>Agent's Last Name</th>
                 <th>Username</th>
+                <th>Agent Role</th>
                 <th>Email Id</th>
                 <th>Contact Number</th>
                 <th>Delete</th>
             </tr>
-            <tr ng-repeat="data in getInsertAgents ">
+            <tr ng-repeat="data in getPerUserDetails ">
                 <td>{{$index+1}}</td>
                 <td>{{data.firstName}}</td>
                 <td>{{data.lastName}}</td>
                 <td>{{data.userName}}</td>
+                <td>{{data.agentRole}}</td>
                 <td>{{data.emailId}}</td>
-                <td>{{data.contact}}</td>
+                <td>{{data.contactAgent}}</td>
                 <td><button ng-click="decline_view(id_view=data.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
 
             </tr>

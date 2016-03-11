@@ -10,12 +10,14 @@ function($http,$state,$scope, $rootScope, $modal, Auth, AUTH_EVENTS, USER_ROLES)
 $scope.enterAgents=function() {
 	var firstname = this.firstName;
 	var lastname = this.lastName;
-	var username = this.userName;
+	var username = this.ad_userName;
 	var location = this.locationName;
 	var emailid = this.emailId;
 	var contact = this.contactNames;
-
-	$http.get("http://localhost:55453/api/insertAgents?username=" + username)
+	var ag_roles=this.roles;
+	var addedby='Admin';
+	var pass_gent='abcd1234';
+	$http.get("http://localhost:55453/api/perUserRegisters?username=" + username)
 		.then(function onFulfilled(response) {
 			$scope.getUsernames = response.data;
 			var getUsername = $scope.getUsernames;
@@ -28,15 +30,18 @@ $scope.enterAgents=function() {
 		}).catch(function onRejected(response) {
 		var request = $http({
 			method: "post",
-			url: "http://localhost:55453/api/insertAgents",
+			url: "http://localhost:55453/api/perUserRegisters",
 			crossDomain: true,
 			data: {
 				firstName: firstname,
 				lastName: lastname,
 				userName: username,
-				locationName: location,
+				agentRole: ag_roles,
 				emailId: emailid,
-				contact: contact
+				contactAgent: contact,
+				addedBy : addedby,
+				passWord:pass_gent,
+				originAgent :location
 			},
 			headers: {'Content-Type': 'application/json'}
 		})
@@ -410,6 +415,12 @@ $scope.approve_req=function()
 			$scope.totalItems=totalItems;
 		})
 
+	$http.get("http://localhost:55453/api/perUserRegisters")
+		.success(function(res){
+			$scope.getPerUserDetails=res;
+
+		})
+
 	$http.get("http://localhost:55453/api/perItemDetails")
 		.success(function(res){
 			$scope.getEditItems=res;
@@ -465,13 +476,14 @@ $scope.approve_req=function()
 		$http.delete("http://localhost:55453/api/itemDetails/" + reject_id)
 			.success(function (res) {
 				console.log("deleted");
+				alert("Deleted");
 			})
 	}
 
 	$scope.decline_view=function()
 	{
 		var id_view=this.id_view;
-		$http.delete("http://localhost:55453/api/insertAgents/" + id_view)
+		$http.delete("http://localhost:55453/api/perUserRegisters/" + id_view)
 			.success(function (res) {
 				console.log("deleted");
 			})

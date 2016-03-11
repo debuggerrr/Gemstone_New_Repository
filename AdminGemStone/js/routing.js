@@ -2,7 +2,7 @@ angular.module('loginApp').config(['$stateProvider', '$urlRouterProvider', 'USER
 function($stateProvider, $urlRouterProvider, USER_ROLES) {
 
   // For any unmatched url, redirect to /
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/");
   
   // Now set up the states
   $stateProvider
