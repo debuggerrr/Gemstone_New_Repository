@@ -209,7 +209,7 @@ example.controller("ExampleController", function($scope,$rootScope, $http, $cord
   $scope.login = function (credentials) {
    var user=this.text1;
     var pass=this.text2;
-    $http.get("http://localhost:17681/api/userRegisters?username="+user+"&password="+pass)
+    $http.get("http://localhost:55453/api/userRegisters?userName="+user+"&passWord="+pass)
       .then(function onFulfilled(response) {
         console.log(response.data);
         $scope.getResult = response.data;
@@ -235,7 +235,7 @@ example.controller("ExampleController", function($scope,$rootScope, $http, $cord
       });
       });
      }
-$http.get("http://localhost:17681/api/userRegisters")
+$http.get("http://localhost:55453/api/userRegisters")
   .success(function(result){
     $scope.getChangedPassword=result;
   });
@@ -249,7 +249,7 @@ $http.get("http://localhost:17681/api/userRegisters")
       passWord: $scope.confirm_pass
   });
 
-    $http.put("http://localhost:17681/api/userRegisters/"+global_id,data)
+    $http.put("http://localhost:55453/api/userRegisters/"+global_id,data)
       .success(function(res){
         alert("Done");
         console.log(username);
@@ -268,7 +268,7 @@ $http.get("http://localhost:17681/api/userRegisters")
     var pass='abcd1234';
    // alert(contact);
     //alert(userName_Name);
-    $http.get("http://localhost:17681/api/userRegisters?username_name="+userName_Name)
+    $http.get("http://localhost:55453/api/userRegisters?username_name="+userName_Name)
       .then(function onFulfilled(response){
         $scope.getUsernames=response.data;
         var getUsername=$scope.getUsernames;
@@ -283,7 +283,7 @@ $http.get("http://localhost:17681/api/userRegisters")
       }).catch(function onRejected(response) {
       var request = $http({
         method: "post",
-        url: "http://localhost:17681/api/userRegisters",
+        url: "http://localhost:55453/api/userRegisters",
         crossDomain: true,
         data: {
           firstName: firstName,
@@ -300,7 +300,7 @@ $http.get("http://localhost:17681/api/userRegisters")
 
           //alert(resp);
           //further code will refresh the current database data on page
-          $http.get('http://localhost:17681/api/userRegisters')
+          $http.get('http://localhost:55453/api/userRegisters')
             .success(function (res) {
               var alertPopup = $ionicPopup.alert({
                 title: 'Registered Successfully ! !',
@@ -321,7 +321,7 @@ $http.get("http://localhost:17681/api/userRegisters")
 
   }
 
-  $http.get("http://localhost:17681/api/itemDetails?userone="+username)
+  $http.get("http://localhost:55453/api/itemDetails?userone="+username)
     .success(function(res){
       $scope.getItemDetails=res;
       var getItemDetails=$scope.getItemDetails;
@@ -420,7 +420,7 @@ $http.get("http://localhost:17681/api/userRegisters")
       alert(color);
     var request = $http({
       method: "post",
-      url: "http://localhost:17681/api/itemDetails",
+      url: "http://localhost:55453/api/itemDetails",
       crossDomain: true,
       data: {
         userNames : username,
@@ -446,7 +446,7 @@ $http.get("http://localhost:17681/api/userRegisters")
 
         //alert(resp);
         //further code will refresh the current database data on page
-        $http.get('http://localhost:17681/api/itemDetails')
+        $http.get('http://localhost:55453/api/itemDetails')
           .success(function (res) {
             var alertPopup = $ionicPopup.alert({
               title: 'Thank you !!',

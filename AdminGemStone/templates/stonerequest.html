@@ -44,10 +44,10 @@
                 <td>{{stone.userNames}}</td>
                 <td>{{stone.sName}}</td>
 
-                <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="showDetails(st_id=stone.id)">Show Details</button></td>
-                <td><button type="button" class="btn btn-info btn-lg" ng-click="approveStone(stone_id=stone.id)">&#10004;</button></td>
-                <td><button type="button" class="btn btn-info btn-lg" ng-click="declineStone(reject_id=stone.id)" >&#10006;</button></td>
+                <td><button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal" ng-click="showDetails(st_id=stone.id)">Show Details</button></td>
+                <td><button type="button" class="btn btn-info btn" ng-click="approveStone(stone_id=stone.id)">&#10004;</button></td>
 
+                <td><button ng-click="declineStone(reject_id=stone.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
             </tr>
         </table>
 
@@ -129,7 +129,7 @@
                         </table>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
