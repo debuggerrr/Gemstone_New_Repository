@@ -5,7 +5,7 @@ controller('ParentController', ['$http','$state','$scope', '$rootScope', '$modal
 function($http,$state,$scope, $rootScope, $modal, Auth, AUTH_EVENTS, USER_ROLES){
 	// this is the parent controller for all controllers.
 	// Manages auth login functions and each controller
-	// inherits from this controller	
+	// inherits from this controller
 
 $scope.enterAgents=function() {
 	var firstname = this.firstName;
@@ -51,7 +51,12 @@ $scope.enterAgents=function() {
 				//further code will refresh the current database data on page
 				alert("Registered Successfully...");
 				//window.location='./main.html';
-				//alert("success");
+				$http.get("http://localhost:55453/api/perUserRegisters")
+					.success(function(res){
+						$scope.getPerUserDetails=res;
+						var totag=res.length;
+						$scope.totag=totag;
+					});	//alert("success");
 			})
 		alert("second line");
 		/*this.firstName = "";
@@ -61,6 +66,7 @@ $scope.enterAgents=function() {
 		 this.locationName = "";
 		 this.emailId = "";
 		 this.contactName = "";*/
+
 	})
 }
 
@@ -69,14 +75,13 @@ $scope.approve_req=function()
 	var agentseller="Seller";
 	console.log("approve");
 	var agents_id=this.agents_id;
-	$http.get("http://localhost:3772/api/userRegisters/"+agents_id)
+	$http.get("http://localhost:55453/api/userRegisters/"+agents_id)
 		.success(function(res){
 			$scope.getAgentsData=res;
 			var getAgents=$scope.getAgentsData;
 			var userName_ag=getAgents.userName;
 			var firstName_ag=getAgents.firstName;
 			var lastname_ag=getAgents.lastName;
-			var location_ag=getAgents.locationName;
 			var city_ag=getAgents.origin;
 			var emailid_ag=getAgents.emailId;
 			var contact_ag=getAgents.contact;
@@ -93,8 +98,8 @@ $scope.approve_req=function()
 					addedBy: addedby ,
 					agentRole:agentseller,
 					emailId: emailid_ag,
-					contact: contact_ag,
-					origin: city_ag,
+					contactAgent: contact_ag,
+					originAgent: city_ag,
 					passWord:password_ag
 				},
 				headers: {'Content-Type': 'application/json'}
@@ -103,18 +108,28 @@ $scope.approve_req=function()
 
 					//alert(resp);
 					//further code will refresh the current database data on page
-					alert("Seller Done Successfully...");
+					alert("The Agent has been Approved as Seller!!");
 					//window.location='./main.html';
 					//alert("success");
 				})
 
 			$http.delete("http://localhost:55453/api/userRegisters/"+agents_id)
 				.success(function(res){
+					$http.get("http://localhost:55453/api/userRegisters")
+						.success(function(res){
+							$scope.getUserRegisters=res;
+							var us=res.length;
+							$scope.us=us;
+						})	;
+					$http.get("http://localhost:55453/api/perUserRegisters")
+						.success(function(res){
+							$scope.getPerUserDetails=res;
+							var totag=res.length;
+							$scope.totag=totag;
+						});
 
-					alert("deleted");
 				})
 		})
-	$location.path('templates/viewrequest.html');
 }
 
 	$scope.approve_req_pur=function()
@@ -147,8 +162,8 @@ $scope.approve_req=function()
 						addedBy: addedbyp,
 						emailId: emailid_ag,
 						agentRole: agentrole,
-						contact: contact_ag,
-						origin: city_ag,
+						contactAgent: contact_ag,
+						originAgent: city_ag,
 						passWord:password_ag
 					},
 					headers: {'Content-Type': 'application/json'}
@@ -157,15 +172,25 @@ $scope.approve_req=function()
 
 						//alert(resp);
 						//further code will refresh the current database data on page
-						alert("Purchaser Done Successfully...");
+						alert("The Agent has been Approved as Purchaser");
 						//window.location='./main.html';
 						//alert("success");
 					})
 
 				$http.delete("http://localhost:55453/api/userRegisters/"+agents_id)
 					.success(function(res){
-
-						alert("deleted");
+						$http.get("http://localhost:55453/api/perUserRegisters")
+							.success(function(res){
+								$scope.getPerUserDetails=res;
+								var totag=res.length;
+								$scope.totag=totag;
+							});
+						$http.get("http://localhost:55453/api/userRegisters")
+							.success(function(res){
+								$scope.getUserRegisters=res;
+								var us=res.length;
+								$scope.us=us;
+							})	;
 					})
 			})
 		}
@@ -175,9 +200,30 @@ $scope.approve_req=function()
 		var decline_id=this.id_dec;
 		$http.delete("http://localhost:55453/api/userRegisters/"+decline_id)
 			.success(function(res){
-				alert("deleted");
+				alert("The Agent has been Declined!!");
+				$http.get("http://localhost:55453/api/userRegisters")
+					.success(function(res){
+						$scope.getUserRegisters=res;
+						var us=res.length;
+						$scope.us=us;
+					})	;
 			})
 
+	};
+
+	$scope.deletetax=function()
+	{
+		var del_id=this.del_id;
+		$http.delete("http://localhost:55453/api/perItemDetails/"+del_id)
+			.success(function(res){
+				//alert("deleted");
+
+				$http.get("http://localhost:55453/api/perItemDetails")
+					.success(function(res){
+						$scope.getPerItemDetails=res;
+						//alert("Item Deleted Successfully!!");
+					})
+			});
 	};
 
 	$scope.delsolditem=function()
@@ -185,9 +231,15 @@ $scope.approve_req=function()
 		var sold_id=this.sold_id;
 		$http.delete("http://localhost:55453/api/soldItemDetails/"+sold_id)
 			.success(function(res){
-				alert("deleted");
-			})
-			};
+				//alert("deleted");
+
+				$http.get("http://localhost:55453/api/soldItemDetails")
+					.success(function(res){
+						$scope.getSoldItems=res;
+						alert('Item Deleted Successfully');
+					});
+			});
+	};
 
 	$scope.markSold=function()
 	{
@@ -239,18 +291,25 @@ $scope.approve_req=function()
 					headers: {'Content-Type': 'application/json'}
 				})
 					.success(function (resp) {
-
 						//alert(resp);
 						//further code will refresh the current database data on page
-						alert("Done Successfully...");
+						//alert("Done Successfully...");
 						//window.location='./main.html';
 						//alert("success");
 					})
 
 				$http.delete("http://localhost:55453/api/perItemDetails/"+items_id2)
 					.success(function(res){
-
-						alert("deleted");
+						//alert("deleted");
+						$http.get("http://localhost:55453/api/perItemDetails")
+							.success(function(res){
+								$scope.getPerItemDetails=res;
+								alert("Item added to Sold Items");
+							});
+						$http.get("http://localhost:55453/api/soldItemDetails")
+							.success(function(res){
+								$scope.getSoldItems=res;
+							});
 					})
 			})
 	}
@@ -312,15 +371,25 @@ $scope.approve_req=function()
 
 						//alert(resp);
 						//further code will refresh the current database data on page
-						alert("Done Successfully...");
+
 						//window.location='./main.html';
 						//alert("success");
 					})
 
 				$http.delete("http://localhost:55453/api/itemDetails/"+stone_id)
 					.success(function(res){
+						alert("The Stone has been Approved!!");
+						$http.get("http://localhost:55453/api/itemDetails")
+							.success(function(res){
+								$scope.getItemDetails=res;
+								var x=res.length;
+								$scope.x=x;
+							})
 
-						alert("deleted");
+						$http.get("http://localhost:55453/api/perItemDetails")
+							.success(function(res){
+								$scope.getPerItemDetails=res;
+							})
 					})
 			})
 
@@ -354,40 +423,33 @@ $scope.approve_req=function()
 		var sname=this.sname;
 		var ptype=this.ptype;
 		var useragent=this.userAgent;
-		var obj = {
+		var request = $http({
+		    method: "put",
+		    url: "http://localhost:55453/api/perItemDetails/" + updateid,
+		    crossDomain: true,
+		    data: {
+		        bbPrice: bb2price,
+		        maxbbPrice: maxbbPrice,
+		        vipPrice: vipPrice,
+		        retailPrice: retailPrice,
+		        userNames: useragent,
+		        pType: ptype,
+		        sName: sname
+		    },
+		    headers: { 'Content-Type': 'application/json' }
+		})
+					.success(function (resp) {
 
-			bbPrice: bb2price,
-			maxbbPrice: maxbbPrice,
-			vipPrice: vipPrice,
-			retailPrice:retailPrice,
-			userNames:useragent,
-			pType:ptype,
-			sName:sname
-		};
+					    //alert(resp);
+					    //further code will refresh the current database data on page
 
-		$http({
-			method: 'put',
-			url: "http://localhost:55453/api/perItemDetails/" + updateid,
-			data: obj,
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		}).
-		success(function (data, status, headers, config) {
-			alert("updated succesfully");
-		}).
-		error(function (data, status, headers, config) {
-			console.log('Error: ' + status);
-		});
+					    //window.location='./main.html';
+					alert("success");
+					})
+
+
 	}
 
-	$http.get("http://localhost:55453/api/insertAgents")
-		.success(function(res){
-			$scope.getInsertAgents=res;
-			var getInsertAgents=$scope.getInsertAgents;
-			var totag=res.length;
-			$scope.totag=totag;
-		})
 
 	$http.get("http://localhost:55453/api/userRegisters")
 		.success(function(res){
@@ -418,17 +480,15 @@ $scope.approve_req=function()
 	$http.get("http://localhost:55453/api/perUserRegisters")
 		.success(function(res){
 			$scope.getPerUserDetails=res;
+			var totag=res.length;
+			$scope.totag=totag;
 
 		})
 
-	$http.get("http://localhost:55453/api/perItemDetails")
-		.success(function(res){
-			$scope.getEditItems=res;
-
-		})
 
 	$scope.showDetails=function(){
 	var id=this.st_id;
+
 
 		$http.get("http://localhost:55453/api/itemDetails/"+id)
 			.success(function(res){
@@ -476,7 +536,13 @@ $scope.approve_req=function()
 		$http.delete("http://localhost:55453/api/itemDetails/" + reject_id)
 			.success(function (res) {
 				console.log("deleted");
-				alert("Deleted");
+				alert("The Stone has been Declined!!");
+				$http.get("http://localhost:55453/api/itemDetails")
+					.success(function(res){
+						$scope.getItemDetails=res;
+						var x=res.length;
+						$scope.x=x;
+					})
 			})
 	}
 
@@ -485,7 +551,14 @@ $scope.approve_req=function()
 		var id_view=this.id_view;
 		$http.delete("http://localhost:55453/api/perUserRegisters/" + id_view)
 			.success(function (res) {
-				console.log("deleted");
+				alert("Agent Deleted Successfully");
+				$http.get("http://localhost:55453/api/perUserRegisters")
+					.success(function(res){
+						$scope.getPerUserDetails=res;
+						var totag=res.length;
+						$scope.totag=totag;
+					})
+				//console.log("deleted");
 			})
 	}
 

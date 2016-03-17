@@ -8,7 +8,7 @@ function($http, $rootScope, $window, Session, AUTH_EVENTS) {
 	
 	//the login function
 	authService.login = function(user, success, error) {
-		$http.post('misc/users.json').success(function(data) {
+		$http.get('misc/users.json').success(function(data) {
 		
 		//this is my dummy technique, normally here the 
 		//user is returned with his data from the db
