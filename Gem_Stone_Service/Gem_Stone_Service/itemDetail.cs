@@ -32,5 +32,6 @@ namespace Gem_Stone_Service
         public string stockId { get; set; }
         public string sSupplierRef { get; set; }
         public string sPurchase { get; set; }
+        public string imageName { get; set; }
     }
 }

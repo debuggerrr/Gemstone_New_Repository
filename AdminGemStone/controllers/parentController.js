@@ -5,7 +5,7 @@ controller('ParentController', ['$http','$state','$scope', '$rootScope', '$modal
 function($http,$state,$scope, $rootScope, $modal, Auth, AUTH_EVENTS, USER_ROLES){
 	// this is the parent controller for all controllers.
 	// Manages auth login functions and each controller
-	// inherits from this controller	
+	// inherits from this controller
 
 $scope.enterAgents=function() {
 	var firstname = this.firstName;
@@ -423,39 +423,33 @@ $scope.approve_req=function()
 		var sname=this.sname;
 		var ptype=this.ptype;
 		var useragent=this.userAgent;
-		var obj = {
+		var request = $http({
+		    method: "put",
+		    url: "http://localhost:55453/api/perItemDetails/" + updateid,
+		    crossDomain: true,
+		    data: {
+		        bbPrice: bb2price,
+		        maxbbPrice: maxbbPrice,
+		        vipPrice: vipPrice,
+		        retailPrice: retailPrice,
+		        userNames: useragent,
+		        pType: ptype,
+		        sName: sname
+		    },
+		    headers: { 'Content-Type': 'application/json' }
+		})
+					.success(function (resp) {
 
-			bbPrice: bb2price,
-			maxbbPrice: maxbbPrice,
-			vipPrice: vipPrice,
-			retailPrice:retailPrice,
-			userNames:useragent,
-			pType:ptype,
-			sName:sname
-		};
+					    //alert(resp);
+					    //further code will refresh the current database data on page
 
-		$http({
-			method: 'put',
-			url: "http://localhost:55453/api/perItemDetails/" + updateid,
-			data: obj,
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		}).
-		success(function (data, status, headers, config) {
-			alert("updated succesfully");
-		}).
-		error(function (data, status, headers, config) {
-			console.log('Error: ' + status);
-		});
+					    //window.location='./main.html';
+					alert("success");
+					})
+
+
 	}
 
-	$http.get("http://localhost:55453/api/insertAgents")
-		.success(function(res){
-			$scope.getInsertAgents=res;
-			var getInsertAgents=$scope.getInsertAgents;
-
-		})
 
 	$http.get("http://localhost:55453/api/userRegisters")
 		.success(function(res){
@@ -494,6 +488,7 @@ $scope.approve_req=function()
 
 	$scope.showDetails=function(){
 	var id=this.st_id;
+
 
 		$http.get("http://localhost:55453/api/itemDetails/"+id)
 			.success(function(res){
@@ -560,7 +555,8 @@ $scope.approve_req=function()
 				$http.get("http://localhost:55453/api/perUserRegisters")
 					.success(function(res){
 						$scope.getPerUserDetails=res;
-
+						var totag=res.length;
+						$scope.totag=totag;
 					})
 				//console.log("deleted");
 			})

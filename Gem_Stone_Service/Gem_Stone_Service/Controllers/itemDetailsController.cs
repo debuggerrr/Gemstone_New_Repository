@@ -14,7 +14,7 @@ namespace Gem_Stone_Service.Controllers
 {
     public class itemDetailsController : ApiController
     {
-        private GEMSTONE_VER_LIVEEntities5 db = new GEMSTONE_VER_LIVEEntities5();
+        private GEMSTONE_VER_LIVEEntities7 db = new GEMSTONE_VER_LIVEEntities7();
 
         // GET: api/itemDetails
         public IQueryable<itemDetail> GetitemDetails()

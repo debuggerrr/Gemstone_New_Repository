@@ -236,7 +236,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\insertAgentsController.cs" />
     <Compile Include="Controllers\itemDetailsController.cs" />
     <Compile Include="Controllers\perItemDetailsController.cs" />
     <Compile Include="Controllers\perUserRegistersController.cs" />
@@ -246,41 +245,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="insertAgent.cs">
-      <DependentUpon>insertAgentsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="insertAgentsModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>insertAgentsModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="insertAgentsModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>insertAgentsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="insertAgentsModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>insertAgentsModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="itemDetail.cs">
-      <DependentUpon>itemDetailsModel.tt</DependentUpon>
+      <DependentUpon>itemDetailModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="itemDetailsModel.Context.cs">
+    <Compile Include="itemDetailModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>itemDetailsModel.Context.tt</DependentUpon>
+      <DependentUpon>itemDetailModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="itemDetailsModel.cs">
+    <Compile Include="itemDetailModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>itemDetailsModel.tt</DependentUpon>
+      <DependentUpon>itemDetailModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="itemDetailsModel.Designer.cs">
+    <Compile Include="itemDetailModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>itemDetailsModel.edmx</DependentUpon>
+      <DependentUpon>itemDetailModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -369,25 +350,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="insertAgentsModel.Context.tt">
+    <Content Include="itemDetailModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>insertAgentsModel.edmx</DependentUpon>
-      <LastGenOutput>insertAgentsModel.Context.cs</LastGenOutput>
+      <DependentUpon>itemDetailModel.edmx</DependentUpon>
+      <LastGenOutput>itemDetailModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="insertAgentsModel.tt">
+    <Content Include="itemDetailModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>insertAgentsModel.edmx</DependentUpon>
-      <LastGenOutput>insertAgentsModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="itemDetailsModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>itemDetailsModel.edmx</DependentUpon>
-      <LastGenOutput>itemDetailsModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="itemDetailsModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>itemDetailsModel.edmx</DependentUpon>
-      <LastGenOutput>itemDetailsModel.cs</LastGenOutput>
+      <DependentUpon>itemDetailModel.edmx</DependentUpon>
+      <LastGenOutput>itemDetailModel.cs</LastGenOutput>
     </Content>
     <Content Include="perItemDetailsModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -449,19 +420,12 @@
     <Content Include="perItemDetailsModel.edmx.diagram">
       <DependentUpon>perItemDetailsModel.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="itemDetailsModel.edmx">
+    <EntityDeploy Include="itemDetailModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>itemDetailsModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>itemDetailModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="itemDetailsModel.edmx.diagram">
-      <DependentUpon>itemDetailsModel.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="insertAgentsModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>insertAgentsModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="insertAgentsModel.edmx.diagram">
-      <DependentUpon>insertAgentsModel.edmx</DependentUpon>
+    <Content Include="itemDetailModel.edmx.diagram">
+      <DependentUpon>itemDetailModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

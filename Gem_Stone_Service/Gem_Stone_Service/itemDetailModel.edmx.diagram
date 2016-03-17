@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="aacfe2d020054e27886e0cb25ebf9660" Name="Diagram1">
-        <EntityTypeShape EntityType="GEMSTONE_VER_LIVEModel5.insertAgent" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="208e4c133e924b17b26a093fb6b36f4f" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="GEMSTONE_VER_LIVEModel4.itemDetail" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

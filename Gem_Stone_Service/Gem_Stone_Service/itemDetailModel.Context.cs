@@ -13,10 +13,10 @@ namespace Gem_Stone_Service
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GEMSTONE_VER_LIVEEntities5 : DbContext
+    public partial class GEMSTONE_VER_LIVEEntities7 : DbContext
     {
-        public GEMSTONE_VER_LIVEEntities5()
-            : base("name=GEMSTONE_VER_LIVEEntities5")
+        public GEMSTONE_VER_LIVEEntities7()
+            : base("name=GEMSTONE_VER_LIVEEntities7")
         {
         }
     

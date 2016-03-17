@@ -36,7 +36,7 @@
                 <th>Name Of Stone</th>
                 <th>Details</th>
                 <th>Approve</th>
-                <th>Delete</th>
+                <th>Decline</th>
             </tr>
             <tr ng-repeat="stone in getItemDetails">
 
@@ -46,8 +46,8 @@
 
                 <td><button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal" ng-click="showDetails(st_id=stone.id)">Show Details</button></td>
                 <td><button type="button" class="btn btn-info btn" ng-click="approveStone(stone_id=stone.id)">&#10004;</button></td>
+                <td><button ng-click="declineStone(reject_id=stone.id)" class="btn btn-danger">&#10006;</button></td>
 
-                <td><button ng-click="declineStone(reject_id=stone.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
             </tr>
         </table>
 
@@ -125,6 +125,13 @@
 
                                 <th style="padding: 10px">Procure Price :</th>
                                 <td>{{sPurchase}}</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Image</th>
+                                <td colspan="2">
+
+                                    <img src ="{{imageName}}" height="100" width="100" />
+                                </td>
                             </tr>
                         </table>
                     </div>

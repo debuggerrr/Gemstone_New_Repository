@@ -1,6 +1,7 @@
-angular.module('loginApp').config(['$stateProvider', '$urlRouterProvider', 'USER_ROLES',
-function($stateProvider, $urlRouterProvider, USER_ROLES) {
-
+angular.module('loginApp').config(['$stateProvider', '$urlRouterProvider','$compileProvider', 'USER_ROLES',
+function($stateProvider, $urlRouterProvider,$compileProvider, USER_ROLES) {
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
+    $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
   // For any unmatched url, redirect to /
   $urlRouterProvider.otherwise("/");
   
