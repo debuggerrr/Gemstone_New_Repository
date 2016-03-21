@@ -325,22 +325,22 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="userRegister.cs">
-      <DependentUpon>UserRegisterModel.tt</DependentUpon>
+      <DependentUpon>userRegistersModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserRegisterModel.Context.cs">
+    <Compile Include="userRegistersModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserRegisterModel.Context.tt</DependentUpon>
+      <DependentUpon>userRegistersModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserRegisterModel.cs">
+    <Compile Include="userRegistersModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserRegisterModel.tt</DependentUpon>
+      <DependentUpon>userRegistersModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserRegisterModel.Designer.cs">
+    <Compile Include="userRegistersModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserRegisterModel.edmx</DependentUpon>
+      <DependentUpon>userRegistersModel.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -448,15 +448,15 @@
       <DependentUpon>soldItemDetailsModel.edmx</DependentUpon>
       <LastGenOutput>soldItemDetailsModel.cs</LastGenOutput>
     </Content>
-    <Content Include="UserRegisterModel.Context.tt">
+    <Content Include="userRegistersModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserRegisterModel.edmx</DependentUpon>
-      <LastGenOutput>UserRegisterModel.Context.cs</LastGenOutput>
+      <DependentUpon>userRegistersModel.edmx</DependentUpon>
+      <LastGenOutput>userRegistersModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="UserRegisterModel.tt">
+    <Content Include="userRegistersModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserRegisterModel.edmx</DependentUpon>
-      <LastGenOutput>UserRegisterModel.cs</LastGenOutput>
+      <DependentUpon>userRegistersModel.edmx</DependentUpon>
+      <LastGenOutput>userRegistersModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -480,12 +480,12 @@
     <Content Include="soldItemDetailsModel.edmx.diagram">
       <DependentUpon>soldItemDetailsModel.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="UserRegisterModel.edmx">
+    <EntityDeploy Include="userRegistersModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserRegisterModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>userRegistersModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="UserRegisterModel.edmx.diagram">
-      <DependentUpon>UserRegisterModel.edmx</DependentUpon>
+    <Content Include="userRegistersModel.edmx.diagram">
+      <DependentUpon>userRegistersModel.edmx</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

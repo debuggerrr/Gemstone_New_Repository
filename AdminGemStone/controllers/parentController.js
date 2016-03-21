@@ -7,7 +7,9 @@ function($http,$state,$scope, $rootScope, $modal, Auth, AUTH_EVENTS, USER_ROLES)
 	// Manages auth login functions and each controller
 	// inherits from this controller
 
-$scope.enterAgents=function() {
+
+
+	$scope.enterAgents=function() {
 	var firstname = this.firstName;
 	var lastname = this.lastName;
 	var username = this.ad_userName;
@@ -402,7 +404,9 @@ $scope.approve_req=function()
 			.success(function (res) {
 				console.log(res);
 				$scope.getupExpenss = res;
-
+				var getuserforupdate = $scope.getupExpenss;
+				var user2 = getuserforupdate.userNames;
+				console.log(user2);
 				var pushTextExpenses = $scope.getupExpenss;
 				$scope.meraId=pushTextExpenses.id;
 				$scope.sname = pushTextExpenses.sName;
@@ -415,40 +419,117 @@ $scope.approve_req=function()
 
 	$scope.updateSave=function()
 	{
+	    
+		//alert("Update function");
 		var updateid=this.meraId;
-		var bb2price=this.bbprice;
-		var maxbbPrice=this.mpbbprice;
-		var vipPrice=this.vip_price;
-		var retailPrice=this.retailprice;
-		var sname=this.sname;
-		var ptype=this.ptype;
-		var useragent=this.userAgent;
-		var request = $http({
-		    method: "put",
-		    url: "http://localhost:55453/api/perItemDetails/" + updateid,
-		    crossDomain: true,
-		    data: {
-		        bbPrice: bb2price,
-		        maxbbPrice: maxbbPrice,
-		        vipPrice: vipPrice,
-		        retailPrice: retailPrice,
-		        userNames: useragent,
-		        pType: ptype,
-		        sName: sname
-		    },
-		    headers: { 'Content-Type': 'application/json' }
-		})
-					.success(function (resp) {
+		var bbprice1=this.bbprice;
+		var maxbbPrice1=this.mpbbprice;
+		var vipPrice1=this.vip_price;
+		var retailPrice1=this.retailprice;
+		var sname1=this.sname;
+		var ptype1=this.ptype;
+		var useragent = this.userAgent;		
+		var username_for_update ;
+		var presemi1 ;
+		var stonesize1 ;
+		var sweight1 ;
+		var spieces1 ;
+		var sdimensions1 ;
+		var sorigin1 ;
+		var color1 ;
+		var stoneshape1 ;
+		var sremark1 ;
+		var sceragency1 ;
+		var scarat1 ;
+		var stockid1 ;
+		var supplier1 ;
+		var spurchase1;
+		
+		//alert("retailPrice :"+retailPrice1);
+		console.log(updateid);
 
-					    //alert(resp);
-					    //further code will refresh the current database data on page
+	    $http.get("http://localhost:55453/api/perItemDetails/" + updateid)
+            .success(function (res) {
+                $scope.getItemss = res
 
-					    //window.location='./main.html';
-					alert("success");
-					})
+                var getItems = $scope.getItemss;
 
+                username_for_update = getItems.userNames;                
+                presemi1 = getItems.preSemi;
+                console.log(presemi1);
+                 ptype1 = getItems.pType;
+                 stonesize1 = getItems.stoneSize;
+                 sweight1 = getItems.sWeight;
+                 spieces1 = getItems.sPieces;
+                 sdimensions1 = getItems.sDimensions;
+                 sorigin1 = getItems.sOrigin;
+                 color1 = getItems.sColor;
+                 stoneshape1 = getItems.stoneShape;
+                 sremark1 = getItems.sRemark;
+                 sceragency1 = getItems.scerAgency;
+                 scarat1 = getItems.sCarat;
+                stockid1 = getItems.stockId;
+                 supplier1 = getItems.sSupplierRef;
+                 spurchase1 = getItems.sPurchase;
 
+                 $http.delete("http://localhost:55453/api/perItemDetails/" + updateid)
+         .success(function (res) {
+             //alert("Record Deleted");
+         })
+                 var request = $http({
+                     method: "post",
+                     url: "http://localhost:55453/api/perItemDetails",
+                     crossDomain: true,
+                     data: {
+                         userNames: useragent,
+                         preSemi: presemi1,
+                         pType: ptype1,
+                         sName: sname1,
+                         stoneSize: stonesize1,
+                         sWeight: sweight1,
+                         sPieces: spieces1,
+                         sDimensions: sdimensions1,
+                         sOrigin: sorigin1,
+                         sColor: color1,
+                         stoneShape: stoneshape1,
+                         sRemark: sremark1,
+                         scerAgency: sceragency1,
+                         sCarat: scarat1,
+                         stockId: stockid1,
+                         sSupplierRef: supplier1,
+                         sPurchase: spurchase1,
+                         bbPrice: bbprice1,
+                         maxbbPrice: maxbbPrice1,
+                         vipPrice: vipPrice1,
+                         retailPrice: retailPrice1
+                     },
+                     headers: { 'Content-Type': 'application/json' }
+                 })
+                   .success(function (resp) {
+
+                       //alert(resp);
+                       //further code will refresh the current database data on page
+                       alert("Record Updated");
+                       //window.location='./main.html';
+                       //alert("success");
+                       $http.get("http://localhost:55453/api/perItemDetails")
+             .success(function (res) {
+                 $scope.getPerItemDetails = res;
+                 var totalItems = res.length;
+                 $scope.totalItems = totalItems;
+
+                 $('#myModal1').modal('hide');
+             })
+                   })
+
+                 
+
+            })
+        
+	    
+              
 	}
+
 
 
 	$http.get("http://localhost:55453/api/userRegisters")
@@ -488,8 +569,6 @@ $scope.approve_req=function()
 
 	$scope.showDetails=function(){
 	var id=this.st_id;
-
-
 		$http.get("http://localhost:55453/api/itemDetails/"+id)
 			.success(function(res){
 				$scope.getItemDetailsByStone=res;
@@ -517,7 +596,37 @@ $scope.approve_req=function()
 			})
 	};
 
-	$scope.cancelAndNew=function()
+	$scope.showPerDetails=function(){
+		var id=this.viewst_id;
+		$http.get("http://localhost:55453/api/perItemDetails/"+id)
+			.success(function(res){
+				$scope.getItemDetailsByStone=res;
+				var test=$scope.getItemDetailsByStone;
+				$scope.id=test.id;
+				$scope.userNames= test.userNames;
+				$scope.preSemi=test.preSemi;
+				$scope.pType=test.pType;
+				$scope.sName=test.sName;
+				$scope.stoneSize=test.stoneSize;
+				$scope.sWeight=test.sWeight;
+				$scope.sPieces=test.sPieces;
+				$scope.sDimensions=test.sDimensions;
+				$scope.sColor=test.sColor;
+				$scope.stoneShape=test.stoneShape;
+				$scope.sOrigin=test.sOrigin;
+				$scope.sRemark=test.sRemark;
+				$scope.scerAgency=test.scerAgency;
+				$scope.sCarat=test.sCarat;
+				$scope.stockId=test.stockId;
+				$scope.sSupplierRef=test.sSupplierRef;
+				$scope.sPurchase=test.sPurchase;
+				$scope.imageName=test.imageName;
+
+			})
+	};
+
+
+	/*$scope.cancelAndNew=function()
 	{
 		//document.getElementById('signup1').reset();
 		document.getElementById("sname").value = "";
@@ -528,7 +637,7 @@ $scope.approve_req=function()
 		document.getElementById("vipprice").value = "";
 		document.getElementById("retailprice").value = "";
 		$scope.upbtn=false;
-	}
+	}*/
 
 	$scope.declineStone=function()
 	{
