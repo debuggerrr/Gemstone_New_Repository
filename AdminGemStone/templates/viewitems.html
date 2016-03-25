@@ -1,7 +1,151 @@
-
 <div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
-    <div class="contentarearight">
-        <style>
+
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Edit Item</h1>
+
+            <table id="t01" >
+
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name of Stone</th>
+                    <th>Agent Username</th>
+                    <th>Purchase Type</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tr ng-repeat="data in getPerItemDetails">
+                    <td>{{$index+1}}</td>
+                    <td>{{data.sName}}</td>
+                    <td>{{data.userNames}}</td>
+                    <td>{{data.pType}}</td>
+                    <td><button ng-click="updateItems(edit_i=data.id)" data-toggle="modal" data-target="#myModal1" class="btn btn-info"> <i class="glyphicon glyphicon-edit"></i> </button> </td>
+                    <td><button ng-click="deletetax(del_id=data.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
+
+                </tr>
+
+
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" align="center">Update Item</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="box box-primary">
+                    <div class="box box-solid">
+
+                        <form class="form-horizontal" id="signup1" name="signup1" role="form">
+                            <div class="box-body">
+
+                                <div class="form-group" style="display:none;">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">ID:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" ng-model="meraId" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">Stone Name:</label>
+                                    <div class="col-sm-8 date">
+                                        <div class="input-group input-append ">
+                                            <input id="sname" type="text" class="form-control"  ng-model="sname" required/>
+                                            <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">Agent Username:</label>
+                                    <div class="col-sm-8 date">
+                                        <div class="input-group input-append ">
+                                            <input id="uname" type="text" class="form-control"  ng-model="userAgent" required/>
+                                            <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">Purchase Type:</label>
+                                    <div class="col-sm-8 date">
+                                        <div class="input-group input-append ">
+                                            <input id="ptype" type="text" class="form-control"  ng-model="ptype" required/>
+                                            <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">B2B Price :</label>
+                                    <div class="col-sm-8 date">
+                                        <div class="input-group input-append ">
+                                            <input id="b2bprice" type="text" class="form-control"  ng-model="bbprice" required/>
+                                            <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">Markup % on B2B price :</label>
+                                    <div class="col-sm-8 date">
+                                        <div class="input-group input-append ">
+                                            <input id="perb2bprice" type="text" class="form-control"  ng-model="mpbbprice" required/>
+                                            <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">VIP Price:</label>
+                                    <div class="col-sm-8 date">
+                                        <div class="input-group input-append ">
+                                            <input id="vipprice" type="text" class="form-control"  ng-model="vip_price" required/>
+                                            <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-4 control-label">Retail Price:</label>
+                                    <div class="col-sm-8 date">
+                                        <div class="input-group input-append ">
+                                            <input id="retailprice" type="text" class="form-control"  ng-model="retailprice" required/>
+                                            <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!-- /.box-body -->
+
+                        </form>
+                        <div class="modal-footer">
+                            <button type="submit" ng-click="updateSave()" class="btn btn-info col-sm-5 pull-left" ng-show="upbtn">Update</button>
+                            <a class="btn btn-danger col-sm-5 pull-right" data-dismiss="modal">Cancel</a>
+
+                        </div>
+                    </div>
+                </div><!-- /. box -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<style>
 
                 table {
                 width:auto;
@@ -25,146 +169,5 @@
                     color: white;
                     }
                     </style>
-
-        <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: #000;color: white"  >View/Edit Items</div>
-            <div class="panel-body ">
-
-<div class="col-md-8" style="margin:10px 0px 10px 10px">
-    <table id="t01" >
-
-        <tr>
-            <th>Sr.No</th>
-            <th>Name of Stone</th>
-            <th>Agent Username</th>
-            <th>Purchase Type</th>
-            <th>Update</th>
-            <th>Delete</th>
-    </tr>
-        <tr ng-repeat="data in getPerItemDetails">
-            <td>{{$index+1}}</td>
-            <td>{{data.sName}}</td>
-            <td>{{data.userNames}}</td>
-            <td>{{data.pType}}</td>
-            <td><button ng-click="updateItems(edit_i=data.id)" data-toggle="modal" data-target="#myModal1" class="btn btn-info"> <i class="glyphicon glyphicon-edit"></i> </button> </td>
-            <td><button ng-click="deletetax(del_id=data.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
-
-        </tr>
-
-
-</table>
-</div>
-                </div>
-            </div>
-    </div>
-
-
-
-
-    <div class="modal fade" id="myModal1" role="dialog">
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" align="center">Update Item</h4>
-                </div>
-
-                <div class="modal-body">
-    <div class="box box-primary">
-        <div class="box box-solid">
-
-            <form class="form-horizontal" id="signup1" name="signup1" role="form">
-                <div class="box-body">
-
-                    <div class="form-group" style="display:none;">
-                        <label for="inputEmail3" class="col-sm-4 control-label">ID:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" ng-model="meraId" required>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-4 control-label">Stone Name:</label>
-                        <div class="col-sm-8 date">
-                            <div class="input-group input-append ">
-                                <input id="sname" type="text" class="form-control"  ng-model="sname" required/>
-                                <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-4 control-label">Agent Username:</label>
-                        <div class="col-sm-8 date">
-                            <div class="input-group input-append ">
-                                <input id="uname" type="text" class="form-control"  ng-model="userAgent" required/>
-                                <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-4 control-label">Purchase Type:</label>
-                        <div class="col-sm-8 date">
-                            <div class="input-group input-append ">
-                                <input id="ptype" type="text" class="form-control"  ng-model="ptype" required/>
-                                <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-4 control-label">B2B Price :</label>
-                        <div class="col-sm-8 date">
-                            <div class="input-group input-append ">
-                                <input id="b2bprice" type="text" class="form-control"  ng-model="bbprice" required/>
-                                <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-4 control-label">Markup % on B2B price :</label>
-                        <div class="col-sm-8 date">
-                            <div class="input-group input-append ">
-                                <input id="perb2bprice" type="text" class="form-control"  ng-model="mpbbprice" required/>
-                                <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-4 control-label">VIP Price:</label>
-                        <div class="col-sm-8 date">
-                            <div class="input-group input-append ">
-                                <input id="vipprice" type="text" class="form-control"  ng-model="vip_price" required/>
-                                <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-4 control-label">Retail Price:</label>
-                        <div class="col-sm-8 date">
-                            <div class="input-group input-append ">
-                                <input id="retailprice" type="text" class="form-control"  ng-model="retailprice" required/>
-                                <!-- <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span> -->
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- /.box-body -->
-
-            </form>
-            <div class="modal-footer">
-                <button type="submit" ng-click="updateSave()" class="btn btn-info col-sm-5 pull-left" ng-show="upbtn">Update</button>
-                <a ng-click="cancelAndNew()" class="btn btn-danger col-sm-5 pull-right" data-dismiss="modal">Cancel</a>
-
-            </div>
-        </div>
-    </div><!-- /. box -->
-</div>
-            </div>
-
-        </div>
-    </div>
 
 

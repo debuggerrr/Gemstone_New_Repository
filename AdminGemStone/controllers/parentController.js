@@ -7,7 +7,9 @@ function($http,$state,$scope, $rootScope, $modal, Auth, AUTH_EVENTS, USER_ROLES)
 	// Manages auth login functions and each controller
 	// inherits from this controller
 
-$scope.enterAgents=function() {
+
+
+	$scope.enterAgents=function() {
 	var firstname = this.firstName;
 	var lastname = this.lastName;
 	var username = this.ad_userName;
@@ -17,7 +19,7 @@ $scope.enterAgents=function() {
 	var ag_roles=this.roles;
 	var addedby='Admin';
 	var pass_gent='abcd1234';
-	$http.get("http://localhost:55453/api/perUserRegisters?username=" + username)
+	$http.get("http://gemstonelive.azurewebsites.net/api/perUserRegisters?username=" + username)
 		.then(function onFulfilled(response) {
 			$scope.getUsernames = response.data;
 			var getUsername = $scope.getUsernames;
@@ -30,7 +32,7 @@ $scope.enterAgents=function() {
 		}).catch(function onRejected(response) {
 		var request = $http({
 			method: "post",
-			url: "http://localhost:55453/api/perUserRegisters",
+			url: "http://gemstonelive.azurewebsites.net/api/perUserRegisters",
 			crossDomain: true,
 			data: {
 				firstName: firstname,
@@ -47,11 +49,24 @@ $scope.enterAgents=function() {
 		})
 			.success(function (resp) {
 
-				//alert(resp);
+                $.ajax({
+                    type: "post",
+                    url: "",
+                    data: {userName: username, emailId:emailid },
+                    cache: false,
+                    success: function (data)
+                    {
+                        alert(data);
+                        //$('#getSubmit')[0].reset();
+                    }});
+
+
+
+        //alert(resp);
 				//further code will refresh the current database data on page
 				alert("Registered Successfully...");
 				//window.location='./main.html';
-				$http.get("http://localhost:55453/api/perUserRegisters")
+				$http.get("http://gemstonelive.azurewebsites.net/api/perUserRegisters")
 					.success(function(res){
 						$scope.getPerUserDetails=res;
 						var totag=res.length;
@@ -75,7 +90,7 @@ $scope.approve_req=function()
 	var agentseller="Seller";
 	console.log("approve");
 	var agents_id=this.agents_id;
-	$http.get("http://localhost:55453/api/userRegisters/"+agents_id)
+	$http.get("http://gemstonelive.azurewebsites.net/api/userRegisters/"+agents_id)
 		.success(function(res){
 			$scope.getAgentsData=res;
 			var getAgents=$scope.getAgentsData;
@@ -89,7 +104,7 @@ $scope.approve_req=function()
 			var addedby='Application';
 			var request = $http({
 				method: "post",
-				url: "http://localhost:55453/api/perUserRegisters",
+				url: "http://gemstonelive.azurewebsites.net/api/perUserRegisters",
 				crossDomain: true,
 				data: {
 					firstName: firstName_ag,
@@ -113,15 +128,15 @@ $scope.approve_req=function()
 					//alert("success");
 				})
 
-			$http.delete("http://localhost:55453/api/userRegisters/"+agents_id)
+			$http.delete("http://gemstonelive.azurewebsites.net/api/userRegisters/"+agents_id)
 				.success(function(res){
-					$http.get("http://localhost:55453/api/userRegisters")
+					$http.get("http://gemstonelive.azurewebsites.net/api/userRegisters")
 						.success(function(res){
 							$scope.getUserRegisters=res;
 							var us=res.length;
 							$scope.us=us;
 						})	;
-					$http.get("http://localhost:55453/api/perUserRegisters")
+					$http.get("http://gemstonelive.azurewebsites.net/api/perUserRegisters")
 						.success(function(res){
 							$scope.getPerUserDetails=res;
 							var totag=res.length;
@@ -137,7 +152,7 @@ $scope.approve_req=function()
 		var agentrole="Purchaser";
 		console.log("approve");
 		var agents_id=this.agents_id_purchaser;
-		$http.get("http://localhost:55453/api/userRegisters/"+agents_id)
+		$http.get("http://gemstonelive.azurewebsites.net/api/userRegisters/"+agents_id)
 			.success(function(res){
 				$scope.getAgentsData=res;
 				var getAgents=$scope.getAgentsData;
@@ -153,7 +168,7 @@ $scope.approve_req=function()
 
 				var request = $http({
 					method: "post",
-					url: "http://localhost:55453/api/perUserRegisters",
+					url: "http://gemstonelive.azurewebsites.net/api/perUserRegisters",
 					crossDomain: true,
 					data: {
 						firstName: firstName_ag,
@@ -177,15 +192,15 @@ $scope.approve_req=function()
 						//alert("success");
 					})
 
-				$http.delete("http://localhost:55453/api/userRegisters/"+agents_id)
+				$http.delete("http://gemstonelive.azurewebsites.net/api/userRegisters/"+agents_id)
 					.success(function(res){
-						$http.get("http://localhost:55453/api/perUserRegisters")
+						$http.get("http://gemstonelive.azurewebsites.net/api/perUserRegisters")
 							.success(function(res){
 								$scope.getPerUserDetails=res;
 								var totag=res.length;
 								$scope.totag=totag;
 							});
-						$http.get("http://localhost:55453/api/userRegisters")
+						$http.get("http://gemstonelive.azurewebsites.net/api/userRegisters")
 							.success(function(res){
 								$scope.getUserRegisters=res;
 								var us=res.length;
@@ -198,10 +213,10 @@ $scope.approve_req=function()
 	$scope.decline=function()
 	{
 		var decline_id=this.id_dec;
-		$http.delete("http://localhost:55453/api/userRegisters/"+decline_id)
+		$http.delete("http://gemstonelive.azurewebsites.net/api/userRegisters/"+decline_id)
 			.success(function(res){
 				alert("The Agent has been Declined!!");
-				$http.get("http://localhost:55453/api/userRegisters")
+				$http.get("http://gemstonelive.azurewebsites.net/api/userRegisters")
 					.success(function(res){
 						$scope.getUserRegisters=res;
 						var us=res.length;
@@ -214,11 +229,11 @@ $scope.approve_req=function()
 	$scope.deletetax=function()
 	{
 		var del_id=this.del_id;
-		$http.delete("http://localhost:55453/api/perItemDetails/"+del_id)
+		$http.delete("http://gemstonelive.azurewebsites.net/api/perItemDetails/"+del_id)
 			.success(function(res){
 				//alert("deleted");
 
-				$http.get("http://localhost:55453/api/perItemDetails")
+				$http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails")
 					.success(function(res){
 						$scope.getPerItemDetails=res;
 						//alert("Item Deleted Successfully!!");
@@ -229,11 +244,11 @@ $scope.approve_req=function()
 	$scope.delsolditem=function()
 	{
 		var sold_id=this.sold_id;
-		$http.delete("http://localhost:55453/api/soldItemDetails/"+sold_id)
+		$http.delete("http://gemstonelive.azurewebsites.net/api/soldItemDetails/"+sold_id)
 			.success(function(res){
 				//alert("deleted");
 
-				$http.get("http://localhost:55453/api/soldItemDetails")
+				$http.get("http://gemstonelive.azurewebsites.net/api/soldItemDetails")
 					.success(function(res){
 						$scope.getSoldItems=res;
 						alert('Item Deleted Successfully');
@@ -245,7 +260,7 @@ $scope.approve_req=function()
 	{
 		console.log("Mark Sold");
 		var items_id2=this.items_id;
-		$http.get("http://localhost:55453/api/perItemDetails/"+items_id2)
+		$http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails/"+items_id2)
 			.success(function(res){
 				$scope.getItemsData=res;
 				var getItems=$scope.getItemsData;
@@ -265,10 +280,14 @@ $scope.approve_req=function()
 				var stockId_item=getItems.stockId;
 				var sSupplierRef_item=getItems.sSupplierRef;
 				var sPurchase_item=getItems.sPurchase;
+                var bbPrice_item=getItems.bbPrice;
+                var maxbbPrice_item=getItems.maxbbPrice;
+                var vipPrice_item=getItems.vipPrice;
+                var retailPrice_item=getItems.retailPrice;
 
 				var request = $http({
 					method: "post",
-					url: "http://localhost:55453/api/soldItemDetails",
+					url: "http://gemstonelive.azurewebsites.net/api/soldItemDetails",
 					crossDomain: true,
 					data: {
 						userNames: userName_item,
@@ -287,6 +306,10 @@ $scope.approve_req=function()
 						stockId: stockId_item,
 						sSupplierRef: sSupplierRef_item,
 						sPurchase:sPurchase_item,
+                        bbPrice:bbPrice_item,
+                        maxbbPrice:maxbbPrice_item,
+                        vipPrice:vipPrice_item,
+                        retailPrice:retailPrice_item
 					},
 					headers: {'Content-Type': 'application/json'}
 				})
@@ -298,15 +321,15 @@ $scope.approve_req=function()
 						//alert("success");
 					})
 
-				$http.delete("http://localhost:55453/api/perItemDetails/"+items_id2)
+				$http.delete("http://gemstonelive.azurewebsites.net/api/perItemDetails/"+items_id2)
 					.success(function(res){
 						//alert("deleted");
-						$http.get("http://localhost:55453/api/perItemDetails")
+						$http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails")
 							.success(function(res){
 								$scope.getPerItemDetails=res;
 								alert("Item added to Sold Items");
 							});
-						$http.get("http://localhost:55453/api/soldItemDetails")
+						$http.get("http://gemstonelive.azurewebsites.net/api/soldItemDetails")
 							.success(function(res){
 								$scope.getSoldItems=res;
 							});
@@ -320,7 +343,7 @@ $scope.approve_req=function()
 		var stone_id=this.stone_id;
 
 		console.log("approve");
-		$http.get("http://localhost:55453/api/itemDetails/"+stone_id)
+		$http.get("http://gemstonelive.azurewebsites.net/api/itemDetails/"+stone_id)
 			.success(function(res){
 				$scope.getStonesData=res;
 				var getStonesData=$scope.getStonesData;
@@ -344,7 +367,7 @@ $scope.approve_req=function()
 
 				var request = $http({
 					method: "post",
-					url: "http://localhost:55453/api/perItemDetails",
+					url: "http://gemstonelive.azurewebsites.net/api/perItemDetails",
 					crossDomain: true,
 					data: {
 						userNames:  userNamess_st,
@@ -376,17 +399,17 @@ $scope.approve_req=function()
 						//alert("success");
 					})
 
-				$http.delete("http://localhost:55453/api/itemDetails/"+stone_id)
+				$http.delete("http://gemstonelive.azurewebsites.net/api/itemDetails/"+stone_id)
 					.success(function(res){
 						alert("The Stone has been Approved!!");
-						$http.get("http://localhost:55453/api/itemDetails")
+						$http.get("http://gemstonelive.azurewebsites.net/api/itemDetails")
 							.success(function(res){
 								$scope.getItemDetails=res;
 								var x=res.length;
 								$scope.x=x;
 							})
 
-						$http.get("http://localhost:55453/api/perItemDetails")
+						$http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails")
 							.success(function(res){
 								$scope.getPerItemDetails=res;
 							})
@@ -398,11 +421,13 @@ $scope.approve_req=function()
 	$scope.updateItems=function()
 	{
 		var edit_i=this.edit_i;
-		$http.get('http://localhost:55453/api/perItemDetails/' + edit_i)
+		$http.get('http://gemstonelive.azurewebsites.net/api/perItemDetails/' + edit_i)
 			.success(function (res) {
 				console.log(res);
 				$scope.getupExpenss = res;
-
+				var getuserforupdate = $scope.getupExpenss;
+				var user2 = getuserforupdate.userNames;
+				console.log(user2);
 				var pushTextExpenses = $scope.getupExpenss;
 				$scope.meraId=pushTextExpenses.id;
 				$scope.sname = pushTextExpenses.sName;
@@ -415,69 +440,144 @@ $scope.approve_req=function()
 
 	$scope.updateSave=function()
 	{
+	    
+		//alert("Update function");
 		var updateid=this.meraId;
-		var bb2price=this.bbprice;
-		var maxbbPrice=this.mpbbprice;
-		var vipPrice=this.vip_price;
-		var retailPrice=this.retailprice;
-		var sname=this.sname;
-		var ptype=this.ptype;
-		var useragent=this.userAgent;
-		var request = $http({
-		    method: "put",
-		    url: "http://localhost:55453/api/perItemDetails/" + updateid,
-		    crossDomain: true,
-		    data: {
-		        bbPrice: bb2price,
-		        maxbbPrice: maxbbPrice,
-		        vipPrice: vipPrice,
-		        retailPrice: retailPrice,
-		        userNames: useragent,
-		        pType: ptype,
-		        sName: sname
-		    },
-		    headers: { 'Content-Type': 'application/json' }
-		})
-					.success(function (resp) {
+		var bbprice1=this.bbprice;
+		var maxbbPrice1=this.mpbbprice;
+		var vipPrice1=this.vip_price;
+		var retailPrice1=this.retailprice;
+		var sname1=this.sname;
+		var ptype1=this.ptype;
+		var useragent = this.userAgent;		
+		var username_for_update ;
+		var presemi1 ;
+		var stonesize1 ;
+		var sweight1 ;
+		var spieces1 ;
+		var sdimensions1 ;
+		var sorigin1 ;
+		var color1 ;
+		var stoneshape1 ;
+		var sremark1 ;
+		var sceragency1 ;
+		var scarat1 ;
+		var stockid1 ;
+		var supplier1 ;
+		var spurchase1;
+		
+		//alert("retailPrice :"+retailPrice1);
+		console.log(updateid);
 
-					    //alert(resp);
-					    //further code will refresh the current database data on page
+	    $http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails/" + updateid)
+            .success(function (res) {
+                $scope.getItemss = res
 
-					    //window.location='./main.html';
-					alert("success");
-					})
+                var getItems = $scope.getItemss;
 
+                username_for_update = getItems.userNames;                
+                presemi1 = getItems.preSemi;
+                console.log(presemi1);
+                 ptype1 = getItems.pType;
+                 stonesize1 = getItems.stoneSize;
+                 sweight1 = getItems.sWeight;
+                 spieces1 = getItems.sPieces;
+                 sdimensions1 = getItems.sDimensions;
+                 sorigin1 = getItems.sOrigin;
+                 color1 = getItems.sColor;
+                 stoneshape1 = getItems.stoneShape;
+                 sremark1 = getItems.sRemark;
+                 sceragency1 = getItems.scerAgency;
+                 scarat1 = getItems.sCarat;
+                stockid1 = getItems.stockId;
+                 supplier1 = getItems.sSupplierRef;
+                 spurchase1 = getItems.sPurchase;
 
+                 $http.delete("http://gemstonelive.azurewebsites.net/api/perItemDetails/" + updateid)
+         .success(function (res) {
+             //alert("Record Deleted");
+         })
+                 var request = $http({
+                     method: "post",
+                     url: "http://gemstonelive.azurewebsites.net/api/perItemDetails",
+                     crossDomain: true,
+                     data: {
+                         userNames: useragent,
+                         preSemi: presemi1,
+                         pType: ptype1,
+                         sName: sname1,
+                         stoneSize: stonesize1,
+                         sWeight: sweight1,
+                         sPieces: spieces1,
+                         sDimensions: sdimensions1,
+                         sOrigin: sorigin1,
+                         sColor: color1,
+                         stoneShape: stoneshape1,
+                         sRemark: sremark1,
+                         scerAgency: sceragency1,
+                         sCarat: scarat1,
+                         stockId: stockid1,
+                         sSupplierRef: supplier1,
+                         sPurchase: spurchase1,
+                         bbPrice: bbprice1,
+                         maxbbPrice: maxbbPrice1,
+                         vipPrice: vipPrice1,
+                         retailPrice: retailPrice1
+                     },
+                     headers: { 'Content-Type': 'application/json' }
+                 })
+                   .success(function (resp) {
+
+                       //alert(resp);
+                       //further code will refresh the current database data on page
+                       alert("Record Updated");
+                       //window.location='./main.html';
+                       //alert("success");
+                       $http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails")
+                         .success(function (res) {
+                                     $scope.getPerItemDetails = res;
+                                     var totalItems = res.length;
+                                     $scope.totalItems = totalItems;
+
+                                     $('#myModal1').modal('hide');
+                         })
+                   })
+
+            })
+        
+	    
+              
 	}
 
 
-	$http.get("http://localhost:55453/api/userRegisters")
+
+	$http.get("http://gemstonelive.azurewebsites.net/api/userRegisters")
 		.success(function(res){
 			$scope.getUserRegisters=res;
 			var us=res.length;
 			$scope.us=us;
 		})
 
-	$http.get("http://localhost:55453/api/soldItemDetails")
+	$http.get("http://gemstonelive.azurewebsites.net/api/soldItemDetails")
 		.success(function(res){
 			$scope.getSoldItems=res;
 		})
 
-	$http.get("http://localhost:55453/api/itemDetails")
+	$http.get("http://gemstonelive.azurewebsites.net/api/itemDetails")
 		.success(function(res){
 			$scope.getItemDetails=res;
 			var x=res.length;
 			$scope.x=x;
 		})
 
-	$http.get("http://localhost:55453/api/perItemDetails")
+	$http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails")
 		.success(function(res){
 			$scope.getPerItemDetails=res;
 			var totalItems=res.length;
 			$scope.totalItems=totalItems;
 		})
 
-	$http.get("http://localhost:55453/api/perUserRegisters")
+	$http.get("http://gemstonelive.azurewebsites.net/api/perUserRegisters")
 		.success(function(res){
 			$scope.getPerUserDetails=res;
 			var totag=res.length;
@@ -488,9 +588,7 @@ $scope.approve_req=function()
 
 	$scope.showDetails=function(){
 	var id=this.st_id;
-
-
-		$http.get("http://localhost:55453/api/itemDetails/"+id)
+		$http.get("http://gemstonelive.azurewebsites.net/api/itemDetails/"+id)
 			.success(function(res){
 				$scope.getItemDetailsByStone=res;
 				var test=$scope.getItemDetailsByStone;
@@ -517,7 +615,37 @@ $scope.approve_req=function()
 			})
 	};
 
-	$scope.cancelAndNew=function()
+	$scope.showPerDetails=function(){
+		var id=this.viewst_id;
+		$http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails/"+id)
+			.success(function(res){
+				$scope.getItemDetailsByStone=res;
+				var test=$scope.getItemDetailsByStone;
+				$scope.id=test.id;
+				$scope.userNames= test.userNames;
+				$scope.preSemi=test.preSemi;
+				$scope.pType=test.pType;
+				$scope.sName=test.sName;
+				$scope.stoneSize=test.stoneSize;
+				$scope.sWeight=test.sWeight;
+				$scope.sPieces=test.sPieces;
+				$scope.sDimensions=test.sDimensions;
+				$scope.sColor=test.sColor;
+				$scope.stoneShape=test.stoneShape;
+				$scope.sOrigin=test.sOrigin;
+				$scope.sRemark=test.sRemark;
+				$scope.scerAgency=test.scerAgency;
+				$scope.sCarat=test.sCarat;
+				$scope.stockId=test.stockId;
+				$scope.sSupplierRef=test.sSupplierRef;
+				$scope.sPurchase=test.sPurchase;
+				$scope.imageName=test.imageName;
+
+			})
+	};
+
+
+	/*$scope.cancelAndNew=function()
 	{
 		//document.getElementById('signup1').reset();
 		document.getElementById("sname").value = "";
@@ -528,16 +656,16 @@ $scope.approve_req=function()
 		document.getElementById("vipprice").value = "";
 		document.getElementById("retailprice").value = "";
 		$scope.upbtn=false;
-	}
+	}*/
 
 	$scope.declineStone=function()
 	{
 		var reject_id=this.reject_id;
-		$http.delete("http://localhost:55453/api/itemDetails/" + reject_id)
+		$http.delete("http://gemstonelive.azurewebsites.net/api/itemDetails/" + reject_id)
 			.success(function (res) {
 				console.log("deleted");
 				alert("The Stone has been Declined!!");
-				$http.get("http://localhost:55453/api/itemDetails")
+				$http.get("http://gemstonelive.azurewebsites.net/api/itemDetails")
 					.success(function(res){
 						$scope.getItemDetails=res;
 						var x=res.length;
@@ -549,10 +677,10 @@ $scope.approve_req=function()
 	$scope.decline_view=function()
 	{
 		var id_view=this.id_view;
-		$http.delete("http://localhost:55453/api/perUserRegisters/" + id_view)
+		$http.delete("http://gemstonelive.azurewebsites.net/api/perUserRegisters/" + id_view)
 			.success(function (res) {
 				alert("Agent Deleted Successfully");
-				$http.get("http://localhost:55453/api/perUserRegisters")
+				$http.get("http://gemstonelive.azurewebsites.net/api/perUserRegisters")
 					.success(function(res){
 						$scope.getPerUserDetails=res;
 						var totag=res.length;

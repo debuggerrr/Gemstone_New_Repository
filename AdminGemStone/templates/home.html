@@ -1,5 +1,109 @@
 <div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
-<div class="contentarearight">
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Home</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row" style="text-align:center;">
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">{{totag}}</div>
+                            <div>Total Agents</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left"><a ui-sref="viewagents">View Details</a></span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-bars fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">{{totalItems}}</div>
+                            <div>Total Items</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left"><a ui-sref="viewitem">View Details</a></span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-shopping-cart fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">{{x}}</div>
+                            <div>New Stone Requests</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left"><a ui-sref="stonerequest">View Details</a></span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-user-plus fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">{{us}}</div>
+                            <div>New Agent Requests</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left"><a ui-sref="viewrequest">View Details</a></span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- /.row -->
+</div>
+
+<!--<div class="contentarearight">
     <div class="contentarearight_panel1">
         <div class="contentarearight_panel_top">{{totalItems}}</div>
         <div class="contentarearight_panel_bottom">Total Items</div>
@@ -19,18 +123,63 @@
     <div class="clear"></div>
 </div>
 <div class="clear"></div>
-</div>
+</div>-->
 
-<div class="footer">
-    <div class="footer_top">
-        <div class="footer_top_left">Copyright &copy; <a href="http://www.mservices.in"><img src="images/mservices_logo.png" border="0"/></a>Mservices Solutions Pvt Ltd.</div>
-        <div class="footer_topright">Email: <a href="mailto:support@mservices.in">support@mservices.in</a></div>
-        <div class="clear"></div>
+<div class="container-fluid footer1">
+
+        <div class="row" style="margin-top: 0px;background-color: white;">
+           <div class="footer">
+            <div class="col-sm-5">
+                &copy; 2016 <a target="_blank" href="http://mservices.in/" title="">Mservices Solution Pvt Ltd</a>. All Rights Reserved.
+            </div>
+            <div class="col-sm-3">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About-Us.html">About Us</a></li>
+
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 pull-right">
+                Designed & Developed By Mservices
+            </div>
+
+
+        </div>
+        </div>
     </div>
 
-    <div class="footer_bottom">
-        <div class="footer_bottomleft">Contact On: 022 23232323 | Mob: 9876543210</div>
-        <div class="footer_bottomright">Designed &amp; Developed by: <a href="http://www.mservices.in">Mservices Solutions Pvt Ltd.</a></div>
-        <div class="clear"></div>
-    </div>
-</div>
+<!--/#footer-->
+<style>
+    .footer {
+
+        padding-top: 20px;
+        padding-bottom: 25px;
+        color: #fff;
+        background: gray;
+    }
+
+    .footer a {
+        color: #fff;
+    }
+
+    .footer a:hover {
+        color: #c52d2f;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer ul > li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+
+    .pull-right{
+        text-align:right;
+    }
+</style>

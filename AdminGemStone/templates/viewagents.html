@@ -1,6 +1,37 @@
 <div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
-<div class="contentarearight" >
-    <style>
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">View Agent Request</h1>
+            <table id="t01" >
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Agent's First Name</th>
+                    <th>Agent's Last Name</th>
+                    <th>Username</th>
+                    <th>Origin</th>
+                    <th>Agent Role</th>
+                    <th>Email Id</th>
+                    <th>Contact Number</th>
+                    <th>Delete</th>
+                </tr>
+                <tr ng-repeat="data in getPerUserDetails ">
+                    <td>{{$index+1}}</td>
+                    <td>{{data.firstName}}</td>
+                    <td>{{data.lastName}}</td>
+                    <td>{{data.userName}}</td>
+                    <td>{{data.originAgent}}</td>
+                    <td>{{data.agentRole}}</td>
+                    <td>{{data.emailId}}</td>
+                    <td>{{data.contactAgent}}</td>
+                    <td><button ng-click="decline_view(id_view=data.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
+
+                </tr>
+
+            </table>
+
+            <style>
         table {
             width:auto;
         }
@@ -24,36 +55,8 @@
         }
     </style>
 
-    <div class="panel panel-default">
-        <div class="panel-heading" style="background-color: #000;color: white"  >Agent's List</div>
-        <div class="panel-body ">
 
-    <div class="col-md-8" style="margin:10px 0px 10px 10px">
-        <table id="t01" >
-            <tr>
-                <th>Sr No.</th>
-                <th>Agent's First Name</th>
-                <th>Agent's Last Name</th>
-                <th>Username</th>
-                <th>Agent Role</th>
-                <th>Email Id</th>
-                <th>Contact Number</th>
-                <th>Delete</th>
-            </tr>
-            <tr ng-repeat="data in getPerUserDetails ">
-                <td>{{$index+1}}</td>
-                <td>{{data.firstName}}</td>
-                <td>{{data.lastName}}</td>
-                <td>{{data.userName}}</td>
-                <td>{{data.agentRole}}</td>
-                <td>{{data.emailId}}</td>
-                <td>{{data.contactAgent}}</td>
-                <td><button ng-click="decline_view(id_view=data.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
-
-            </tr>
-
-        </table>
     </div>
         </div>
         </div>
-</div>
+
