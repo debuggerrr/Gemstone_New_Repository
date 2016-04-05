@@ -1,0 +1,391 @@
+
+
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">View Details</h1>
+
+      <button type="button" class="close button button-positive pull-right" ng-click="closeModal()">Close</button>
+
+    </ion-header-bar>
+  <ion-content>
+
+    <table style="width:auto">
+      <tr>
+        <th style="padding: 10px">First Name :</th>
+        <td>{{userNames}}</td>
+
+        <th style="padding: 10px">Type Of Purchase :</th>
+        <td>{{pType}}</td>
+      </tr>
+
+      <tr>
+        <th style="padding: 10px">Name Of Stone :</th>
+        <td>{{sName}}</td>
+
+        <th style="padding: 10px">Size :</th>
+        <td>{{stoneSize}}</td>
+      </tr>
+
+      <tr>
+        <th style="padding: 10px">Total Weight(CTs) :</th>
+        <td>{{sWeight}}</td>
+
+        <th style="padding: 10px">Pieces :</th>
+        <td>{{sPieces}}</td>
+      </tr>
+
+      <tr>
+        <th style="padding: 10px">Dimensions :</th>
+        <td>{{sDimensions}}</td>
+
+        <th style="padding: 10px">Color :</th>
+        <td>{{sColor}}</td>
+      </tr>
+
+      <tr>
+        <th style="padding: 10px">Shape :</th>
+        <td>{{stoneShape}}</td>
+
+        <th style="padding: 10px">Origin :</th>
+        <td>{{sOrigin}}</td>
+      </tr>
+
+      <tr>
+        <th style="padding: 10px">Treatment Remark :</th>
+        <td>{{sRemark}}</td>
+
+        <th style="padding: 10px">Certificate Agency :</th>
+        <td>{{scerAgency}}</td>
+      </tr>
+      <tr>
+        <th style="padding: 10px">Expected Sales price/carat :</th>
+        <td>{{sCarat}}</td>
+
+        <th style="padding: 10px">Stock ID :</th>
+        <td>{{stockId}}</td>
+
+      </tr>
+      <tr>
+        <th style="padding: 10px">Supplier Reference Certificate No. :</th>
+        <td>{{sSupplierRef}}</td>
+
+        <th style="padding: 10px">Procure Price :</th>
+        <td>{{sPurchase}}</td>
+      </tr>
+      <tr>
+        <th colspan="2">Image</th>
+        <td colspan="2">
+        <img src="data:image/jpeg;base64,{{image}}" style="height:200px; padding: 5px 5px 5px 5px;"/>
+        </td>
+      </tr>
+    </table>
+
+  </ion-content>
+  </ion-modal-view>
+</script>
+
+<ion-view view-title="View Items">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon ion-power"  ng-click="logout()">LOGOUT
+    </button>
+
+  </ion-nav-buttons>
+  <ion-content class="padding">
+<div class="contentarearight">
+  <style>
+    table {
+      width:auto;
+    }
+    table, th, td {
+      border: 1px solid red;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: center;
+    }
+    table#t01 tr:nth-child(even) {
+      background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+      background-color:#fff;
+    }
+    table#t01 th	{
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+       <div class="col-md-8" style="margin:50px 0px 10px 10px">
+        <table id="t01" >
+          <tr>
+            <th>Sr No.</th>
+            <th>First Name</th>
+            <th>Name Of Stone</th>
+            <th>Details</th>
+
+          </tr>
+          <tr ng-repeat="stone in getItemDetails">
+
+            <td>{{$index+1}}</td>
+            <td>{{stone.userNames}}</td>
+            <td>{{stone.sName}}</td>
+
+            <td><button type="button" class="btn btn-info btn" ng-click="showDetail(st_id=stone.id);openModal()">Show Details</button></td>
+
+
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+<!--<table>
+  <tr>
+    <th>Id</th>
+    <th>Image Name</th>
+    <th>Image</th>
+  </tr>
+    <tr ng-repeat="img in getimageDetails">
+      <td>{{$index+1}}</td>
+      <td>{{img.name}}</td>
+      <td><img src="data:image/jpeg;base64,{{img.image}}" style="height:200px; padding: 5px 5px 5px 5px;"/></td>
+    </tr>
+  </table> -->
+
+
+  </ion-content>
+  </ion-view>
+
+<!--<head><style>
+  table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 2px;
+    table-layout: fixed;
+    margin: 0;
+  }
+  table tr:nth-child(odd)	{
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+</style>
+</head>
+<script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-header-bar>
+      <h1 class="title">Settings</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list">
+        <a class="item" ui-sref="changepassword" ng-click="hidePopover()">
+          Change Password
+        </a>
+        <a class="item" ui-sref="login" ng-click="hidePopover()">
+          Logout
+        </a>
+      </div>
+    </ion-content>
+  </ion-popover-view>
+</script>
+
+<ion-view view-title="View Items">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon ion-ios-gear"  ng-click="openPopover($event)">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+      <style>
+        table {
+          width:auto;
+        }
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: center;
+        }
+        table#t01 tr:nth-child(even) {
+          background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+          background-color:#fff;
+        }
+        table#t01 th	{
+          background-color: slateblue;
+          color: white;
+        }
+      </style>
+      <div class="col-md-8">
+        <table id="t01">
+          <tr>
+            <th>Sr.No</th>
+            <th>Stone Name</th>
+            <th>Stock ID</th>
+            <th>Stone Origin</th>
+            <th>View Details</th>
+          </tr>
+          <tr ng-repeat="partialdata in getItemDetails" ng-hide="data.Status==false">
+            <td>{{$index+1}}</td>
+            <td>{{partialdata.sName}}</td>
+            <td>{{partialdata.stockId}}</td>
+            <td>{{partialdata.sOrigin}}</td>
+            <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="showDetails(st_id=stone.id)">Show Details</button></td>
+
+          </tr>
+
+        </table>
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Details</h4>
+              </div>
+
+              <div class="modal-body">
+
+
+                <table style="width:auto">
+                  <tr>
+                    <td style="padding: 10px">First Name :</td>
+                    <td>{{userNames}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">Type Of Purchase :</td>
+                    <td>{{pType}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding: 10px">Name Of Stone :</td>
+                    <td>{{sName}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding: 10px">Size :</td>
+                    <td>{{stoneSize}}</td>
+
+                    <td style="padding: 10px">Total Weight(CTs) :</td>
+                    <td>{{sWeight}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding: 10px">Pieces :</td>
+                    <td>{{sPieces}}</td>
+
+                    <td style="padding: 10px">Dimensions :</td>
+                    <td>{{sDimensions}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding: 10px">Color :</td>
+                    <td>{{sColor}}</td>
+
+                    <td style="padding: 10px">Shape :</td>
+                    <td>{{stoneShape}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding: 10px">Origin :</td>
+                    <td>{{sOrigin}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding: 10px">Treatment Remark :</td>
+                    <td>{{sRemark}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">Certificate Agency :</td>
+                    <td>{{scerAgency}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">Expected Sales price/carat :</td>
+                    <td>{{sCarat}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">Stock ID :</td>
+                    <td>{{stockId}}</td>
+
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">Supplier Reference Certificate No. :</td>
+                    <td>{{sSupplierRef}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 10px">Procure Price :</td>
+                    <td>{{sPurchase}}</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+ <!-- <ion-content class="padding">
+    <ion-refresher pulling-text="Pull to refresh"
+                   refreshing-text="Loading..."
+                   refreshing-icon="ion-loading-c"
+                   pulling-icon="ion-ios7-arrow-thin-down"
+                   on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-scroll direction="xy" style="width:auto; height:auto">
+      <div class="scroll-container"></div>
+
+      <h4>Procured Items:</h4>
+      <table>
+
+        <tr>
+          <th><h5>Precious/Semiprecious</h5></th> 1
+          <th><h5>Purchase Type</h5></th> 1
+          <th><h5>Stone name</h5></th> 1
+          <th><h5>Size</h5></th> 2
+          <th><h5>Weight</h5></th> 2
+          <th><h5>Pieces</h5></th> 2
+          <th><h5>Dimensions</h5></th> 2
+          <th><h5>Color</h5></th> 2
+          <th><h5>Shape</h5></th> 2
+          <th><h5>Origin</h5></th> 2
+          <th><h5>Treatment Remark</h5></th> 3
+          <th><h5>Certificate Agency</h5></th> 3
+          <th><h5>Exp Sp/Carat</h5></th> 4
+          <th><h5>Stock Id</h5></th> 1
+          <th><h5>Supplier Cert Ref Num</h5></th> 3
+          <th><h5>Purchase Price</h5></th>4
+
+        </tr>
+        <tr ng-repeat="x in getData">
+          <td>{{ x.a }}</td>
+          <td>{{ x.b}}</td>
+          <td>{{ x.c}}</td>
+          <td>{{ x.d}}</td>
+          <td>{{ x.e}}</td>
+          <td>{{ x.f}}</td>
+          <td>{{ x.g}}</td>
+          <td>{{ x.h}}</td>
+          <td>{{ x.i}}</td>
+          <td>{{ x.j}}</td>
+          <td>{{ x.k}}</td>
+          <td>{{ x.l}}</td>
+          <td>{{ x.m}}</td>
+          <td>{{ x.n}}</td>
+          <td>{{ x.o}}</td>
+          <td>{{ x.p}}</td>
+
+
+        </tr>
+      </table>
+    </ion-scroll>
+  </ion-content>
+</ion-view>-->

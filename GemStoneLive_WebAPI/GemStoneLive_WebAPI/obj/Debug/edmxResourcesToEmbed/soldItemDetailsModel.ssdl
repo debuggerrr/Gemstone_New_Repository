@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GemStone_LIVEModel3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="soldItemDetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userNames" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="preSemi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="stoneSize" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sWeight" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sPieces" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sDimensions" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sColor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="stoneShape" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sOrigin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sRemark" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="scerAgency" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sCarat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="stockId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sSupplierRef" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sPurchase" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="image_name" Type="varchar(max)" />
+    <Property Name="bbPrice" Type="varchar" MaxLength="50" />
+    <Property Name="maxbbPrice" Type="varchar" MaxLength="50" />
+    <Property Name="vipPrice" Type="varchar" MaxLength="50" />
+    <Property Name="retailPrice" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="GemStone_LIVEModel3StoreContainer">
+    <EntitySet Name="soldItemDetails" EntityType="Self.soldItemDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

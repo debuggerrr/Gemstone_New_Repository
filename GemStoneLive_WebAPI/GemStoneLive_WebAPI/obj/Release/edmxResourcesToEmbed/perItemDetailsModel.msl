@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GemStone_LIVEModel1StoreContainer" CdmEntityContainer="GemStone_LIVEEntities3">
+    <EntitySetMapping Name="perItemDetails">
+      <EntityTypeMapping TypeName="GemStone_LIVEModel1.perItemDetail">
+        <MappingFragment StoreEntitySet="perItemDetails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userNames" ColumnName="userNames" />
+          <ScalarProperty Name="preSemi" ColumnName="preSemi" />
+          <ScalarProperty Name="pType" ColumnName="pType" />
+          <ScalarProperty Name="sName" ColumnName="sName" />
+          <ScalarProperty Name="stoneSize" ColumnName="stoneSize" />
+          <ScalarProperty Name="sWeight" ColumnName="sWeight" />
+          <ScalarProperty Name="sPieces" ColumnName="sPieces" />
+          <ScalarProperty Name="sDimensions" ColumnName="sDimensions" />
+          <ScalarProperty Name="sColor" ColumnName="sColor" />
+          <ScalarProperty Name="stoneShape" ColumnName="stoneShape" />
+          <ScalarProperty Name="sOrigin" ColumnName="sOrigin" />
+          <ScalarProperty Name="sRemark" ColumnName="sRemark" />
+          <ScalarProperty Name="scerAgency" ColumnName="scerAgency" />
+          <ScalarProperty Name="sCarat" ColumnName="sCarat" />
+          <ScalarProperty Name="stockId" ColumnName="stockId" />
+          <ScalarProperty Name="sSupplierRef" ColumnName="sSupplierRef" />
+          <ScalarProperty Name="sPurchase" ColumnName="sPurchase" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="bbPrice" ColumnName="bbPrice" />
+          <ScalarProperty Name="maxbbPrice" ColumnName="maxbbPrice" />
+          <ScalarProperty Name="vipPrice" ColumnName="vipPrice" />
+          <ScalarProperty Name="retailPrice" ColumnName="retailPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

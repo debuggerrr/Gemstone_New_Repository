@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\icon.png",
+        "source": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\res\\drawable-ldpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\icon.png",
+        "source": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\res\\drawable-ldpi\\icon.png"
+    },
+    {
+        "merged": "D:\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\icon.png",
+        "source": "D:\\myApp\\platforms\\android\\res\\drawable-ldpi\\icon.png"
+    }
+]

@@ -1,6 +1,42 @@
 <div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
-<div class="contentarearight">
-    <style>
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">New Agent Request</h1>
+
+            <table id="t01" ng-table="tableParams" show-filter="true" class="table">
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Username</th>
+                    <th>Name of Stone</th>
+                    <th>Origin</th>
+                    <th>Whole Sale Price</th>
+                    <th>Max BB Price</th>
+                    <th>Vip Price</th>
+                    <th>Retail Price</th>
+                    <th>Delete</th>
+                </tr>
+                <tr ng-repeat="data in getSoldItems">
+                    <td>{{$index+1}}</td>
+                    <td>{{data.userNames}}</td>
+                    <td>{{data.sName}}</td>
+                    <td>{{data.sOrigin}}</td>
+                    <td>{{data.bbPrice}}</td>
+                    <td>{{data.maxbbPrice}}</td>
+                    <td>{{data.vipPrice}}</td>
+                    <td>{{data.retailPrice}}</td>
+                    <td><button ng-click="delsolditem(sold_id=data.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
+
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+            <style>
         table {
             width:auto;
         }
@@ -24,39 +60,7 @@
         }
     </style>
 
-    <div class="panel panel-default">
-        <div class="panel-heading" style="background-color: #000;color: white"  >Items Sold</div>
-        <div class="panel-body ">
 
-    <div class="col-md-8" style="margin:10px 0px 10px 10px">
-        <table id="t01" ng-table="tableParams" show-filter="true" class="table">
-            <tr>
-                <th>Sr. No.</th>
-                <th>Username</th>
-                <th>Name of Stone</th>
-                <th>Origin</th>
-                <th>Whole Sale Price</th>
-                <th>Vip Price</th>
-                <th>Retail Price</th>
-                <th>Delete</th>
-            </tr>
-            <tr ng-repeat="data in getSoldItems">
-                <td>{{$index+1}}</td>
-                <td>{{data.userNames}}</td>
-                <td>{{data.sName}}</td>
-                <td>{{data.sOrigin}}</td>
-                <td>{{data.bbPrice}}</td>
-                <td>{{data.vipPrice}}</td>
-                <td>{{data.retailPrice}}</td>
-                <td><button ng-click="delsolditem(sold_id=data.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
-
-            </tr>
-
-        </table>
-    </div>
-            </div>
-        </div>
-</div>
 <!--
 <div class="col-md-3">
 

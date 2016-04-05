@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GemStone_LIVEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="itemDetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userNames" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="preSemi" Type="varchar" MaxLength="50" />
+          <Property Name="pType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="stoneSize" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sWeight" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sPieces" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sDimensions" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sColor" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="stoneShape" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sOrigin" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sRemark" Type="varchar" MaxLength="450" Nullable="false" />
+          <Property Name="scerAgency" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="sCarat" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="stockId" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="sSupplierRef" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="sPurchase" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="image" Type="varbinary(max)" />
+        </EntityType>
+        <EntityContainer Name="GemStone_LIVEModelStoreContainer">
+          <EntitySet Name="itemDetails" EntityType="Self.itemDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GemStone_LIVEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="itemDetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userNames" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="preSemi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stoneSize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sWeight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sPieces" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sDimensions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sColor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stoneShape" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sRemark" Type="String" MaxLength="450" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="scerAgency" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sCarat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stockId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sSupplierRef" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sPurchase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="GemStone_LIVEEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="itemDetails" EntityType="Self.itemDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GemStone_LIVEModelStoreContainer" CdmEntityContainer="GemStone_LIVEEntities2">
+          <EntitySetMapping Name="itemDetails">
+            <EntityTypeMapping TypeName="GemStone_LIVEModel.itemDetail">
+              <MappingFragment StoreEntitySet="itemDetails">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userNames" ColumnName="userNames" />
+                <ScalarProperty Name="preSemi" ColumnName="preSemi" />
+                <ScalarProperty Name="pType" ColumnName="pType" />
+                <ScalarProperty Name="sName" ColumnName="sName" />
+                <ScalarProperty Name="stoneSize" ColumnName="stoneSize" />
+                <ScalarProperty Name="sWeight" ColumnName="sWeight" />
+                <ScalarProperty Name="sPieces" ColumnName="sPieces" />
+                <ScalarProperty Name="sDimensions" ColumnName="sDimensions" />
+                <ScalarProperty Name="sColor" ColumnName="sColor" />
+                <ScalarProperty Name="stoneShape" ColumnName="stoneShape" />
+                <ScalarProperty Name="sOrigin" ColumnName="sOrigin" />
+                <ScalarProperty Name="sRemark" ColumnName="sRemark" />
+                <ScalarProperty Name="scerAgency" ColumnName="scerAgency" />
+                <ScalarProperty Name="sCarat" ColumnName="sCarat" />
+                <ScalarProperty Name="stockId" ColumnName="stockId" />
+                <ScalarProperty Name="sSupplierRef" ColumnName="sSupplierRef" />
+                <ScalarProperty Name="sPurchase" ColumnName="sPurchase" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

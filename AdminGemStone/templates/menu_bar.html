@@ -1,106 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="header">
-    <div class="header_left">
-        <div class="companyname1">Admin Dashboard</div>
-    </div>
-    <div class="header_right">
-        <div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
-        <div class="companyname2">Gemstone</div>
-        <div class="logoutbar">
-            <div class="logoutbar_img2"><a href="#"><img src="images/profileicon.png" /></a></div>
-            <div class="logoutbar_img2"><a href="#" ng-click="logout()"><img src="images/logouticon.png" /></a></div>
-            <div class="clear"></div>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+</head>
+
+<body>
+
+<div id="wrapper" >
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom:0px!important;background-color:#0d6aad " >
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" style="font-size:18px;color: white">GemStone</a>
         </div>
-        <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-</div>
+        <!-- /.navbar-header -->
 
-<div class="contentarea">
-    <div class="contentarealeft">
-        <div class="userbar">
-            <div class="userbar_1"><img src="images/photoicon2.png" class="photoicon" /></div>
-            <div class="userbar_2">Admin Name</div>
-            <div class="clear"></div>
-            <div class="userbar_3">
+        <ul class="nav navbar-top-links navbar-right">
 
-            </div>
-        </div>
-        <div class="menubar">
-            <!--<ul class="mainmenu">
-                 <li><a href="">Dashboard</a></li>
-                 <li><a href="">View Requests</a>
-                     <ul class="submenu">
-                        <li><a href="">Agent Request</a></li>
-                        <li><a href="">Stone Request</a></li>
-                    </ul>
-                 </li>
-                 <li><a href="">Add Agent</a></li>
-                 <li><a href="">View Agent</a></li>
-                 <li><a href="">Add Item</a></li>
-                 <li><a href="">View Items</a></li>
-                 <li><a href="">View Inventory</a></li>
-            </ul> -->
-            <div id='cssmenu'>
-                <ul>
-                    <li class='last'><a ui-sref='home'><span>Home</span></a></li>
-                    <li class='last'><a ui-sref='viewrequest'><span>Agent Request</span></a></li>
-                    <li class="last"><a ui-sref='stonerequest'><span>Stone Request</span></a></li>
-                    <li class='last'><a ui-sref="adminState"><span>Add Agent</span></a></li>
-                    <li class='last'><a ui-sref="viewagents" ui-sref-opts="{reload: true}"><span>View Agent</span></a></li>
-                    <li class='last'><a ui-sref="viewitem"><span>View/Edit Items</span></a></li>
-                    <li class='last'><a ui-sref="viewinv"><span>Available Items</span></a></li>
-                    <li class='last'><a ui-sref="solditems"><span>Sold Items</span></a></li>
+            <!-- /.dropdown -->
+
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-gear fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+
+                    <li><a href="#"><i class="fa fa-key fa-fw"></i> Change Password</a>
+                    </li>
+
+
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" style="background-color: white" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Admin</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-plus fa-fw"></i> Request<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a ui-sref="viewrequest"><i class="fa fa-user fa-fw"></i> Agent Request</a>
+                            </li>
+                            <li>
+                                <a ui-sref="stonerequest"><i class="fa fa-star fa-fw"></i> Stone Request</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a ui-sref="adminState"><i class="fa fa-user fa-fw"></i> Add Agent</a>
+                    </li>
+                    <li>
+                        <a ui-sref="viewagents"><i class="fa fa-table fa-fw"></i> View Agent</a>
+                    </li>
+                    <li>
+                        <a ui-sref="viewitem"><i class="fa fa-pencil-square-o fa-fw"></i> Edit Items</a>
+                    </li>
+                    <li>
+                        <a ui-sref="viewinv"><i class="fa fa-shopping-cart fa-fw"></i> Available Items</a>
+                    </li>
+                    <li>
+                        <a ui-sref="solditems"><i class="fa fa- fa-fw"></i> Sold Items</a>
+                    </li>
+                    <li>
+
                 </ul>
             </div>
-
+            <!-- /.sidebar-collapse -->
         </div>
-    </div>
+        <!-- /.navbar-static-side -->
+    </nav>
 
-
+    <!-- /#page-wrapper -->
 
 </div>
+<!-- /#wrapper -->
 
 </body>
+
 </html>
-
-<!--<nav class="navbar navbar-custom">
-    <div class="container-fluid">
-        <div class="navbar-header" >
-            <a class="navbar-brand" href="#" style="color: black;font-size: xx-large;text-align: center" >Gemstone Admin Panel</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown" style="">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-top: 10px;padding-bottom: 25px;margin-top: 10px;"><span class="glyphicon glyphicon-user pull-right" style=""></span></a>
-                <ul class="dropdown-menu">
-            <li><a href="#" ng-click="logout()"><span class="glyphicon glyphicon-log-out" ></span> Logout</a></li>
-                    <li><a ui-sref="changepass"><span class="glyphicon glyphicon-cog" ></span> Change Password</a></li>
-                </ul>
-            </li>
-        </ul>
-</div>
-</nav>
-<div class="col-sm-2" style="background-color: #ccccff;padding: 10px 20px 10px 20px">
-
-        <a  style="color: black; font-size: 22px;margin-left: 30px;padding: 0px 5px 15px 5px;" href="#">DashBoard</a>
-
-        <ul class="list-group">
-
-            <li class="dropdown list-group-item" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">View Requests <span class="caret"></span></a>
-                <ul class="dropdown-menu abc" role="menu" style="margin-left:140px;margin-top: -25px;">
-                    <li class="dropdown-submenu"><a ui-sref="stonerequest">View Stone Requests</a></li>
-                    <li class="dropdown-submenu"><a ui-sref="viewrequest">View Agent Requests</a></li>
-                </ul>
-            </li>
-
-            <li class="list-group-item"><a ui-sref="adminState">Add Agent</a></li>
-
-            <li class="list-group-item"><a ui-sref="viewagents">View Agent</a></li>
-
-            <li class="list-group-item"><a ui-sref="viewitem">View Items</a></li>
-
-            <li class="list-group-item"><a ui-sref="viewinv">View Inventory</a></li>
-        </ul>
-
-
-    </div>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GemStone_LIVEModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="itemDetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userNames" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="preSemi" Type="varchar" MaxLength="50" />
+    <Property Name="pType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="stoneSize" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sWeight" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sPieces" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sDimensions" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sColor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="stoneShape" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sOrigin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sRemark" Type="varchar" MaxLength="450" Nullable="false" />
+    <Property Name="scerAgency" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sCarat" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="stockId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sSupplierRef" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sPurchase" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="GemStone_LIVEModel1StoreContainer">
+    <EntitySet Name="itemDetails" EntityType="Self.itemDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
