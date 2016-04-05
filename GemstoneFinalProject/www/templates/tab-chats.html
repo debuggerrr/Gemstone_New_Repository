@@ -1,0 +1,281 @@
+
+<ion-view view-title="Add Item">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon ion-power"  ng-click="logout()">LOGOUT
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <form name="myForm">
+      <div class="list"><br>
+        <label>Note : * indicates required field</label>
+        <div ng-init="rad1=precious">
+        <div class="item row">
+
+          <div class="col">
+            <input type="radio" ng-model="rad1" value="precious" checked="checked"><label> Precious</label>
+          </div>
+          <div class="col">
+            <input type="radio" ng-model="rad1" value="semi-precious"><label> Semi-Precious</label>
+          </div>
+          </div>
+        </div>
+
+        <!--<div ng-init="rad1=precious" />
+        &nbsp;&nbsp;&nbsp;  <input type="radio" ng-model="rad1" value="precious" name="one"  checked required> Precious
+      <span style="color:red" ng-show="myForm.one.$invalid && myForm.one.$pristine||myForm.one.$invalid && myForm.one.$dirty">
+      <span ng-show="myForm.one.$error.required">*required</span>
+      </span>
+
+        &nbsp;&nbsp;&nbsp;<input type="radio" ng-model="rad1" value="semi-precious" name="two" required> Semi-Precious<span style="color:red" ng-show="myForm.two.$invalid && myForm.two.$pristine||myForm.two.$invalid && myForm.two.$dirty">
+      <span ng-show="myForm.pur.$error.required">*required</span>
+      </span> <br/> -->
+
+
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Type Of Purhase <font color="red">*</font> </span>
+            <input type="text" ng-model="purchasetype" name="type" maxlength="10" required autofocus>
+            <span style="color:red" ng-show="myForm.type.$invalid && myForm.type.$pristine ||myForm.type.$invalid && myForm.type.$dirty">
+              <span ng-show="myForm.type.$error.required"></span>
+           </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Name Of Stone <font color="red">*</font></span>
+            <input type="text" ng-model="stonename" ng-maxlength="10" name="Name" required>
+            <span style="color:red" ng-show="myForm.Name.$invalid && myForm.Name.$pristine||myForm.Name.$invalid && myForm.Name.$dirty">
+              <span ng-show="myForm.Name.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Size <font color="red">*</font></span>
+            <input type="number" ng-model="sizesize" name="siz" required>
+            <span style="color:red" ng-show="myForm.siz.$invalid && myForm.siz.$pristine||myForm.siz.$invalid && myForm.siz.$dirty">
+              <span ng-show="myForm.siz.$error.required"></span>
+             </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Total Weight(cts) <font color="red">*</font></span>
+            <input type="number" ng-model="weightweight"name="wt" required>
+            <span style="color:red" ng-show="myForm.wt.$invalid && myForm.wt.$pristine||myForm.wt.$invalid && myForm.wt.$dirty">
+              <span ng-show="myForm.wt.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Pieces <font color="red">*</font></span>
+            <input type="text" ng-model="piecespieces" name="pcs" required>
+            <span style="color:red" ng-show="myForm.pcs.$invalid && myForm.pcs.$pristine||myForm.pcs.$invalid && myForm.pcs.$dirty">
+              <span ng-show="myForm.pcs.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Dimension <font color="red">*</font></span>
+            <input type="text" ng-model="dimensions" name="dim" required>
+            <span style="color:red" ng-show="myForm.dim.$invalid && myForm.dim.$pristine||myForm.dim.$invalid && myForm.dim.$dirty">
+              <span ng-show="myForm.dim.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Color <font color="red">*</font></span>
+            <input type="text" ng-model="colorco" name="col" required>
+            <span style="color:red" ng-show="myForm.col.$invalid && myForm.col.$pristine||myForm.col.$invalid && myForm.col.$dirty">
+              <span ng-show="myForm.col.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Shape <font color="red">*</font></span>
+            <input type="text" ng-model="shapeshape" name="shap" required>
+            <span style="color:red" ng-show="myForm.shap.$invalid && myForm.shap.$pristine||myForm.shap.$invalid && myForm.shap.$dirty">
+              <span ng-show="myForm.shap.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Origin <font color="red">*</font></span>
+            <input type="text" ng-model="originor" name="org" required>
+            <span style="color:red" ng-show="myForm.org.$invalid && myForm.org.$pristine||myForm.org.$invalid && myForm.org.$dirty">
+              <span ng-show="myForm.org.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Treatment Remark <font color="red">*</font></span>
+            <input type="text" ng-model="treatment" name="trt" required>
+            <span style="color:red" ng-show="myForm.trt.$invalid && myForm.trt.$pristine||myForm.trt.$invalid && myForm.trt.$dirty">
+              <span ng-show="myForm.trt.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Certificate Agency <font color="red">*</font></span>
+            <input type="text" ng-model="certi" name="cert" required>
+            <span style="color:red" ng-show="myForm.cert.$invalid && myForm.cert.$pristine||myForm.cert.$invalid && myForm.cert.$dirty">
+              <span ng-show="myForm.cert.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Exp. S.P./carat <font color="red">*</font></span>
+            <input type="number" ng-model="salesPrice" name="exp" required>
+            <span style="color:red" ng-show="myForm.exp.$invalid && myForm.exp.$pristine||myForm.exp.$invalid && myForm.exp.$dirty">
+              <span ng-show="myForm.exp.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Stock Id <font color="red">*</font></span>
+            <input type="text" ng-model="stockid" name="stock" required>
+             <span style="color:red" ng-show="myForm.stock.$invalid && myForm.stock.$pristine||myForm.stock.$invalid && myForm.stock.$dirty">
+              <span ng-show="myForm.stock.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Supplier ref. cert. no. <font color="red">*</font></span>
+            <input type="number" ng-model="certificatenum" name="ref" required>
+            <span style="color:red" ng-show="myForm.ref.$invalid && myForm.ref.$pristine||myForm.ref.$invalid && myForm.ref.$dirty">
+              <span ng-show="myForm.ref.$error.required"></span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Purchase Price <font color="red">*</font></span>
+            <input type="number" ng-model="purchase" name="pur" required>
+            <span style="color:red" ng-show="myForm.pur.$invalid && myForm.pur.$pristine||myForm.pur.$invalid && myForm.pur.$dirty">
+              <span ng-show="myForm.pur.$error.required"></span>
+            </span>
+          </label>
+        </div>
+
+        <!--
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Type Of Purchase</span>
+          <input type="text" ng-model="purchasetype" name="type" required>
+    <span style="color:red" ng-show="myForm.type.$invalid && myForm.type.$pristine ||myForm.type.$invalid && myForm.type.$dirty">
+      <span ng-show="myForm.type.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name Of Stone</span>
+          <input type="text" ng-model="stonename" name="Name" required>
+    <span style="color:red" ng-show="myForm.Name.$invalid && myForm.Name.$pristine||myForm.Name.$invalid && myForm.Name.$dirty">
+      <span ng-show="myForm.Name.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Size</span>
+          <input type="text" ng-model="size" name="siz" required>
+    <span style="color:red" ng-show="myForm.siz.$invalid && myForm.siz.$pristine||myForm.siz.$invalid && myForm.siz.$dirty">
+      <span ng-show="myForm.siz.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Total Weight(Cts)</span>
+          <input type="text" ng-model="weight"name="wt" required>
+    <span style="color:red" ng-show="myForm.wt.$invalid && myForm.wt.$pristine||myForm.wt.$invalid && myForm.wt.$dirty">
+      <span ng-show="myForm.wt.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Pieces</span>
+          <input type="text" ng-model="pieces" name="pcs" required>
+    <span style="color:red" ng-show="myForm.pcs.$invalid && myForm.pcs.$pristine||myForm.pcs.$invalid && myForm.pcs.$dirty">
+      <span ng-show="myForm.pcs.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Dimension</span>
+          <input type="text" ng-model="dimension" name="dim" required>
+    <span style="color:red" ng-show="myForm.dim.$invalid && myForm.dim.$pristine||myForm.dim.$invalid && myForm.dim.$dirty">
+      <span ng-show="myForm.dim.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Color</span>
+          <input type="text" ng-model="color" name="col" required>
+    <span style="color:red" ng-show="myForm.col.$invalid && myForm.col.$pristine||myForm.col.$invalid && myForm.col.$dirty">
+      <span ng-show="myForm.col.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Shape</span>
+          <input type="text" ng-model="shape" name="shap" required>
+    <span style="color:red" ng-show="myForm.shap.$invalid && myForm.shap.$pristine||myForm.shap.$invalid && myForm.shap.$dirty">
+      <span ng-show="myForm.shape.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Origin</span>
+          <input type="text" ng-model="origin"name="org" required>
+    <span style="color:red" ng-show="myForm.org.$invalid && myForm.org.$pristine||myForm.org.$invalid && myForm.org.$dirty">
+      <span ng-show="myForm.org.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Treatment Remark</span>
+          <input type="text" ng-model="treatment" name="trt" required>
+    <span style="color:red" ng-show="myForm.trt.$invalid && myForm.trt.$pristine||myForm.trt.$invalid && myForm.trt.$dirty">
+      <span ng-show="myForm.trt.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Certificate Agency</span>
+          <input type="text"ng-model="certi"name="cert" required>
+    <span style="color:red" ng-show="myForm.cert.$invalid && myForm.cert.$pristine||myForm.cert.$invalid && myForm.cert.$dirty">
+      <span ng-show="myForm.cert.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Expected Sales Price/Carat</span>
+          <input type="text" ng-model="salesPrice" name="exp" required>
+    <span style="color:red" ng-show="myForm.exp.$invalid && myForm.exp.$pristine||myForm.exp.$invalid && myForm.exp.$dirty">
+      <span ng-show="myForm.exp.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Stock ID</span>
+          <input type="text" ng-model="stockid" name="stock" required>
+    <span style="color:red" ng-show="myForm.stock.$invalid && myForm.stock.$pristine||myForm.stock.$invalid && myForm.stock.$dirty">
+      <span ng-show="myForm.stock.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Supplier reference certificate number</span>
+          <input type="text" ng-model="certificatenum"name="ref" required>
+    <span style="color:red" ng-show="myForm.ref.$invalid && myForm.ref.$pristine||myForm.ref.$invalid && myForm.ref.$dirty">
+      <span ng-show="myForm.ref.$error.required">*required</span>
+      </span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Purchase Price</span>
+          <input type="text" ng-model="purchase" name="pur" required>
+    <span style="color:red" ng-show="myForm.pur.$invalid && myForm.pur.$pristine||myForm.pur.$invalid && myForm.pur.$dirty">
+      <span ng-show="myForm.pur.$error.required">*required</span>
+      </span>
+        </label>
+      </div>
+      <div class="padding">
+        <button ng-click="takePicture()" class="button button-block button-calm">Take Picture</button>
+        <button ng-click="takePhoto()" class="button button-block button-positive">Choose Picture</button>
+      </div>-->
+
+        <div class="item row">
+          <div class="col">
+            <button ng-click="takePicture()" class="button button-block button-calm">Take Picture</button>
+          </div>
+          <div class="col">
+            <button ng-click="takePhoto()" class="button button-block button-positive">Choose Picture</button>
+          </div>
+        </div>
+
+
+        <div class="list card">
+          <div class="item item-image">
+
+              <img src="{{pictureUrl}}" style="height:200px; padding: 5px 5px 5px 5px;"/>
+
+          </div>
+        </div>
+
+        <p>
+
+          <button class="button button-block button-calm" ng-disabled="myForm.pur.$invalid && myForm.pur.$pristine||myForm.pur.$invalid && myForm.pur.$dirty||myForm.ref.$invalid && myForm.ref.$pristine||myForm.ref.$invalid && myForm.ref.$dirty||myForm.stock.$invalid && myForm.stock.$pristine||myForm.stock.$invalid && myForm.stock.$dirty||myForm.exp.$invalid && myForm.exp.$pristine||myForm.exp.$invalid && myForm.exp.$dirty||myForm.cert.$invalid && myForm.cert.$pristine||myForm.cert.$invalid && myForm.cert.$dirty||myForm.trt.$invalid && myForm.trt.$pristine||myForm.trt.$invalid && myForm.trt.$dirty||myForm.org.$invalid && myForm.org.$pristine||myForm.org.$invalid && myForm.org.$dirty||myForm.shap.$invalid && myForm.shap.$pristine||myForm.shap.$invalid && myForm.shap.$dirty||myForm.col.$invalid && myForm.col.$pristine||myForm.col.$invalid && myForm.col.$dirty||myForm.dim.$invalid && myForm.dim.$pristine||myForm.dim.$invalid && myForm.dim.$dirty||myForm.pcs.$invalid && myForm.pcs.$pristine||myForm.pcs.$invalid && myForm.pcs.$dirty||myForm.wt.$invalid && myForm.wt.$pristine||myForm.wt.$invalid && myForm.wt.$dirty||myForm.siz.$invalid && myForm.siz.$pristine||myForm.siz.$invalid && myForm.siz.$dirty||myForm.Name.$invalid && myForm.Name.$pristine||myForm.Name.$invalid && myForm.Name.$dirty||myForm.type.$invalid && myForm.type.$pristine||myForm.type.$invalid && myForm.type.$dirty||myForm.one.$invalid && myForm.one.$pristine||myForm.one.$invalid && myForm.one.$dirty" ng-click="enter()">Submit</button>
+          <!--<input type="submit" ng-click="enter(purchasetype,stonename,Size,weight,pieces,dimension,Color,Shape,Origin,treatment,certi,salesPrice,stockid,certificatenum,purchase)"> -->
+        </p>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
+

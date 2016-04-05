@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi-v4\\screen.png",
+        "source": "D:\\myApp\\platforms\\android\\res\\drawable-land-ldpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi-v4\\screen.png",
+        "source": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\res\\drawable-land-ldpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi-v4\\screen.png",
+        "source": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\res\\drawable-land-ldpi\\screen.png"
+    }
+]

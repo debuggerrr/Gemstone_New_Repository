@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GemStone_LIVEModel5StoreContainer" CdmEntityContainer="GemStone_LIVEEntities1">
+    <EntitySetMapping Name="imageTables">
+      <EntityTypeMapping TypeName="GemStone_LIVEModel5.imageTable">
+        <MappingFragment StoreEntitySet="imageTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

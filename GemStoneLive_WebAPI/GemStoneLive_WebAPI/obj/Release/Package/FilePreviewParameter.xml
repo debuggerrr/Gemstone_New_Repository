@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="gemstonelive" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:gemstoneserver.database.windows.net,1433;Initial Catalog=gemstonelive865;User Id=mservices@gemstoneserver;Password=Gemlive@2016" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="GemStone_LIVEEntities-Web.config Connection String" description="" value="metadata=res://*/userRegisterModel.csdl|res://*/userRegisterModel.ssdl|res://*/userRegisterModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:gemstoneserver.database.windows.net,1433;Initial Catalog=gemstonelive865;User Id=mservices@gemstoneserver;Password=Gemlive@2016&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GemStone_LIVEEntities']/@connectionString" />
+  </parameter>
+  <parameter name="GemStone_LIVEEntities1-Web.config Connection String" description="" value="metadata=res://*/itemDetailModel.csdl|res://*/itemDetailModel.ssdl|res://*/itemDetailModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:gemstoneserver.database.windows.net,1433;Initial Catalog=gemstonelive865;User Id=mservices@gemstoneserver;Password=Gemlive@2016&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GemStone_LIVEEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="GemStone_LIVEEntities2-Web.config Connection String" description="" value="metadata=res://*/perItemDetailModel.csdl|res://*/perItemDetailModel.ssdl|res://*/perItemDetailModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:gemstoneserver.database.windows.net,1433;Initial Catalog=gemstonelive865;User Id=mservices@gemstoneserver;Password=Gemlive@2016&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GemStone_LIVEEntities2']/@connectionString" />
+  </parameter>
+  <parameter name="GemStone_LIVEEntities3-Web.config Connection String" description="" value="metadata=res://*/perUserRegisterModel.csdl|res://*/perUserRegisterModel.ssdl|res://*/perUserRegisterModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:gemstoneserver.database.windows.net,1433;Initial Catalog=gemstonelive865;User Id=mservices@gemstoneserver;Password=Gemlive@2016&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GemStone_LIVEEntities3']/@connectionString" />
+  </parameter>
+  <parameter name="GemStone_LIVEEntities4-Web.config Connection String" description="" value="metadata=res://*/soldItemDetailModel.csdl|res://*/soldItemDetailModel.ssdl|res://*/soldItemDetailModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:gemstoneserver.database.windows.net,1433;Initial Catalog=gemstonelive865;User Id=mservices@gemstoneserver;Password=Gemlive@2016&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Mohnish\\Desktop\\GemStone\ All\ Files\\Gem\ Stone\ Live\\GemStoneLive_WebAPI\\GemStoneLive_WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GemStone_LIVEEntities4']/@connectionString" />
+  </parameter>
+</parameters>

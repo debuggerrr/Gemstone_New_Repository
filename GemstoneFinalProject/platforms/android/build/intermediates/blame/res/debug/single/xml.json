@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\xml\\config.xml",
+        "source": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\res\\xml\\config.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\xml\\config.xml",
+        "source": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\res\\xml\\config.xml"
+    },
+    {
+        "merged": "D:\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\xml\\config.xml",
+        "source": "D:\\myApp\\platforms\\android\\res\\xml\\config.xml"
+    }
+]
