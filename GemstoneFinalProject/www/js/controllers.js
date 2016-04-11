@@ -4,20 +4,57 @@ var pass;
 
 angular.module('starter.controllers', ['ionic','ngCordova'])
 
-.controller('DashCtrl', function($scope,$rootScope,$http,$state,$ionicPopup) {
+.controller('DashCtrl', function($scope,$ionicPopover,$rootScope,$http,$state,$ionicPopup,$ionicLoading) {
 
   $scope.insert=function(){
     $state.go('signup')
   };
-
-
 
   $scope.logout = function () {
     //$state.go('login');
       window.location = "index.html";
   };
 
-  $scope.signup = function () {
+    $scope.forgotPassword = function(){
+        var alertPopup = $ionicPopup.alert({
+            title: 'Successful!',
+            template: 'New Password has been sent to your registered email ID'
+        });
+    }
+
+   var template = '<ion-popover-view><ion-header-bar><h1 class="title">Settings</h1></ion-header-bar><ion-content><div class="list"><a class="item" target="_blank" ui-sref="changepassword" ng-click="hidePopover()">Change Password</a><a class="item" target="_blank" ng-click="hidePopover();logout()">Logout</a></div></ion-content></ion-popover-view>';
+
+    $scope.popover = $ionicPopover.fromTemplate(template, {
+        scope: $scope
+    });
+
+    // .fromTemplateUrl() method
+    $ionicPopover.fromTemplateUrl('my-popover.html', {
+        scope: $scope
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+
+    $scope.openPopover = function($event) {
+        $scope.popover.show($event);
+    };
+    $scope.closePopover = function() {
+        $scope.popover.hide();
+    };
+    //Cleanup the popover when we're done with it!
+    $scope.$on('$destroy', function() {
+        $scope.popover.remove();
+    });
+    // Execute action on hide popover
+    $scope.$on('popover.hidden', function() {
+        // Execute action
+    });
+    // Execute action on remove popover
+    $scope.$on('popover.removed', function() {
+        // Execute action
+    });
+
+$scope.signup = function () {
     var firstName = this.firstName;
     var lastName = this.lastName;
     var userName2 = this.Naam;
@@ -91,10 +128,22 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
 
     });
 
+    $scope.show = function() {
+        $ionicLoading.show({
+            template: '<p>Signing In, Please Wait..</p><ion-spinner icon="android"></ion-spinner>'
+        });
+    };
 
-  $scope.login = function (text1,text2) {
+    $scope.hide = function(){
+        $ionicLoading.hide();
+    };
+
+
+    $scope.login = function (text1,text2) {
     user = text1;
     pass = text2;
+
+    $scope.show($ionicLoading);
 
     $http.get("http://gemstonelive.azurewebsites.net/api/perUserRegisters?username="+user+"&password="+pass)
       .then(function onFulfilled(response) {
@@ -116,11 +165,30 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
 
 
 
-        if (username == user && password == pass && agentRole=="Purchaser")
-        {
-          $state.go('tab.dash');
+          if (username == user && password == pass && agentRole == 'Purchaser' )
+          {
+              $state.go('tab.dash');
+              $http.get("http://gemstonelive.azurewebsites.net/api/itemDetails?name_user="+user)
+                  .success(function(res){
+                      $scope.getItemDetails=res;
+                      var getItemDetails=$scope.getItemDetails;
+                      len=res.length;
+                      $rootScope.lenn=len;
 
-        }
+                  })
+          }
+          if (username == user && password == pass && agentRole == 'Salesman' )
+          {
+              $state.go('tab1.dash1');
+              $http.get("http://gemstonelive.azurewebsites.net/api/itemDetails")
+                  .success(function(res){
+                      $scope.getItemDetails=res;
+                      var getItemDetails=$scope.getItemDetails;
+                      len=res.length;
+                      $rootScope.lenn=len;
+
+                  })
+          }
         /* else if(username == user && password == pass && agentRole=="Salesman"){
          $state.go("SellerHome");
          }*/
@@ -132,15 +200,120 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
         title: 'Login Failed !',
         template: 'Please Enter Correct Credentials'
       });
+    }).finally(function($ionicLoading) {
+        // On both cases hide the loading
+        $scope.hide($ionicLoading);
     });
-  };
-
-
-
+    };
 })
 
-.controller('ChatsCtrl', function($scope,$rootScope,$http,$cordovaCamera,$state,$ionicPopup,$window) {
+.controller('ChatsCtrl', function($scope,$ionicPopover,$rootScope,$http,$cordovaCamera,$state,$ionicPopup,$window,$ionicModal) {
 
+    $ionicModal.fromTemplateUrl('my-modal.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal) {
+        $scope.modal = modal;
+    });
+    $scope.openModal = function() {
+        $scope.modal.show();
+    };
+    $scope.closeModal = function() {
+        $scope.modal.hide();
+    };
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+        $scope.modal.remove();
+    });
+    // Execute action on hide modal
+    $scope.$on('modal.hidden', function() {
+        // Execute action
+    });
+    // Execute action on remove modal
+    $scope.$on('modal.removed', function() {
+        // Execute action
+    });
+
+
+    $scope.showPerDetails=function(){
+        var id=this.viewst_id;
+        $http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails/"+id)
+            .success(function(res){
+                $scope.getItemDetailsByStone=res;
+                var test=$scope.getItemDetailsByStone;
+                $scope.id=test.id;
+                $scope.userNames= test.userNames;
+                $scope.preSemi=test.preSemi;
+                $scope.pType=test.pType;
+                $scope.sName=test.sName;
+                $scope.stoneSize=test.stoneSize;
+                $scope.sWeight=test.sWeight;
+                $scope.sPieces=test.sPieces;
+                $scope.sDimensions=test.sDimensions;
+                $scope.sColor=test.sColor;
+                $scope.stoneShape=test.stoneShape;
+                $scope.sOrigin=test.sOrigin;
+                $scope.sRemark=test.sRemark;
+                $scope.scerAgency=test.scerAgency;
+                $scope.sCarat=test.sCarat;
+                $scope.stockId=test.stockId;
+                $scope.sSupplierRef=test.sSupplierRef;
+                $scope.sPurchase=test.sPurchase;
+                $scope.image=test.image;
+
+            })
+    };
+
+
+
+
+    $http.get("http://gemstonelive.azurewebsites.net/api/perItemDetails")
+        .success(function(res){
+            $scope.getPerItemDetails=res;
+            var totalItems=res.length;
+            $scope.totalItems=totalItems;
+
+        });
+
+
+
+
+
+
+
+
+
+    var template = '<ion-popover-view><ion-header-bar><h1 class="title">Settings</h1></ion-header-bar><ion-content><div class="list"><a class="item" target="_blank" ui-sref="changepassword" ng-click="hidePopover()">Change Password</a><a class="item" target="_blank" ng-click="hidePopover();logout()">Logout</a></div></ion-content></ion-popover-view>';
+
+    $scope.popover = $ionicPopover.fromTemplate(template, {
+        scope: $scope
+    });
+
+    // .fromTemplateUrl() method
+    $ionicPopover.fromTemplateUrl('my-popover.html', {
+        scope: $scope
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+
+    $scope.openPopover = function($event) {
+        $scope.popover.show($event);
+    };
+    $scope.closePopover = function() {
+        $scope.popover.hide();
+    };
+    //Cleanup the popover when we're done with it!
+    $scope.$on('$destroy', function() {
+        $scope.popover.remove();
+    });
+    // Execute action on hide popover
+    $scope.$on('popover.hidden', function() {
+        // Execute action
+    });
+    // Execute action on remove popover
+    $scope.$on('popover.removed', function() {
+        // Execute action
+    });
 
   $scope.pictureUrl = "http://placehold.it/100x100";
 
@@ -296,13 +469,42 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
   }
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats,$state) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
 
 
 
-.controller('AccountCtrl', function($scope,$http,$ionicModal,$state) {
+.controller('AccountCtrl', function($scope,$http,$ionicPopover,$ionicModal,$state) {
+
+    var template = '<ion-popover-view><ion-header-bar><h1 class="title">Settings</h1></ion-header-bar><ion-content><div class="list"><a class="item" target="_blank" ui-sref="changepassword" ng-click="hidePopover()">Change Password</a><a class="item" target="_blank" ng-click="hidePopover();logout()">Logout</a></div></ion-content></ion-popover-view>';
+
+    $scope.popover = $ionicPopover.fromTemplate(template, {
+        scope: $scope
+    });
+
+    // .fromTemplateUrl() method
+    $ionicPopover.fromTemplateUrl('my-popover.html', {
+        scope: $scope
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+
+    $scope.openPopover = function($event) {
+        $scope.popover.show($event);
+    };
+    $scope.closePopover = function() {
+        $scope.popover.hide();
+    };
+    //Cleanup the popover when we're done with it!
+    $scope.$on('$destroy', function() {
+        $scope.popover.remove();
+    });
+    // Execute action on hide popover
+    $scope.$on('popover.hidden', function() {
+        // Execute action
+    });
+    // Execute action on remove popover
+    $scope.$on('popover.removed', function() {
+        // Execute action
+    });
 
   $ionicModal.fromTemplateUrl('my-modal.html', {
     scope: $scope,

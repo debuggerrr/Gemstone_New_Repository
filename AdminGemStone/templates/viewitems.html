@@ -1,3 +1,28 @@
+<style>
+    table {
+        width:auto;
+    }
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+    th {
+        background-color: #2c4762;
+        color: white;
+    }
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+        background-color:#fff;
+    }
+
+</style>
+
 <div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
 
 
@@ -6,7 +31,7 @@
         <div class="col-lg-12">
             <h1 class="page-header">Edit Item</h1>
 
-            <table id="t01" >
+            <table id="t01" class="table">
 
                 <tr>
                     <th>Sr.No</th>
@@ -31,7 +56,7 @@
         </div>
     </div>
 </div>
-</div>
+
 
 
 
@@ -51,92 +76,91 @@
 
                 <table style="width:auto">
                     <tr>
-                        <th style="padding: 10px">First Name :</th>
+                        <td style="padding: 10px"><b>First Name :</b></td>
                         <td>{{userNames}}</td>
 
-                        <th style="padding: 10px">Type Of Purchase :</th>
+                        <td style="padding: 10px"><b>Type Of Purchase:</b></td>
                         <td>{{pType}}</td>
                     </tr>
 
                     <tr>
-                        <th style="padding: 10px">Name Of Stone :</th>
+                        <td style="padding: 10px"><b>Name Of Stone :</b></td>
                         <td>{{sName}}</td>
 
-                        <th style="padding: 10px">Size :</th>
+                        <td style="padding: 10px"><b>Size :</b></td>
                         <td>{{stoneSize}}</td>
                     </tr>
 
                     <tr>
-                        <th style="padding: 10px">Total Weight(CTs) :</th>
+                        <td style="padding: 10px"><b>Total Weight(CTs) :</b></td>
                         <td>{{sWeight}}</td>
 
-                        <th style="padding: 10px">Pieces :</th>
+                        <td style="padding: 10px"><b>Pieces :</b></td>
                         <td>{{sPieces}}</td>
                     </tr>
 
                     <tr>
-                        <th style="padding: 10px">Dimensions :</th>
+                        <td style="padding: 10px"><b>Dimensions :</b></td>
                         <td>{{sDimensions}}</td>
 
-                        <th style="padding: 10px">Color :</th>
+                        <td style="padding: 10px"><b>Color :</b></td>
                         <td>{{sColor}}</td>
                     </tr>
 
                     <tr>
-                        <th style="padding: 10px">Shape :</th>
+                        <td style="padding: 10px"><b>Shape :</b></td>
                         <td>{{stoneShape}}</td>
 
-                        <th style="padding: 10px">Origin :</th>
+                        <td style="padding: 10px"><b>Origin :</b></td>
                         <td>{{sOrigin}}</td>
                     </tr>
 
                     <tr>
-                        <th style="padding: 10px">Treatment Remark :</th>
+                        <td style="padding: 10px"><b>Treatment Remark :</b></td>
                         <td>{{sRemark}}</td>
 
-                        <th style="padding: 10px">Certificate Agency :</th>
+                        <td style="padding: 10px"><b>Certificate Agency :</b></td>
                         <td>{{scerAgency}}</td>
                     </tr>
                     <tr>
-                        <th style="padding: 10px">Expected Sales price/carat :</th>
+                        <td style="padding: 10px"><b>Exp Sales price/carat:</b></td>
                         <td>{{sCarat}}</td>
 
-                        <th style="padding: 10px">Stock ID :</th>
+                        <td style="padding: 10px"><b>Stock ID :</b></td>
                         <td>{{stockId}}</td>
 
                     </tr>
                     <tr>
-                        <th style="padding: 10px">Supplier Ref. Certificate No. :</th>
+                        <td style="padding: 10px"><b>Supplier Ref. Cert. No. :</b></td>
                         <td>{{sSupplierRef}}</td>
 
-                        <th style="padding: 10px">Procure Price :</th>
+                        <td style="padding: 10px"><b>Procure Price :</b></td>
                         <td>{{sPurchase}}</td>
                     </tr>
                     <tr>
-                        <th colspan="2">Image</th>
+                        <td colspan="2"><b>Image</b></td>
                         <td colspan="2">
-
-                            <img src ="{{imageName}}" height="100" width="100" />
+                            <img src ="data:image/jpeg;base64,{{image}}" height="100" width="100" />
                         </td>
                     </tr>
 
                     <tr>
-                        <th style="padding: 10px">B2B Price :</th>
+                        <td style="padding: 10px"><b>B2B Price :</b></td>
 
                         <td><input id="b2bprice" type="text" class="form-control"  ng-model="bbprice" required/></td>
                     </tr>
                     <tr>
-                        <th style="padding: 10px">Markup % on B2B price :</th>
+                        <td style="padding: 10px"><b>Markup % on B2B price:</b></td>
 
                         <td><input id="perb2bprice" type="text" class="form-control"  ng-model="mpbbprice" required/></td>
                     </tr>
                     <tr>
-                        <th style="padding: 10px">VIP Price:</th>
+                        <td style="padding: 10px"><b>VIP Price:</b></td>
 
                         <td> <input id="vipprice" type="text" class="form-control"  ng-model="vip_price" required/></td>
                     </tr>
                     <tr>
-                        <th style="padding: 10px">Retail Price:</th>
+                        <td style="padding: 10px"><b>Retail Price:</b></td>
 
                         <td><input id="retailprice" type="text" class="form-control"  ng-model="retailprice" required/></td>
                     </tr>
@@ -258,32 +282,5 @@
     </div>
 </div>
 
-
-
-
-<style>
-
-                table {
-                width:auto;
-                    }
-                    table, th, td {
-                    border: 1px solid red;
-                    border-collapse: collapse;
-                    }
-                    th, td {
-                    padding: 5px;
-                    text-align: center;
-                    }
-                    table#t01 tr:nth-child(even) {
-                    background-color: #eee;
-                    }
-                    table#t01 tr:nth-child(odd) {
-                    background-color:#fff;
-                    }
-                    table#t01 th	{
-                    background-color: black;
-                    color: white;
-                    }
-                    </style>
 
 
