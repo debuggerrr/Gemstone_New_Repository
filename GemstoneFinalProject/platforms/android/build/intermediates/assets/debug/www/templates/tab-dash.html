@@ -17,10 +17,34 @@
 </script>
 -->
 
+<script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-header-bar>
+      <h1 class="title">Settings</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list">
+        <a class="item" target="_blank" ui-sref="changepassword" ng-click="hidePopover()">
+          Change Password
+        </a>
+        <a class="item" target="_blank" ng-click="hidePopover();logout()">
+          Logout
+        </a>
+      </div>
+    </ion-content>
+  </ion-popover-view>
+</script>
+
 <ion-view view-title="Home">
   <ion-nav-buttons side="secondary">
+    <!--
     <button class="button button-icon ion-power"  ng-click="logout()">LOGOUT
     </button>
+    -->
+    <div class="buttons">
+      <button class="button button-icon ion-gear-a" ng-click="openPopover($event)">
+      </button>
+    </div>
   </ion-nav-buttons>
   <ion-content class="padding">
     <h3>Welcome {{first}} !!</h3>

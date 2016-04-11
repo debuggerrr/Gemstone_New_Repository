@@ -1,16 +1,42 @@
+<style>
+  table{
+    align-content: center;
+  }
+  th{
+    align-items: center;
+    vertical-align: middle;
+  }
+</style>
 
+<script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-header-bar>
+      <h1 class="title">Settings</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list">
+        <a class="item" target="_blank" ui-sref="changepassword" ng-click="hidePopover()">
+          Change Password
+        </a>
+        <a class="item" target="_blank" ng-click="hidePopover();logout()">
+          Logout
+        </a>
+      </div>
+    </ion-content>
+  </ion-popover-view>
+</script>
 
 <script id="my-modal.html" type="text/ng-template">
-  <ion-modal-view>
+  <ion-modal-view style="width: 90%; height: 90%; top: 5%; left: 5%; right: 5%; bottom: 5%;">
     <ion-header-bar>
       <h1 class="title">View Details</h1>
-
       <button type="button" class="close button button-positive pull-right" ng-click="closeModal()">Close</button>
-
     </ion-header-bar>
-  <ion-content>
 
-    <table style="width:auto">
+  <ion-content align="center">
+  <div class="row row-center">
+    <div class="col col-center">
+    <table align="center" style="width:auto">
       <tr>
         <th style="padding: 10px">First Name :</th>
         <td>{{userNames}}</td>
@@ -59,7 +85,7 @@
         <td>{{scerAgency}}</td>
       </tr>
       <tr>
-        <th style="padding: 10px">Expected Sales price/carat :</th>
+        <th style="padding: 10px">Exp S.P./carat :</th>
         <td>{{sCarat}}</td>
 
         <th style="padding: 10px">Stock ID :</th>
@@ -67,27 +93,32 @@
 
       </tr>
       <tr>
-        <th style="padding: 10px">Supplier Reference Certificate No. :</th>
+        <th style="padding: 10px">Supplier Ref Cert No. :</th>
         <td>{{sSupplierRef}}</td>
 
         <th style="padding: 10px">Procure Price :</th>
         <td>{{sPurchase}}</td>
       </tr>
       <tr>
-        <th colspan="2">Image</th>
+        <th colspan="2" style="align:center; valign:middle" >Stone Image</th>
         <td colspan="2">
-        <img src="data:image/jpeg;base64,{{image}}" style="height:200px; padding: 5px 5px 5px 5px;"/>
+          <a class="item item-list-detail">
+          <img src="data:image/jpeg;base64,{{image}}" style="height:150px; width:150px; " ng-click="showImage()" class="image-list-thumb" />
+          </a>
         </td>
       </tr>
     </table>
-
+    </div>
+  </div>
   </ion-content>
+
+
   </ion-modal-view>
 </script>
 
 <ion-view view-title="View Items">
   <ion-nav-buttons side="secondary">
-    <button class="button button-icon ion-power"  ng-click="logout()">LOGOUT
+    <button class="button button-icon ion-gear-a" ng-click="openPopover($event)">
     </button>
 
   </ion-nav-buttons>

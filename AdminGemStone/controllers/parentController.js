@@ -264,6 +264,7 @@ $scope.approve_req=function()
 			.success(function(res){
 				$scope.getItemsData=res;
 				var getItems=$scope.getItemsData;
+
 				var userName_item=getItems.userNames;
 				var preSemi_item=getItems.preSemi;
 				var pType_item=getItems.pType;
@@ -279,7 +280,8 @@ $scope.approve_req=function()
 				var sCarat_item=getItems.sCarat;
 				var stockId_item=getItems.stockId;
 				var sSupplierRef_item=getItems.sSupplierRef;
-				var sPurchase_item=getItems.sPurchase;
+				var sPurchase_item = getItems.sPurchase;
+				var image_item = getItems.image;
                 var bbPrice_item=getItems.bbPrice;
                 var maxbbPrice_item=getItems.maxbbPrice;
                 var vipPrice_item=getItems.vipPrice;
@@ -305,7 +307,8 @@ $scope.approve_req=function()
 						sCarat: sCarat_item,
 						stockId: stockId_item,
 						sSupplierRef: sSupplierRef_item,
-						sPurchase:sPurchase_item,
+						sPurchase: sPurchase_item,
+                        image:image_item,
                         bbPrice:bbPrice_item,
                         maxbbPrice:maxbbPrice_item,
                         vipPrice:vipPrice_item,
@@ -365,30 +368,32 @@ $scope.approve_req=function()
 				var scarat_st=getStonesData.sCarat;
 				var stockid_st=getStonesData.stockId;
 				var supplier_st=getStonesData.sSupplierRef;
-				var spurchase_st=getStonesData.sPurchase;
+				var spurchase_st = getStonesData.sPurchase;
+				var image_st = getStonesData.image;
 
 				var request = $http({
 					method: "post",
 					url: "http://gemstonelive.azurewebsites.net/api/perItemDetails",
 					crossDomain: true,
 					data: {
-						userNames:  userNamess_st,
-						preSemi: presemi_st,
-						pType: ptype_st,
-						sName: sname_st,
-						stoneSize: stonesize_st,
-						sWeight: sweight_st,
-						sPieces:spieces_st ,
-						sDimensions:sdimensions_st,
-						sOrigin : sorigin_st,
-						sColor : color_st,
-						stoneShape : stoneshape_st,
-						sRemark : sremark_st,
-						scerAgency :sceragency_st,
-						sCarat : scarat_st,
-						stockId : stockid_st,
-						sSupplierRef : supplier_st,
-						sPurchase : spurchase_st
+					    userNames:  userNamess_st,
+					    preSemi: presemi_st,
+					    pType: ptype_st,
+					    sName: sname_st,
+					    stoneSize: stonesize_st,
+					    sWeight: sweight_st,
+					    sPieces:spieces_st ,
+					    sDimensions:sdimensions_st,
+					    sOrigin : sorigin_st,
+					    sColor : color_st,
+					    stoneShape : stoneshape_st,
+					    sRemark : sremark_st,
+					    scerAgency :sceragency_st,
+					    sCarat : scarat_st,
+					    stockId : stockid_st,
+					    sSupplierRef : supplier_st,
+					    sPurchase: spurchase_st,
+                        image: image_st
 					},
 					headers: {'Content-Type': 'application/json'}
 				})
@@ -467,6 +472,7 @@ $scope.approve_req=function()
 		var stockid1 ;
 		var supplier1 ;
 		var spurchase1;
+		var image1;
 		
 		//alert("retailPrice :"+retailPrice1);
 		console.log(updateid);
@@ -494,6 +500,7 @@ $scope.approve_req=function()
                 stockid1 = getItems.stockId;
                  supplier1 = getItems.sSupplierRef;
                  spurchase1 = getItems.sPurchase;
+                 image1 = getItems.image;
 
                  $http.delete("http://gemstonelive.azurewebsites.net/api/perItemDetails/" + updateid)
          .success(function (res) {
@@ -521,6 +528,7 @@ $scope.approve_req=function()
                          stockId: stockid1,
                          sSupplierRef: supplier1,
                          sPurchase: spurchase1,
+                         image: image1,
                          bbPrice: bbprice1,
                          maxbbPrice: maxbbPrice1,
                          vipPrice: vipPrice1,
@@ -613,8 +621,8 @@ $scope.approve_req=function()
 				$scope.stockId=test.stockId;
 				$scope.sSupplierRef=test.sSupplierRef;
 				$scope.sPurchase=test.sPurchase;
-				$scope.imageName=test.imageName;
-				var img = $scope.imageName;
+				$scope.image=test.image;
+				//var img = $scope.imageName;
 				//alert(img);
 			})
 	};
@@ -643,7 +651,7 @@ $scope.approve_req=function()
 				$scope.stockId=test.stockId;
 				$scope.sSupplierRef=test.sSupplierRef;
 				$scope.sPurchase=test.sPurchase;
-				$scope.imageName=test.imageName;
+				$scope.image=test.image;
 
 			})
 	};

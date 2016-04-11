@@ -1,7 +1,7 @@
 
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform,$timeout,$state,$ionicHistory) {
+.run(function($ionicPlatform,$timeout,$state,$ionicHistory,$ionicPopup) {
 
   var backbutton=0;
   $ionicPlatform.registerBackButtonAction(function() {
@@ -28,6 +28,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
+
+    // Check for network connection
+    if(window.Connection) {
+      if(navigator.connection.type == Connection.NONE) {
+        $ionicPopup.confirm({
+              title: 'No Internet Connection',
+              content: 'Sorry, no Internet connectivity detected. Please reconnect and try again.'
+            })
+            .then(function(result) {
+              if(!result) {
+                ionic.Platform.exitApp();
+              }
+            });
+      }
+    }
+
+
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
@@ -56,6 +73,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/tabs.html'
   })
 
+
+      .state('tab1', {
+        url: '/tab1',
+        abstract: true,
+        templateUrl: 'templates/tabs1.html'
+      })
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
@@ -68,6 +91,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+      .state('tab1.dash1', {
+        url: '/dash1',
+        views: {
+          'tab-dash1': {
+            templateUrl: 'templates/tab-dash1.html',
+            controller: 'DashCtrl'
+          }
+        }
+      })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -77,15 +110,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+
+      .state('tab1.View1', {
+        url: '/View1',
+        views: {
+          'tab-view': {
+            templateUrl: 'templates/ViewItems.html',
+            controller: 'ChatsCtrl'
+          }
         }
-      }
-    })
+      })
 
     .state('login', {
       url: '/login',
@@ -99,7 +133,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       controller: 'DashCtrl'
     })
 
-  .state('tab.account', {
+
+      .state('tab1.demand1', {
+        url: '/demand1',
+        views: {
+          'tab-demand': {
+            templateUrl: 'templates/tab-demand.html',
+            controller: 'AccountCtrl'
+          }
+        }
+      })
+
+      .state('tab.account', {
     url: '/account',
     views: {
       'tab-account': {
@@ -107,7 +152,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
+
+      .state('forgot-password', {
+        url: '/forgot-password',
+        templateUrl: 'templates/forgotPassword.html',
+        controller:'DashCtrl'
+      });
 
 
 
