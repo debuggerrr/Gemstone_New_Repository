@@ -154,6 +154,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+      .state('changepassword', {
+          url: '/changepassword',
+          templateUrl: 'templates/changePassword.html',
+          controller: 'DashCtrl'
+      })
+
       .state('forgot-password', {
         url: '/forgot-password',
         templateUrl: 'templates/forgotPassword.html',
