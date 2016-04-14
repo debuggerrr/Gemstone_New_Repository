@@ -15,6 +15,13 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
       window.location = "index.html";
   };
 
+    $scope.forgotPassword = function(){
+        var alertPopup = $ionicPopup.alert({
+            title: 'Successful!',
+            template: 'New Password has been sent to your registered email ID'
+        });
+    }
+
    var template = '<ion-popover-view><ion-header-bar><h1 class="title">Settings</h1></ion-header-bar><ion-content><div class="list"><a class="item" target="_blank" ui-sref="changepassword" ng-click="hidePopover()">Change Password</a><a class="item" target="_blank" ng-click="hidePopover();logout()">Logout</a></div></ion-content></ion-popover-view>';
 
     $scope.popover = $ionicPopover.fromTemplate(template, {

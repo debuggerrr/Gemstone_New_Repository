@@ -87,5 +87,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-fonts": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-fonts"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

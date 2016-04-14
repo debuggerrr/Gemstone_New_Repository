@@ -26,46 +26,109 @@
         </button>
     </ion-nav-buttons>
     <ion-pane>
-    <ion-content>
+        <ion-content>
+            <div class="list list-inset">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Stone Name :<font color="red">*</font>
+                    </div>
+                    <select ng-model="demand_stone" name="stn" required>
+                        <option value="">--Select One--</option>
+                        <option>Ruby</option>
+                        <option>Sapphire</option>
+                        <option>Emerald</option>
+                        <option>Rubellite</option>
+                        <option>Tanzanite</option>
+                        <option>Green Tourmouline</option>
+                        <option>Diamonds(White)</option>
+                        <option>Diamonds(Yellow)</option>
+                    </select>
+            <span style="color:red" ng-show="myForm.stn.$invalid && myForm.stn.$pristine||myForm.stn.$invalid && myForm.stn.$dirty">
+              <span ng-show="myForm.stn.$error.required">Required</span>
+             </span>
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Size(MM)<font color="red">*</font>
+                    </div>
+                    <select ng-model="demand_size" name="siz" required>
+                        <option value="">--Select One--</option>
+                        <option>5X4</option>
+                        <option>6X4</option>
+                        <option>6X5</option>
+                        <option>7X5</option>
+                        <option>8X6</option>
+                        <option>9X7</option>
+                    </select>
+            <span style="color:red" ng-show="myForm.siz.$invalid && myForm.siz.$pristine||myForm.siz.$invalid && myForm.siz.$dirty">
+              <span ng-show="myForm.siz.$error.required">Required</span>
+             </span>
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Color<font color="red">*</font>
+                    </div>
+                    <select ng-model="demand_color" name="col" required>
+                        <option value="">--Select One--</option>
+                        <option>Red</option>
+                        <option>Light Green</option>
+                        <option>Deep Green</option>
+                        <option>Light Blue</option>
+                        <option>Deep Bue</option>
+                        <option>Purple</option>
+                        <option>Pinkish Red</option>
+                        <option>Orangish Red</option>
+                        <option>White</option>
+                    </select>
+            <span style="color:red" ng-show="myForm.col.$invalid && myForm.col.$pristine||myForm.col.$invalid && myForm.col.$dirty">
+              <span ng-show="myForm.col.$error.required"></span>
+            </span>
+                </label>
 
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Shape<font color="red">*</font>
+                    </div>
+                    <select ng-model="demand_shape" name="shap" required>
+                        <option value="">--Select One--</option>
+                        <option>Round</option>
+                        <option>Oval</option>
+                        <option>Pear</option>
+                        <option>Cushion</option>
+                        <option>Princess</option>
+                        <option>Emerald Cut</option>
+                        <option>Trillion</option>
+                        <option>Long Cushion </option>
+                    </select>
+            <span style="color:red" ng-show="myForm.shap.$invalid && myForm.shap.$pristine||myForm.shap.$invalid && myForm.shap.$dirty">
+              <span ng-show="myForm.shap.$error.required">Required</span>
+            </span>
+                </label>
 
+                <label class="item item-input">
+                    <span class="input-label">Dimension <font color="red">*</font></span>
+                    <input type="text" ng-model="demand_dimensions" name="dim" required>
+            <span style="color:red" ng-show="myForm.dim.$invalid && myForm.dim.$pristine||myForm.dim.$invalid && myForm.dim.$dirty">
+              <span ng-show="myForm.dim.$error.required">Required</span>
+            </span>
+                </label>
 
-                        <div class="list list-inset">
-                            <label class="item item-input">
-                                <input type="text" placeholder="User Name">
-                            </label>
-                            <label class="item item-input">
-                                <input type="text" placeholder="Stone Name">
-                            </label>
-                            <label class="item item-input">
-                                <input type="text" placeholder="Carat">
-                            </label>
-                            <label class="item item-input">
-                                <input type="text" placeholder="Color">
-                            </label>
+                <label class="item item-input">
+                    <span class="input-label">Pieces <font color="red">*</font></span>
+                    <input type="text" ng-model="demand_pieces" name="piece" required>
+            <span style="color:red" ng-show="myForm.piece.$invalid && myForm.piece.$pristine||myForm.piece.$invalid && myForm.piece.$dirty">
+              <span ng-show="myForm.piece.$error.required">Required</span>
+            </span>
+                </label>
 
-                            <label class="item item-input item-select">
-                                <div class="input-label">
-                                    Type of Stone
-                                </div>
-                                <select>
-                                    <option selected>Precious</option>
-                                    <option>Semi-Precious</option>
-                                    <option>Diamond</option>
-                                </select>
-                            </label>
-                            
-                            <label class="item item-input">
-                                <input type="text" placeholder="Shape">
-                            </label>
-
-                            <button class="button button-positive button-block">Submit</button>
-
-
-                        </div>
-
-
-
+                <button class="button button-positive button-block" ng-disabled="myForm.stn.$invalid && myForm.stn.$pristine||
+          myForm.stn.$invalid && myForm.stn.$dirty||myForm.siz.$invalid && myForm.siz.$pristine||
+          myForm.siz.$invalid && myForm.siz.$dirty||myForm.col.$invalid && myForm.col.$pristine||
+          myForm.col.$invalid && myForm.col.$dirty||myForm.shap.$invalid && myForm.shap.$pristine||
+          myForm.shap.$invalid && myForm.shap.$dirty||myForm.piece.$invalid && myForm.piece.$pristine||
+          myForm.piece.$invalid && myForm.piece.$dirty||myForm.dim.$invalid && myForm.dim.$pristine||
+          myForm.dim.$invalid && myForm.dim.$dirty" ng-click="demandReq();demand_pieces='';demand_dimensions='';demand_quantity='';">Submit</button>
+            </div>
         </ion-content>
-</ion-pane>
-    </ion-view>
+    </ion-pane>
+</ion-view>

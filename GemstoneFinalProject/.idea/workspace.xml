@@ -1,7 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a1f85d4-c348-4eb7-a357-4cde03a926d2" name="Default" comment="" />
+    <list default="true" id="1a1f85d4-c348-4eb7-a357-4cde03a926d2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/GemstoneFinalProject_node_modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_43476701195c727d5571ae21a222145faf48bda9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/debug_43605a6fd4a188ec5d6689cb69df394baa7a5b3c.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/.vs/GemStoneLive_WebAPI/v14/.suo" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/.vs/GemStoneLive_WebAPI/v14/.suo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/bin/GemStoneLive_WebAPI.dll" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/bin/GemStoneLive_WebAPI.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/bin/GemStoneLive_WebAPI.pdb" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/bin/GemStoneLive_WebAPI.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/GemStoneLive_WebAPI.dll" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/GemStoneLive_WebAPI.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/GemStoneLive_WebAPI.pdb" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/GemStoneLive_WebAPI.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/GemStoneLive_WebAPI.dll" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/GemStoneLive_WebAPI.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/GemStoneLive_WebAPI.pdb" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/GemStoneLive_WebAPI.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/Package/PackageTmp/bin/GemStoneLive_WebAPI.dll" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/Package/PackageTmp/bin/GemStoneLive_WebAPI.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/bundles/debug/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_d442c48355ef2c324971b7c1d5e3fd475204007b.jar" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_d442c48355ef2c324971b7c1d5e3fd475204007b.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/debug_e72953d0cdafca239e40ef20f822f835a604fc6b.jar" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/debug_e72953d0cdafca239e40ef20f822f835a604fc6b.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/outputs/apk/android-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/build/outputs/apk/android-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/outputs/apk/android-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/build/outputs/apk/android-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AdminGemStone/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AdminGemStone/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/GemStoneLive_WebAPI.csproj" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/GemStoneLive_WebAPI.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/GemStoneLive_WebAPI.csproj.user" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/GemStoneLive_WebAPI.csproj.user" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/Properties/PublishProfiles/gemstonelive - Web Deploy.pubxml" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/Properties/PublishProfiles/gemstonelive - Web Deploy.pubxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/Web.config" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/Web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/bin/GemStoneLive_WebAPI.dll.config" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/bin/GemStoneLive_WebAPI.dll.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/GemStoneLive_WebAPI.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Debug/GemStoneLive_WebAPI.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/CSAutoParameterize.parameters.xml" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/CSAutoParameterize.parameters.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/CSAutoParameterize/original/Web.config" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/CSAutoParameterize/original/Web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/CSAutoParameterize/transformed/Web.config" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/CSAutoParameterize/transformed/Web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/GemStoneLive_WebAPI.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/GemStoneLive_WebAPI.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/Package/GemStoneLive_WebAPI.SourceManifest.xml" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/Package/GemStoneLive_WebAPI.SourceManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/Package/PackageTmp/Web.config" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/Package/PackageTmp/Web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/TransformWebConfig/original/Web.config" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/TransformWebConfig/original/Web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/TransformWebConfig/transformed/Web.config" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/TransformWebConfig/transformed/Web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/_WPPLastBuildInfo.txt" afterPath="$PROJECT_DIR$/../GemStoneLive_WebAPI/GemStoneLive_WebAPI/obj/Release/_WPPLastBuildInfo.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/myApp.iml" afterPath="$PROJECT_DIR$/.idea/myApp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/android.json" afterPath="$PROJECT_DIR$/platforms/android/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/ViewItems.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/ViewItems.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/login.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-chats.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-chats.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-demand.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-demand.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/ViewItems.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/ViewItems.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/login.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/tab-chats.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/tab-chats.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/tab-demand.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/tab-demand.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-hdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-ldpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-ldpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-mdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xxxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-hdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-ldpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-ldpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-mdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xxxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/xml.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/platforms/android/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/android.json" afterPath="$PROJECT_DIR$/plugins/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/fetch.json" afterPath="$PROJECT_DIR$/plugins/fetch.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/ViewItems.html" afterPath="$PROJECT_DIR$/www/templates/ViewItems.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-account.html" afterPath="$PROJECT_DIR$/www/templates/tab-account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-chats.html" afterPath="$PROJECT_DIR$/www/templates/tab-chats.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-demand.html" afterPath="$PROJECT_DIR$/www/templates/tab-demand.html" />
+    </list>
     <ignored path="myApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,24 +124,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/login.html">
+      <file leaf-file-name="forgotPassword.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/forgotPassword.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="49" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#center#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#p#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-11.0">
+              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forgotPassword.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/templates/forgotPassword.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6409336">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state vertical-scroll-proportion="-17.653847">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -47,8 +147,18 @@
       <file leaf-file-name="ViewItems.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/ViewItems.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.576923">
-              <caret line="111" column="85" selection-start-line="111" selection-start-column="85" selection-end-line="111" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab-account.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tab-account.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -57,15 +167,15 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.965517">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="566" column="0" selection-start-line="566" selection-start-column="0" selection-end-line="566" selection-end-column="0" />
               <folding>
-                <marker date="1460358974978" expanded="true" signature="605:873" placeholder="..." />
-                <marker date="1460358974978" expanded="true" signature="605:883" placeholder="..." />
-                <marker date="1460358974978" expanded="true" signature="605:897" placeholder="..." />
-                <marker date="1460358974978" expanded="true" signature="682:873" placeholder="..." />
-                <marker date="1460358974978" expanded="true" signature="700:873" placeholder="..." />
-                <marker date="1460358974978" expanded="true" signature="867:873" placeholder="..." />
+                <marker date="1460641910431" expanded="true" signature="605:873" placeholder="..." />
+                <marker date="1460641910431" expanded="true" signature="605:883" placeholder="..." />
+                <marker date="1460641910431" expanded="true" signature="605:897" placeholder="..." />
+                <marker date="1460641910431" expanded="true" signature="682:873" placeholder="..." />
+                <marker date="1460641910431" expanded="true" signature="700:873" placeholder="..." />
+                <marker date="1460641910431" expanded="true" signature="867:873" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -75,40 +185,18 @@
         <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="158" column="53" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab-dash1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/tab-dash1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="22" column="85" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab-demand.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tab-demand.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/templates/tab-demand.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.807692">
-              <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+            <state vertical-scroll-proportion="1.9192101">
+              <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab-dash.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5471697">
-              <caret line="44" column="83" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="83" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -116,19 +204,24 @@
       <file leaf-file-name="tab-chats.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/tab-chats.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6037736">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-17.538462">
+              <caret line="369" column="11" selection-start-line="369" selection-start-column="11" selection-end-line="369" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab-account.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/tab-account.html">
+      <file leaf-file-name="tab-dash.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8658535">
-              <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="83" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="83" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,21 +235,25 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/www/templates/signUp.html" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/templates/tab-dash.html" />
-        <option value="$PROJECT_DIR$/www/templates/tab-account.html" />
-        <option value="$PROJECT_DIR$/www/templates/tab-chats.html" />
         <option value="$PROJECT_DIR$/www/templates/tab-dash1.html" />
-        <option value="$PROJECT_DIR$/www/templates/ViewItems.html" />
         <option value="$PROJECT_DIR$/www/templates/login.html" />
-        <option value="$PROJECT_DIR$/www/templates/tab-demand.html" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers.js" />
         <option value="$PROJECT_DIR$/www/templates/forgotPassword.html" />
+        <option value="$PROJECT_DIR$/www/templates/changePassword.html" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/templates/ViewItems.html" />
+        <option value="$PROJECT_DIR$/www/templates/tab-account.html" />
+        <option value="$PROJECT_DIR$/www/templates/tab-demand.html" />
+        <option value="$PROJECT_DIR$/www/templates/tab-chats.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
   </component>
@@ -176,7 +273,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -201,6 +298,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -216,7 +314,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="myApp" />
+              <option name="myItemId" value="GemstoneFinalProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -226,7 +324,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="myApp" />
+              <option name="myItemId" value="GemstoneFinalProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -240,7 +338,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="myApp" />
+              <option name="myItemId" value="GemstoneFinalProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -254,11 +352,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/GEMSTONE_REPOSITORY_NAYAWALA/Gemstone_New_Repository/AdminGemStone" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/myApp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -293,6 +390,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -328,26 +430,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24627976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18898809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -385,6 +487,165 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="83" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <marker date="1460641910431" expanded="true" signature="605:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:883" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:897" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="682:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="700:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="867:873" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="53" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="85" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-demand.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-chats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="83" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/forgotPassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/ViewItems.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="85" selection-start-line="111" selection-start-column="85" selection-end-line="111" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <marker date="1460641910431" expanded="true" signature="605:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:883" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:897" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="682:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="700:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="867:873" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="53" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="85" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-demand.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="83" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-chats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -397,10 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#center#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -409,12 +666,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding>
-            <marker date="1460358974978" expanded="true" signature="605:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:883" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:897" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="682:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="700:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="867:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:883" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:897" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="682:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="700:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="867:873" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -431,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -450,7 +706,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="273" column="10" selection-start-line="273" selection-start-column="10" selection-end-line="273" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -475,10 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#center#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,12 +740,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="358" column="14" selection-start-line="358" selection-start-column="14" selection-end-line="358" selection-end-column="14" />
           <folding>
-            <marker date="1460358974978" expanded="true" signature="605:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:883" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:897" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="682:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="700:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="867:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:883" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:897" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="682:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="700:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="867:873" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -501,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -520,7 +772,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="273" column="10" selection-start-line="273" selection-start-column="10" selection-end-line="273" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -545,10 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#center#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,12 +806,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding>
-            <marker date="1460358974978" expanded="true" signature="605:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:883" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:897" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="682:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="700:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="867:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:883" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:897" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="682:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="700:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="867:873" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -590,7 +839,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -599,15 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6923075">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,29 +856,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-chats.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6037736">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="85" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-account.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8658535">
-          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5471697">
+        <state vertical-scroll-proportion="0.0">
           <caret line="44" column="83" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
@@ -645,26 +883,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="85" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/ViewItems.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.576923">
-          <caret line="111" column="85" selection-start-line="111" selection-start-column="85" selection-end-line="111" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-demand.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.807692">
-          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -672,41 +902,57 @@
     <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="53" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-chats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.538462">
+          <caret line="369" column="11" selection-start-line="369" selection-start-column="11" selection-end-line="369" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.965517">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="566" column="0" selection-start-line="566" selection-start-column="0" selection-end-line="566" selection-end-column="0" />
           <folding>
-            <marker date="1460358974978" expanded="true" signature="605:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:883" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="605:897" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="682:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="700:873" placeholder="..." />
-            <marker date="1460358974978" expanded="true" signature="867:873" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#center#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#form#0;n#ion-content#0;n#!!top" expanded="true" />
+            <marker date="1460641910431" expanded="true" signature="605:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:883" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="605:897" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="682:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="700:873" placeholder="..." />
+            <marker date="1460641910431" expanded="true" signature="867:873" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/forgotPassword.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6409336">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        <state vertical-scroll-proportion="-11.0">
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-demand.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9192101">
+          <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
           <folding />
         </state>
       </provider>

@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\res\\drawable-port-xhdpi\\screen.png"
     },
     {
+        "merged": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-port-xhdpi-v4\\screen.png",
+        "source": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\res\\drawable-port-xhdpi\\screen.png"
+    },
+    {
         "merged": "D:\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-port-xhdpi-v4\\screen.png",
         "source": "D:\\myApp\\platforms\\android\\res\\drawable-port-xhdpi\\screen.png"
     }

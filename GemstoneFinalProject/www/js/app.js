@@ -6,7 +6,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   var backbutton=0;
   $ionicPlatform.registerBackButtonAction(function() {
     if ( ($state.$current.name=="login") ||
-      ($state.$current.name=="tab.dash") || ($state.$current.name=="tab.chats") || ($state.$current.name=="tab.account")
+      ($state.$current.name=="tab.dash") || ($state.$current.name=="tab.chats") || ($state.$current.name=="tab.account") || ($state.$current.name=="tab1.dash1") || ($state.$current.name=="tab1.View1") || ($state.$current.name=="tab1.demand1")
     ){
       // H/W BACK button is disabled for these states (these views)
       // Do not go to the previous state (or view) for these states.

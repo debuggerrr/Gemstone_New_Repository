@@ -287,6 +287,13 @@ module.exports = [
         "file": "plugins/cordova-plugin-whitelist/whitelist.js",
         "id": "cordova-plugin-whitelist.whitelist",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-fonts/www/fonts.js",
+        "id": "cordova-plugin-fonts.fonts",
+        "clobbers": [
+            "navigator.Fonts"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -302,7 +309,8 @@ module.exports.metadata =
     "cordova-plugin-camera": "2.1.1",
     "cordova-plugin-x-toast": "2.5.0",
     "cordova-plugin-network-information": "1.2.0",
-    "cordova-plugin-whitelist": "1.2.1"
+    "cordova-plugin-whitelist": "1.2.1",
+    "cordova-plugin-fonts": "0.4.0"
 };
 // BOTTOM OF METADATA
 });

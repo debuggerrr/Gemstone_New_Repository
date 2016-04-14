@@ -10,5 +10,9 @@
     {
         "merged": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi-v4\\screen.png",
         "source": "C:\\Users\\sai\\Desktop\\myApp\\platforms\\android\\res\\drawable-land-ldpi\\screen.png"
+    },
+    {
+        "merged": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi-v4\\screen.png",
+        "source": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\res\\drawable-land-ldpi\\screen.png"
     }
 ]

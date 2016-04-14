@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxhdpi-v4\\screen.png",
+        "source": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\res\\drawable-port-xxhdpi\\screen.png"
+    },
+    {
         "merged": "D:\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxhdpi-v4\\screen.png",
         "source": "D:\\myApp\\platforms\\android\\res\\drawable-port-xxhdpi\\screen.png"
     },

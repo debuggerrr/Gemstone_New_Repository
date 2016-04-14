@@ -236,6 +236,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\demandRequestsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\imageTablesController.cs" />
     <Compile Include="Controllers\itemDetailsController.cs" />
@@ -244,6 +245,24 @@
     <Compile Include="Controllers\soldItemDetailsController.cs" />
     <Compile Include="Controllers\userRegistersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="demandRequest.cs">
+      <DependentUpon>demandRequestsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="demandRequestsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demandRequestsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="demandRequestsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demandRequestsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="demandRequestsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demandRequestsModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -367,6 +386,16 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="demandRequestsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>demandRequestsModel.edmx</DependentUpon>
+      <LastGenOutput>demandRequestsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="demandRequestsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>demandRequestsModel.edmx</DependentUpon>
+      <LastGenOutput>demandRequestsModel.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -463,6 +492,13 @@
     </EntityDeploy>
     <Content Include="perItemDetailsModel.edmx.diagram">
       <DependentUpon>perItemDetailsModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="demandRequestsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>demandRequestsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="demandRequestsModel.edmx.diagram">
+      <DependentUpon>demandRequestsModel.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\gemstonelive - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

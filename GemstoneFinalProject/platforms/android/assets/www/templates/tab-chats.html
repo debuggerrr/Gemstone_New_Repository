@@ -25,17 +25,18 @@
     <form name="myForm">
       <div class="list"><br>
         <label>Note : * indicates required field</label>
-        <div ng-init="rad1=precious">
-        <div class="item row">
 
-          <div class="col">
-            <input type="radio" ng-model="rad1" value="precious" checked="checked"><label> Precious</label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Type of Stone<font color="red">*</font>
           </div>
-          <div class="col">
-            <input type="radio" ng-model="rad1" value="semi-precious"><label> Semi-Precious</label>
-          </div>
-          </div>
-        </div>
+          <select>
+            <option selected>Precious</option>
+            <option>Semi-Precious</option>
+            <option>Diamond</option>
+          </select>
+        </label>
+
 
         <!--<div ng-init="rad1=precious" />
         &nbsp;&nbsp;&nbsp;  <input type="radio" ng-model="rad1" value="precious" name="one"  checked required> Precious

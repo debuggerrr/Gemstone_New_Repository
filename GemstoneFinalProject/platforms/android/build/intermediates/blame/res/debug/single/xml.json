@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Mohnish\\Desktop\\myApp\\platforms\\android\\res\\xml\\config.xml"
     },
     {
+        "merged": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\xml\\config.xml",
+        "source": "D:\\GEMSTONE_REPOSITORY_NAYAWALA\\Gemstone_New_Repository\\GemstoneFinalProject\\platforms\\android\\res\\xml\\config.xml"
+    },
+    {
         "merged": "D:\\myApp\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\xml\\config.xml",
         "source": "D:\\myApp\\platforms\\android\\res\\xml\\config.xml"
     }

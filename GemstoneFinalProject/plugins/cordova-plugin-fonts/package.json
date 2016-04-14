@@ -1,0 +1,42 @@
+{
+  "name": "cordova-plugin-fonts",
+  "version": "0.4.0",
+  "cordova": {
+    "id": "cordova-plugin-fonts",
+    "platforms": [
+        "firefoxos",
+        "android",
+        "amazon-fireos",
+        "ios"
+    ]
+  },
+  "description": "Cordova Fonts plugin",
+  "main": "fonts.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adapt-it/cordova-fonts.git"
+  },
+  "author": "Erik Brommers",
+  "license": "Apache-2.0",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-amazon-fireos",
+    "cordova-ios",
+    "cordova-firefox",
+    "plugin",
+    "fonts"
+  ],
+  "bugs": {
+    "url": "https://github.com/adapt-it/cordova-fonts/issues"
+  },
+  "homepage": "https://github.com/adapt-it/cordova-fonts"
+}

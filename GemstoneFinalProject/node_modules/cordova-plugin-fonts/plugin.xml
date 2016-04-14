@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-fonts" 
+        version="0.4.0" 
+        xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Fonts</name>
+    <description>Cordova Fonts Plugin</description>
+    <author>Erik Brommers</author>
+    <license>Apache 2.0 License</license>
+    <keywords>cordova,fonts</keywords>
+    <repo>https://github.com/adapt-it/cordova-fonts.git</repo>
+    <issue>https://github.com/adapt-it/cordova-fonts/issues</issue>
+    <!-- expose our API under navigator.Fonts -->
+    <js-module name="fonts" src="www/fonts.js">
+        <clobbers target="navigator.Fonts" />
+    </js-module>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Fonts">
+                <param name="ios-package" value="CDVFonts"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVFonts.h" />
+        <source-file src="src/ios/CDVFonts.m" />
+    </platform>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Fonts">
+                <param name="android-package" value="org.adaptit.cordova.fonts.Fonts"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Fonts.java" target-dir="src/org/adaptit/cordova/Fonts" />      
+     </platform>          
+    <!-- Amazon Fire (just reusing Android) -->
+    <platform name="amazon-fireos">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Fonts">
+                <param name="android-package" value="org.adaptit.cordova.fonts.Fonts"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Fonts.java" target-dir="src/org/adaptit/cordova/Fonts" />      
+    </platform>    
+    <!-- firefoxos -->
+    <platform name="firefoxos">
+        <js-module src="src/firefoxos/FontsProxy.js" name="FontsProxy">
+            <runs />
+        </js-module>
+    </platform>
+    <!-- wp7 -->
+    <platform name="wp7">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Fonts">
+                <param name="wp-package" value="Fonts"/>
+            </feature>
+        </config-file>
+        <source-file src="src/wp/Fonts.cs" />
+    </platform>
+    <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Fonts">
+                <param name="wp-package" value="Fonts"/>
+            </feature>
+        </config-file>
+        <source-file src="src/wp/Fonts.cs" />
+    </platform>
+</plugin>

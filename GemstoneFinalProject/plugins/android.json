@@ -39,6 +39,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.myapp652317"
+        },
+        "cordova-plugin-fonts": {
+            "PACKAGE_NAME": "com.ionicframework.myapp652317"
         }
     },
     "dependent_plugins": {}

@@ -1,10 +1,26 @@
 <style>
-  table{
-    align-content: center;
+  table {
+    width:auto;
   }
-  th{
-    align-items: center;
+  table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: center;
     vertical-align: middle;
+  }
+
+  table#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+    background-color:#fff;
+  }
+  table#t01 th	{
+    background-color: #2c4762;
+    color: white;
   }
 </style>
 
@@ -34,73 +50,72 @@
     </ion-header-bar>
 
   <ion-content align="center">
-  <div class="row row-center">
-    <div class="col col-center">
-    <table align="center" style="width:auto">
+    <center>
+    <table style="width:auto">
       <tr>
-        <th style="padding: 10px">First Name :</th>
+        <td style="padding: 10px"><b>First Name :</b></td>
         <td>{{userNames}}</td>
 
-        <th style="padding: 10px">Type Of Purchase :</th>
+        <td style="padding: 10px"><b>Type Of Purchase :</b></td>
         <td>{{pType}}</td>
       </tr>
 
       <tr>
-        <th style="padding: 10px">Name Of Stone :</th>
+        <td style="padding: 10px"><b>Name Of Stone :</b></td>
         <td>{{sName}}</td>
 
-        <th style="padding: 10px">Size :</th>
+        <td style="padding: 10px"><b>Size :</b></td>
         <td>{{stoneSize}}</td>
       </tr>
 
       <tr>
-        <th style="padding: 10px">Total Weight(CTs) :</th>
+        <td style="padding: 10px"><b>Total Weight(CTs) :</b></td>
         <td>{{sWeight}}</td>
 
-        <th style="padding: 10px">Pieces :</th>
+        <td style="padding: 10px"><b>Pieces :</b></td>
         <td>{{sPieces}}</td>
       </tr>
 
       <tr>
-        <th style="padding: 10px">Dimensions :</th>
+        <td style="padding: 10px"><b>Dimensions :</b></td>
         <td>{{sDimensions}}</td>
 
-        <th style="padding: 10px">Color :</th>
+        <td style="padding: 10px"><b>Color :</b></td>
         <td>{{sColor}}</td>
       </tr>
 
       <tr>
-        <th style="padding: 10px">Shape :</th>
+        <td style="padding: 10px"></td></td>
         <td>{{stoneShape}}</td>
 
-        <th style="padding: 10px">Origin :</th>
+        <td style="padding: 10px"><b>Origin :</b></td>
         <td>{{sOrigin}}</td>
       </tr>
 
       <tr>
-        <th style="padding: 10px">Treatment Remark :</th>
+        <td style="padding: 10px"><b>Treatment Remark :</b></td>
         <td>{{sRemark}}</td>
 
-        <th style="padding: 10px">Certificate Agency :</th>
+        <td style="padding: 10px"><b>Certificate Agency :</b></td>
         <td>{{scerAgency}}</td>
       </tr>
       <tr>
-        <th style="padding: 10px">Exp S.P./carat :</th>
+        <td style="padding: 10px"><b>Exp S.P./carat :</b></td>
         <td>{{sCarat}}</td>
 
-        <th style="padding: 10px">Stock ID :</th>
+        <td style="padding: 10px"><b>Stock ID :</b></td>
         <td>{{stockId}}</td>
 
       </tr>
       <tr>
-        <th style="padding: 10px">Supplier Ref Cert No. :</th>
+        <td style="padding: 10px"><b>Supplier Ref Cert No. :</b></td>
         <td>{{sSupplierRef}}</td>
 
-        <th style="padding: 10px">Procure Price :</th>
+        <td style="padding: 10px"><b>Procure Price :</b></td>
         <td>{{sPurchase}}</td>
       </tr>
       <tr>
-        <th colspan="2" style="align:center; valign:middle" >Stone Image</th>
+        <td colspan="2" style="align:center; valign:middle" ><b>Stone Image</b></td>
         <td colspan="2">
           <a class="item item-list-detail">
           <img src="data:image/jpeg;base64,{{image}}" style="height:150px; width:150px; " ng-click="showImage()" class="image-list-thumb" />
@@ -108,8 +123,7 @@
         </td>
       </tr>
     </table>
-    </div>
-  </div>
+    </center>
   </ion-content>
 
 
@@ -122,33 +136,8 @@
     </button>
 
   </ion-nav-buttons>
-  <ion-content class="padding">
-<div class="contentarearight">
-  <style>
-    table {
-      width:auto;
-    }
-    table, th, td {
-      border: 1px solid red;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 5px;
-      text-align: center;
-    }
-    table#t01 tr:nth-child(even) {
-      background-color: #eee;
-    }
-    table#t01 tr:nth-child(odd) {
-      background-color:#fff;
-    }
-    table#t01 th	{
-      background-color: black;
-      color: white;
-    }
-  </style>
-
-       <div class="col-md-8" style="margin:50px 0px 10px 10px">
+  <ion-content> <br>
+    <center>
         <table id="t01" >
           <tr>
             <th>Sr No.</th>
@@ -163,14 +152,13 @@
             <td>{{stone.userNames}}</td>
             <td>{{stone.sName}}</td>
 
-            <td><button type="button" class="btn btn-info btn" ng-click="showDetail(st_id=stone.id);openModal()">Show Details</button></td>
-
+            <td><button type="button" class="button button-positive" ng-click="showDetail(st_id=stone.id);openModal()">Show Details</button></td>
 
           </tr>
         </table>
-
-      </div>
-    </div>
+    </center>
+  </ion-content>
+  </ion-view>
 
 <!--<table>
   <tr>

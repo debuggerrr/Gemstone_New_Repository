@@ -234,6 +234,30 @@ $scope.signup = function () {
         // Execute action
     });
 
+    $scope.stones = {
+        'Precious': {
+            'Ruby': ['Vivid Red', 'Piegon Red', 'Red'],
+            'Sapphire': ['Royal Blue', 'Corn Flower Blue', 'Blue','Deep Blue'],
+            'Emerald': ['Green', 'Deep Green', 'Light Green']
+        },
+        'Semi-Precious': {
+            'Rubellite': ['Red', 'Pinkish Red','Orangish Red'],
+            'Tanzanite': ['Purple Blue', 'Deep Blue', 'Light Blue'],
+            'Green Tourmouline': ['Light Green', 'Dark Green']
+        },
+        'Diamonds': {
+            'White': ['White','Cream White'],
+            'Yellow': ['Yellow','Light Yellow']
+        }
+    };
+
+    $scope.GetSelectedType = function () {
+        $scope.strType = $("#type option:selected").text();
+    };
+    $scope.GetSelectedStone = function () {
+        $scope.strStone = $("#stone option:selected").text();
+    };
+
 
     $scope.showPerDetails=function(){
         var id=this.viewst_id;
@@ -537,7 +561,12 @@ $scope.signup = function () {
   };
 
 
-  var id=this.st_id;
+    $scope.demandReq = function () {
+        alert("Your Rquest has been sent to Admin");
+    }
+
+
+    var id=this.st_id;
 
 
   $http.get("http://gemstonelive.azurewebsites.net/api/itemDetails?name_user="+user)
