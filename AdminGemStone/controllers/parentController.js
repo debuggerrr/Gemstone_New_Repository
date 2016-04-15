@@ -246,9 +246,14 @@ $scope.approve_req=function()
 		var delDemand=this.demId;
 		$http.delete("http://gemstonelive.azurewebsites.net/api/demandRequests/"+delDemand)
 			.success(function(res){
-				alert("Demand Deleted Successfully !!");
 
-							});
+				$http.get("http://gemstonelive.azurewebsites.net/api/demandRequests")
+					.success(function(res){
+						$scope.getDemandInfo=res;
+						alert("Demand Deleted Successfully !!");
+					});
+
+			});
 	};
 
 
