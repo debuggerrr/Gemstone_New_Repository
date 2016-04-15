@@ -42,6 +42,14 @@ function($stateProvider, $urlRouterProvider,$compileProvider, USER_ROLES) {
           authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor]
       }
     })
+      .state('demandRequest', {
+          url: "/demandRequest",
+          templateUrl: "templates/demandRequests.html",
+          data: {
+              authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor]
+          }
+      })
+
     .state('adminState', {
         url: "/adminState",
         templateUrl: "templates/adminState.html",

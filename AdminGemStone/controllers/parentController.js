@@ -241,6 +241,17 @@ $scope.approve_req=function()
 			});
 	};
 
+	$scope.delDemand=function()
+	{
+		var delDemand=this.demId;
+		$http.delete("http://gemstonelive.azurewebsites.net/api/demandRequests/"+delDemand)
+			.success(function(res){
+				alert("Demand Deleted Successfully !!");
+
+							});
+	};
+
+
 	$scope.delsolditem=function()
 	{
 		var sold_id=this.sold_id;
@@ -559,6 +570,12 @@ $scope.approve_req=function()
 			var us=res.length;
 			$scope.us=us;
 		})
+
+	$http.get("http://gemstonelive.azurewebsites.net/api/demandRequests")
+		.success(function(res){
+			$scope.getDemandInfo=res;
+		})
+
 
 	$http.get("http://gemstonelive.azurewebsites.net/api/soldItemDetails")
 		.success(function(res){

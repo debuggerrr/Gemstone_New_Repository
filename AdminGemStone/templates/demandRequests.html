@@ -1,0 +1,62 @@
+<div ng-include="'templates/menu_bar.html'" onload= "type='true'"></div>
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">New Demand Request</h1>
+
+            <table id="t01" ng-table="tableParams" show-filter="true" class="table">
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Username</th>
+                    <th>Name of Stone</th>
+                    <th>Color</th>
+                    <th>Shape</th>
+                    <th>Size</th>
+                    <th>Dimensions</th>
+                    <th>Pieces</th>
+                    <th>Delete</th>
+                </tr>
+                <tr ng-repeat="demand in getDemandInfo">
+                    <td>{{$index+1}}</td>
+                    <td>{{demand.UserName}}</td>
+                    <td>{{demand.StoneName}}</td>
+                    <td>{{demand.Color}}</td>
+                    <td>{{demand.Shape}}</td>
+                    <td>{{demand.Size}}</td>
+                    <td>{{demand.Dimension}}</td>
+                    <td>{{demand.Pieces}}</td>
+                    <td><button ng-click="delDemand(demId=demand.Id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button> </td>
+
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    table {
+        width:auto;
+    }
+    table, th, td {
+        border: 1px solid red;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table#t01 th	{
+        background-color: black;
+        color: white;
+    }
+</style>
+
